@@ -12,11 +12,8 @@ TagManager:
   - nitrogen
   - collected
   - asteroids
+  - commonasteroids
   - eye
-  - FxTemporaire
-  - projectile
-  - TeleportIgnore
-  - common
   layers:
   - Default
   - TransparentFX

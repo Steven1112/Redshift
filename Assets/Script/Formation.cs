@@ -30,6 +30,7 @@ public class Formation : MonoBehaviour {
 
 		//replace finalStage with the current protoplanet object
 		GameObject formed = (GameObject)Instantiate (finalStage);
+		formed.AddComponent<Spin> ();
 		formed.GetComponent<Spin> ().speed = protoPlanet.GetComponent<Spin> ().speed;
 		formed.GetComponent<Spin> ().vector = protoPlanet.GetComponent<Spin> ().vector;
 		Debug.Log (finalStage.name + " is created");

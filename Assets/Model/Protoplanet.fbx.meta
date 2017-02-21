@@ -1,22 +1,66 @@
 fileFormatVersion: 2
 guid: 73377acf128354eb58f65d2eff57bf3d
-timeCreated: 1487719372
+timeCreated: 1485381624
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: CORE
-    100002: //RootNode
-    100004: Torus
-    400000: CORE
-    400002: //RootNode
-    400004: Torus
-    2300000: CORE
-    2300002: Torus
-    3300000: CORE
-    3300002: Torus
-    4300000: Torus
-    4300002: CORE
+    100000: //RootNode
+    100002: BELTS
+    100004: BELTS.001
+    100006: BELTS.001_MeshPart0
+    100008: BELTS.001_MeshPart1
+    100010: BELTS.001_MeshPart2
+    100012: BELTS_MeshPart0
+    100014: BELTS_MeshPart1
+    100016: BELTS_MeshPart2
+    100018: protoplanet
+    100020: rings
+    100022: CORE
+    100024: Torus
+    400000: //RootNode
+    400002: BELTS
+    400004: BELTS.001
+    400006: BELTS.001_MeshPart0
+    400008: BELTS.001_MeshPart1
+    400010: BELTS.001_MeshPart2
+    400012: BELTS_MeshPart0
+    400014: BELTS_MeshPart1
+    400016: BELTS_MeshPart2
+    400018: protoplanet
+    400020: rings
+    400022: CORE
+    400024: Torus
+    2300000: BELTS.001_MeshPart0
+    2300002: BELTS.001_MeshPart1
+    2300004: BELTS.001_MeshPart2
+    2300006: BELTS_MeshPart0
+    2300008: BELTS_MeshPart1
+    2300010: BELTS_MeshPart2
+    2300012: protoplanet
+    2300014: rings
+    2300016: CORE
+    2300018: Torus
+    3300000: BELTS.001_MeshPart0
+    3300002: BELTS.001_MeshPart1
+    3300004: BELTS.001_MeshPart2
+    3300006: BELTS_MeshPart0
+    3300008: BELTS_MeshPart1
+    3300010: BELTS_MeshPart2
+    3300012: protoplanet
+    3300014: rings
+    3300016: CORE
+    3300018: Torus
+    4300000: BELTS.001_MeshPart0
+    4300002: BELTS.001_MeshPart1
+    4300004: BELTS.001_MeshPart2
+    4300006: rings
+    4300008: BELTS_MeshPart0
+    4300010: BELTS_MeshPart1
+    4300012: BELTS_MeshPart2
+    4300014: protoplanet
+    4300016: Torus
+    4300018: CORE
   materials:
     importMaterials: 1
     materialName: 0
