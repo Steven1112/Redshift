@@ -20,9 +20,10 @@ public class PlanetCreator : MonoBehaviour {
 	public GameObject[] collected;
 
     public static PlanetCreator instance = null;
+	public GameObject[] asteroidTracking = new GameObject[3];
 
-
-	[Header("Asteroid Tracking Text")]
+	/*
+	//[Header("Asteroid Tracking Text")]
 	public GameObject textFirstCollected;
 	public Text textFirstCollectedText;
 	public GameObject textSecondCollected;
@@ -36,10 +37,12 @@ public class PlanetCreator : MonoBehaviour {
 	private Sprite sulfurSprite;
 	private Sprite carbonSprite;
 
-	[Header("Asteroid Tracking Image")]
+	//[Header("Asteroid Tracking Image")]
 	public Image firstCollectedImage;
 	public Image secondCollectedImage;
 	public Image thirdCollectedImage;
+	*/
+
 
     void Awake() {
 
@@ -93,6 +96,7 @@ public class PlanetCreator : MonoBehaviour {
         results[8] = pluto;
         results[9] = fail;
 
+		/*
 		textFirstCollectedText = textFirstCollected.GetComponent<Text>();
 		textSecondCollectedText = textSecondCollected.GetComponent<Text>();
 		textThirdCollectedText = textThirdCollected.GetComponent<Text>();
@@ -119,14 +123,27 @@ public class PlanetCreator : MonoBehaviour {
 		firstCollectedImage.enabled = false;
 		secondCollectedImage.enabled = false;
 		thirdCollectedImage.enabled = false;
+		*/
+		foreach (GameObject image in asteroidTracking) {
+			image.GetComponent<Image> ().enabled = false;
+		}
 
     }
 
     public void addMaterial(string material) {
 
         //SoundManager.instance.playSingle("effectSource",clickSound);
-		if (numMaterialCollected < MAX_NUM_MATERIAL && !userMixture.Contains(material) && material!= "")
+		if (numMaterialCollected < MAX_NUM_MATERIAL && !userMixture.Contains(material) && material!= "common")
 		{
+			numMaterialCollected++;
+
+			// update Asteroid Tracking UI
+			GameObject curAsteroid = asteroidTracking [numMaterialCollected - 1];
+			Sprite asteroidImage = Resources.Load<Sprite> (material + "_2D") as Sprite;
+			curAsteroid.GetComponent<Image> ().enabled = true;
+			curAsteroid.GetComponent<Image> ().sprite = asteroidImage;
+			curAsteroid.transform.GetChild (0).GetComponent<Text> ().text = material;
+			/*
 			if(string.Equals(material, "commonasteroids")){
 				Debug.Log ("Add nothing");
 			}
@@ -134,46 +151,46 @@ public class PlanetCreator : MonoBehaviour {
 					Debug.Log ("Add material collection");
 					numMaterialCollected++;
 			}
+			*/
+			if (string.Equals(material, "nitrogen"))
+			{
+				addNitrogen();
+			}
+			else if (string.Equals(material, "carbon"))
+			{
+				addCarbon();
+
+			}
+			else if (string.Equals(material, "oxygen"))
+			{
+				addOxygen();
+			}
+			else if (string.Equals(material, "hydrogen"))
+			{
+				addHydrogen();
+			}
+			else if (string.Equals(material, "sulfur"))
+			{
+				addSulfur();
+			}
+
+			else {
+				// do nothing
+			}
+
+			growSize();
 		}
 
-        if (string.Equals(material, "nitrogen"))
-        {
-            addNitrogen();
-        }
-        else if (string.Equals(material, "carbon"))
-        {
-            addCarbon();
 
-        }
-        else if (string.Equals(material, "oxygen"))
-        {
-            addOxygen();
-        }
-        else if (string.Equals(material, "hydrogen"))
-        {
-            addHydrogen();
-        }
-        else if (string.Equals(material, "sulfur"))
-        {
-            addSulfur();
-        }
-
-        else {
-            // do nothing
-        }
-
-        growSize();
-
-
-        if (numMaterialCollected == 3) {
-            computeResult(userMixture).form(protoPlanet);
-        }
+		if (numMaterialCollected == 3) {
+			computeResult(userMixture).form(protoPlanet);
+		}
 
     }
     void addNitrogen() {
         userMixture.Add("nitrogen");
         Debug.Log("asteroid " + numMaterialCollected + ":nitrogen");
-
+		/*
 		if (numMaterialCollected == 1) {
 			textFirstCollectedText.text = "nitrogen";
 			firstCollectedImage.sprite = nitrogenSprite;
@@ -190,13 +207,13 @@ public class PlanetCreator : MonoBehaviour {
 			textThirdCollectedText.text = "nitrogen";
 			thirdCollectedImage.sprite = nitrogenSprite;
 			thirdCollectedImage.enabled = true;
-		}
+		}*/
     }
     void addCarbon()
     {
         userMixture.Add("carbon");
         Debug.Log("asteroid" + numMaterialCollected + ":carbon");
-
+		/*
 		if (numMaterialCollected == 1) {
 			textFirstCollectedText.text = "carbon";
 			firstCollectedImage.sprite = carbonSprite;
@@ -213,13 +230,13 @@ public class PlanetCreator : MonoBehaviour {
 			textThirdCollectedText.text = "carbon";
 			thirdCollectedImage.sprite = carbonSprite;
 			thirdCollectedImage.enabled = true;
-		}
+		}*/
 
     }
     void addOxygen() {
         userMixture.Add("oxygen");
         Debug.Log("asteroid" + numMaterialCollected + ":oxygen");
-
+		/*
 		if (numMaterialCollected == 1) {
 			textFirstCollectedText.text = "oxygen";
 			firstCollectedImage.sprite = oxygenSprite;
@@ -236,12 +253,12 @@ public class PlanetCreator : MonoBehaviour {
 			textThirdCollectedText.text = "oxygen";
 			thirdCollectedImage.sprite = oxygenSprite;
 			thirdCollectedImage.enabled = true;
-		}
+		}*/
     }
     void addHydrogen() {
         userMixture.Add("hydrogen");
         Debug.Log("asteroid" + numMaterialCollected + ":hydrogen");
-
+		/*
 		if (numMaterialCollected == 1) {
 			textFirstCollectedText.text = "hydrogen";
 			firstCollectedImage.sprite = hydrogenSprite;
@@ -258,13 +275,13 @@ public class PlanetCreator : MonoBehaviour {
 			textThirdCollectedText.text = "hydrogen";
 			thirdCollectedImage.sprite = hydrogenSprite;
 			thirdCollectedImage.enabled = true;
-		}
+		}*/
 
     }
     void addSulfur() {
         userMixture.Add("sulfur");
         Debug.Log("asteroid" + numMaterialCollected + ":sulfur");
-
+		/*
 		if (numMaterialCollected == 1) {
 			textFirstCollectedText.text = "sulfur";
 			firstCollectedImage.sprite = sulfurSprite;
@@ -281,7 +298,7 @@ public class PlanetCreator : MonoBehaviour {
 			textThirdCollectedText.text = "sulfur";
 			thirdCollectedImage.sprite = sulfurSprite;
 			thirdCollectedImage.enabled = true;
-		}
+		}*/
     }
 
 
