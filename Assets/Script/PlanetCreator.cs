@@ -20,26 +20,8 @@ public class PlanetCreator : MonoBehaviour {
 	public GameObject[] collected;
 
     public static PlanetCreator instance = null;
+	public GameObject[] asteroidTracking = new GameObject[3];
 
-
-	[Header("Asteroid Tracking Text")]
-	public GameObject textFirstCollected;
-	public Text textFirstCollectedText;
-	public GameObject textSecondCollected;
-	public Text textSecondCollectedText;
-	public GameObject textThirdCollected;
-	public Text textThirdCollectedText;
-
-	private Sprite nitrogenSprite;
-	private Sprite hydrogenSprite;
-	private Sprite oxygenSprite;
-	private Sprite sulfurSprite;
-	private Sprite carbonSprite;
-
-	[Header("Asteroid Tracking Image")]
-	public Image firstCollectedImage;
-	public Image secondCollectedImage;
-	public Image thirdCollectedImage;
 
     void Awake() {
 
@@ -93,195 +75,83 @@ public class PlanetCreator : MonoBehaviour {
         results[8] = pluto;
         results[9] = fail;
 
-		textFirstCollectedText = textFirstCollected.GetComponent<Text>();
-		textSecondCollectedText = textSecondCollected.GetComponent<Text>();
-		textThirdCollectedText = textThirdCollected.GetComponent<Text>();
-
-		if (numMaterialCollected == 0) {
-			textFirstCollectedText.text = "";
-			textSecondCollectedText.text = "";
-			textThirdCollectedText.text = "";
+		foreach (GameObject image in asteroidTracking) {
+			image.GetComponent<Image> ().enabled = false;
 		}
-
-		nitrogenSprite = Resources.Load <Sprite>("asteroids02");
-		hydrogenSprite = Resources.Load <Sprite>("asteroids01");
-		oxygenSprite = Resources.Load <Sprite>("asteroids04");
-		sulfurSprite = Resources.Load <Sprite>("asteroids05");
-		carbonSprite = Resources.Load <Sprite>("asteroids03");
-
-		//firstCollectedImage = GameObject.Find("FirstAsteroidImage");
-		//secondCollectedImage = GameObject.Find("SecondAsteroidImage");
-		//thirdCollectedImage = GameObject.Find("ThirdAsteroidImage");
-
-		firstCollectedImage.sprite = null;
-		secondCollectedImage.sprite = null;
-		thirdCollectedImage.sprite = null;
-		firstCollectedImage.enabled = false;
-		secondCollectedImage.enabled = false;
-		thirdCollectedImage.enabled = false;
 
     }
 
     public void addMaterial(string material) {
 
         //SoundManager.instance.playSingle("effectSource",clickSound);
-		if (numMaterialCollected < MAX_NUM_MATERIAL && !userMixture.Contains(material) && material!= "")
+		if (numMaterialCollected < MAX_NUM_MATERIAL && !userMixture.Contains(material) && material!= "common")
 		{
-			if(string.Equals(material, "commonasteroids")){
-				Debug.Log ("Add nothing");
+			numMaterialCollected++;
+
+			// update Asteroid Tracking UI
+			GameObject curAsteroid = asteroidTracking [numMaterialCollected - 1];
+			Sprite asteroidImage = Resources.Load<Sprite> (material + "_2D") as Sprite;
+			curAsteroid.GetComponent<Image> ().enabled = true;
+			curAsteroid.GetComponent<Image> ().sprite = asteroidImage;
+			curAsteroid.transform.GetChild (0).GetComponent<Text> ().text = material;
+
+			if (string.Equals(material, "nitrogen"))
+			{
+				addNitrogen();
 			}
-			else{
-					Debug.Log ("Add material collection");
-					numMaterialCollected++;
+			else if (string.Equals(material, "carbon"))
+			{
+				addCarbon();
+
 			}
+			else if (string.Equals(material, "oxygen"))
+			{
+				addOxygen();
+			}
+			else if (string.Equals(material, "hydrogen"))
+			{
+				addHydrogen();
+			}
+			else if (string.Equals(material, "sulfur"))
+			{
+				addSulfur();
+			}
+
+			else {
+				// do nothing
+			}
+
+			growSize();
 		}
 
-        if (string.Equals(material, "nitrogen"))
-        {
-            addNitrogen();
-        }
-        else if (string.Equals(material, "carbon"))
-        {
-            addCarbon();
 
-        }
-        else if (string.Equals(material, "oxygen"))
-        {
-            addOxygen();
-        }
-        else if (string.Equals(material, "hydrogen"))
-        {
-            addHydrogen();
-        }
-        else if (string.Equals(material, "sulfur"))
-        {
-            addSulfur();
-        }
-
-        else {
-            // do nothing
-        }
-
-        growSize();
-
-
-        if (numMaterialCollected == 3) {
-            computeResult(userMixture).form(protoPlanet);
-        }
+		if (numMaterialCollected == 3) {
+			computeResult(userMixture).form(protoPlanet);
+			canRestart = true;
+		}
 
     }
     void addNitrogen() {
         userMixture.Add("nitrogen");
         Debug.Log("asteroid " + numMaterialCollected + ":nitrogen");
-
-		if (numMaterialCollected == 1) {
-			textFirstCollectedText.text = "nitrogen";
-			firstCollectedImage.sprite = nitrogenSprite;
-			firstCollectedImage.enabled = true;
-		}
-
-		if (numMaterialCollected == 2) {
-			textSecondCollectedText.text = "nitrogen";
-			secondCollectedImage.sprite = nitrogenSprite;
-			secondCollectedImage.enabled = true;
-		}
-
-		if (numMaterialCollected == 3) {
-			textThirdCollectedText.text = "nitrogen";
-			thirdCollectedImage.sprite = nitrogenSprite;
-			thirdCollectedImage.enabled = true;
-		}
     }
     void addCarbon()
     {
         userMixture.Add("carbon");
         Debug.Log("asteroid" + numMaterialCollected + ":carbon");
 
-		if (numMaterialCollected == 1) {
-			textFirstCollectedText.text = "carbon";
-			firstCollectedImage.sprite = carbonSprite;
-			firstCollectedImage.enabled = true;
-		}
-
-		if (numMaterialCollected == 2) {
-			textSecondCollectedText.text = "carbon";
-			secondCollectedImage.sprite = carbonSprite;
-			secondCollectedImage.enabled = true;
-		}
-
-		if (numMaterialCollected == 3) {
-			textThirdCollectedText.text = "carbon";
-			thirdCollectedImage.sprite = carbonSprite;
-			thirdCollectedImage.enabled = true;
-		}
-
     }
     void addOxygen() {
         userMixture.Add("oxygen");
         Debug.Log("asteroid" + numMaterialCollected + ":oxygen");
-
-		if (numMaterialCollected == 1) {
-			textFirstCollectedText.text = "oxygen";
-			firstCollectedImage.sprite = oxygenSprite;
-			firstCollectedImage.enabled = true;
-		}
-
-		if (numMaterialCollected == 2) {
-			textSecondCollectedText.text = "oxygen";
-			secondCollectedImage.sprite = oxygenSprite;
-			secondCollectedImage.enabled = true;
-		}
-
-		if (numMaterialCollected == 3) {
-			textThirdCollectedText.text = "oxygen";
-			thirdCollectedImage.sprite = oxygenSprite;
-			thirdCollectedImage.enabled = true;
-		}
     }
     void addHydrogen() {
         userMixture.Add("hydrogen");
         Debug.Log("asteroid" + numMaterialCollected + ":hydrogen");
-
-		if (numMaterialCollected == 1) {
-			textFirstCollectedText.text = "hydrogen";
-			firstCollectedImage.sprite = hydrogenSprite;
-			firstCollectedImage.enabled = true;
-		}
-
-		if (numMaterialCollected == 2) {
-			textSecondCollectedText.text = "hydrogen";
-			secondCollectedImage.sprite = hydrogenSprite;
-			secondCollectedImage.enabled = true;
-		}
-
-		if (numMaterialCollected == 3) {
-			textThirdCollectedText.text = "hydrogen";
-			thirdCollectedImage.sprite = hydrogenSprite;
-			thirdCollectedImage.enabled = true;
-		}
-
     }
     void addSulfur() {
         userMixture.Add("sulfur");
         Debug.Log("asteroid" + numMaterialCollected + ":sulfur");
-
-		if (numMaterialCollected == 1) {
-			textFirstCollectedText.text = "sulfur";
-			firstCollectedImage.sprite = sulfurSprite;
-			firstCollectedImage.enabled = true;
-		}
-
-		if (numMaterialCollected == 2) {
-			textSecondCollectedText.text = "sulfur";
-			secondCollectedImage.sprite = sulfurSprite;
-			secondCollectedImage.enabled = true;
-		}
-
-		if (numMaterialCollected == 3) {
-			textThirdCollectedText.text = "sulfur";
-			thirdCollectedImage.sprite = sulfurSprite;
-			thirdCollectedImage.enabled = true;
-		}
     }
 
 
@@ -311,7 +181,7 @@ public class PlanetCreator : MonoBehaviour {
 
 	public void reStart(){
 
-		SceneManager.LoadScene("Teleport_Scene_2");
+		SceneManager.LoadScene("PlanetCollection");
 	}
 
 	void Update() {
