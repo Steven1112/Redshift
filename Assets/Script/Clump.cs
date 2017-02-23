@@ -53,9 +53,10 @@ public class Clump : MonoBehaviour
 				    //PlanetCreator.instance.collected[PlanetCreator.instance.numMaterialCollected] = asteroid;
 
                     //call addMaterial() and collision parameters to be passed for visual effects
-                    PlanetCreator.instance.addMaterial(gameObject.tag);
+                    PlanetCreator.instance.addMaterial(gameObject);
 
-				    AnimationManager.instance.simpleExplosion.Play();
+                    AnimationManager.instance.asteroidExplosion.Play();
+
                     StartCoroutine(Replay());
 
                     numCollision++;
@@ -157,8 +158,8 @@ public class Clump : MonoBehaviour
 
     IEnumerator Replay()
     {
-        yield return new WaitForSeconds(1);
-		AnimationManager.instance.simpleExplosion.Stop();
+        yield return new WaitForSeconds(2);
+		AnimationManager.instance.asteroidExplosion.Stop();
         // soundManager.hitOn.Stop();
     }
 
