@@ -181,7 +181,7 @@ public class PlanetCreator : MonoBehaviour {
 
 	public void reStart(){
 
-		SceneManager.LoadScene("PlanetCollection");
+		SceneManager.LoadScene("Scene_23Feb_EnvironmentLayout_v2");
 	}
 
 	void Update() {
