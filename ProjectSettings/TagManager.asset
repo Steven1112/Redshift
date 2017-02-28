@@ -14,6 +14,22 @@ TagManager:
   - asteroids
   - commonasteroids
   - eye
+  - FxTemporaire
+  - projectile
+  - TeleportIgnore
+  - common
+  - earth
+  - mercury
+  - pluto
+  - mars
+  - neptune
+  - saturn
+  - jupiter
+  - venus
+  - uranus
+  - ingredients
+  - image
+  - name
   layers:
   - Default
   - TransparentFX

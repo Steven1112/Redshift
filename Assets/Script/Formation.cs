@@ -24,7 +24,7 @@ public class Formation : MonoBehaviour {
 		//wait for a few seconds
 
 		// add formed planet to collection
-		// PlanetCollection.instance.addPlanetToCollection(this);
+		PlanetCollection.instance.addPlanetToCollection(this);
 
 		//display animation
 

@@ -8,6 +8,7 @@ public class PlanetCollection : MonoBehaviour {
     public static PlanetCollection instance = null;
     public int numPlanetColelcted = 0;
     HashSet<string> collection;
+    public static int maxNumPlanet = 9;
 
     // UI
     [SerializeField]
@@ -38,15 +39,49 @@ public class PlanetCollection : MonoBehaviour {
 	}
 
     public void addPlanetToCollection(Formation planet) {
+        int planetIndex = 0;
         string name = planet.name;
+
+        for(int i = 0; i < maxNumPlanet; i++)
+        {
+            if (collectionBook[i].tag.Equals(name))
+            {
+                planetIndex = i;
+                Debug.Log("planet index: " + i);
+                break;
+            }
+        }
+
         if (planet.name != "fail" && !collection.Contains(name)) 
         {
             numPlanetColelcted++;
             collection.Add(name);
             Debug.Log(name + " is added to the collection");
-            Sprite planetImage = Resources.Load<Sprite> (planet.name + "_2D") as Sprite;
 
-            collectionBook[numPlanetColelcted - 1].GetComponent<Image>().sprite = planetImage;
+            // get all UI compoents of the newly collected planet
+            GameObject planetObj = collectionBook[planetIndex];
+            GameObject planetIngredients = planetObj.transform.GetChild(0).gameObject;
+            GameObject planetImage = planetObj.transform.GetChild(1).gameObject;
+            GameObject planetName = planetObj.transform.GetChild(2).gameObject;
+
+            // update the image of the planet on UI
+            Sprite image = Resources.Load<Sprite> (planet.name + "_2D") as Sprite;
+            planetImage.GetComponent<Image>().sprite = image;
+            // update the name of the planet on UI
+            planetName.GetComponent<Text>().text = name;
+
+            for(int i = 0; i < 3; i++)
+            {
+                string[] ingredients = new string[planet.ingredients.Count];
+				// convert hashset from formation class to array
+                planet.ingredients.CopyTo(ingredients);
+
+                string ingredient = ingredients[i];
+                Sprite ingredientImage = Resources.Load<Sprite>(ingredient + "_2D") as Sprite;
+                planetIngredients.transform.GetChild(i).gameObject.GetComponent<Image>().sprite = ingredientImage;
+            }
+
+            //planetObj.GetComponent<Image>().sprite = planetImage;
             foreach(string collected in collection)
             {
                 Debug.Log("in collection: " + collected);
@@ -54,17 +89,4 @@ public class PlanetCollection : MonoBehaviour {
         }
     }
 
-    public bool isInCollection(Formation planet)
-    {
-        /*
-        for(int i =0; i < numPlanetColelcted; i++)
-        {
-            Debug.Log("index: " + i);
-            if (string.Equals(collection[i].name, planet.name))
-            {
-                return true;
-            }
-        }*/
-        return false;
-    }
 }
