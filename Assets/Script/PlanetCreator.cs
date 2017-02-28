@@ -58,7 +58,7 @@ public class PlanetCreator : MonoBehaviour {
         //DontDestroyOnLoad(gameObject);
 
         //planets = new GameObject[10];
-        ingredients = new HashSet<string> {"nitrogen", "hydrogen", "oxygen", "sulfur", "carbon", "commonasteroids"};
+        ingredients = new HashSet<string> {"nitrogen", "hydrogen", "oxygen", "sulfur", "carbon", "common"};
         userMixture = new HashSet<string>();
 
         HashSet<string> mercuryIngredients = new HashSet<string> { "oxygen", "hydrogen", "nitrogen"};
@@ -133,14 +133,22 @@ public class PlanetCreator : MonoBehaviour {
     public void addMaterial(GameObject gameObject) {
 
         string material = gameObject.tag;
-        AnimationManager.instance.asteroidExplosion.transform.position = gameObject.transform.position;
+
+        AnimationManager.instance.visualEffectsClearAll();
+
+        if (string.Equals(material, "common"))
+        {
+            AnimationManager.instance.commonHitExplosion.transform.position = gameObject.transform.position;
+            AnimationManager.instance.commonHitExplosion.Play();
+        }
+
         //SoundManager.instance.playSingle("effectSource",clickSound);
         if (numMaterialCollected < MAX_NUM_MATERIAL && !userMixture.Contains(material) && material!= "common")
 		{
 			numMaterialCollected++;
 
-			// update Asteroid Tracking UI
-			GameObject curAsteroid = asteroidTracking [numMaterialCollected - 1];
+            // update Asteroid Tracking UI
+            GameObject curAsteroid = asteroidTracking [numMaterialCollected - 1];
 			Sprite asteroidImage = Resources.Load<Sprite> (material + "_2D") as Sprite;
 			curAsteroid.GetComponent<Image> ().enabled = true;
 			curAsteroid.GetComponent<Image> ().sprite = asteroidImage;
@@ -192,8 +200,10 @@ public class PlanetCreator : MonoBehaviour {
     void addNitrogen() {
         userMixture.Add("nitrogen");
         Debug.Log("asteroid " + numMaterialCollected + ":nitrogen");
+        AnimationManager.instance.nitrogenHitExplosion.transform.position = gameObject.transform.position;
+        AnimationManager.instance.nitrogenHitExplosion.Play();
 
-		/*
+        /*
 		if (numMaterialCollected == 1) {
 			textFirstCollectedText.text = "nitrogen";
 			firstCollectedImage.sprite = nitrogenSprite;
@@ -216,7 +226,10 @@ public class PlanetCreator : MonoBehaviour {
     {
         userMixture.Add("carbon");
         Debug.Log("asteroid" + numMaterialCollected + ":carbon");
-		/*
+        AnimationManager.instance.carbonHitExplosion.transform.position = gameObject.transform.position;
+        AnimationManager.instance.carbonHitExplosion.Play();
+
+        /*
 		if (numMaterialCollected == 1) {
 			textFirstCollectedText.text = "carbon";
 			firstCollectedImage.sprite = carbonSprite;
@@ -239,7 +252,10 @@ public class PlanetCreator : MonoBehaviour {
     void addOxygen() {
         userMixture.Add("oxygen");
         Debug.Log("asteroid" + numMaterialCollected + ":oxygen");
-		/*
+        AnimationManager.instance.oxygenHitExplosion.transform.position = gameObject.transform.position;
+        AnimationManager.instance.oxygenHitExplosion.Play();
+
+        /*
 		if (numMaterialCollected == 1) {
 			textFirstCollectedText.text = "oxygen";
 			firstCollectedImage.sprite = oxygenSprite;
@@ -261,7 +277,10 @@ public class PlanetCreator : MonoBehaviour {
     void addHydrogen() {
         userMixture.Add("hydrogen");
         Debug.Log("asteroid" + numMaterialCollected + ":hydrogen");
-		/*
+        AnimationManager.instance.hydrogenHitExplosion.transform.position = gameObject.transform.position;
+        AnimationManager.instance.hydrogenHitExplosion.Play();
+
+        /*
 		if (numMaterialCollected == 1) {
 			textFirstCollectedText.text = "hydrogen";
 			firstCollectedImage.sprite = hydrogenSprite;
@@ -284,7 +303,10 @@ public class PlanetCreator : MonoBehaviour {
     void addSulfur() {
         userMixture.Add("sulfur");
         Debug.Log("asteroid" + numMaterialCollected + ":sulfur");
-		/*
+        AnimationManager.instance.sulfurHitExplosion.transform.position = gameObject.transform.position;
+        AnimationManager.instance.sulfurHitExplosion.Play();
+
+        /*
 		if (numMaterialCollected == 1) {
 			textFirstCollectedText.text = "sulfur";
 			firstCollectedImage.sprite = sulfurSprite;

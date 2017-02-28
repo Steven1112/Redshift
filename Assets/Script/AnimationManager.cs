@@ -4,27 +4,15 @@ using UnityEngine;
 
 public class AnimationManager : MonoBehaviour {
 
-	[Header("Animations")]
+	[Header("Visual Effects")]
 	public ParticleSystem simpleExplosion;
 	public ParticleSystem seeResults;
-    public ParticleSystem asteroidExplosion;
-    [Header("Asteroids Collision Point")]
-    public GameObject oxygen1;
-    public GameObject oxygen2;
-    public GameObject oxygen3;
-    public GameObject nitrogen1;
-    public GameObject nitrogen2;
-    public GameObject nitrogen3;
-    public GameObject hydrogen1;
-    public GameObject hydrogen2;
-    public GameObject hydrogen3;
-    public GameObject sulfur1;
-    public GameObject sulfur2;
-    public GameObject sulfur3;
-    public GameObject carbon1;
-    public GameObject carbon2;
-    public GameObject carbon3;
-
+    public ParticleSystem oxygenHitExplosion;
+    public ParticleSystem nitrogenHitExplosion;
+    public ParticleSystem hydrogenHitExplosion;
+    public ParticleSystem sulfurHitExplosion;
+    public ParticleSystem carbonHitExplosion;
+    public ParticleSystem commonHitExplosion;
 
     public static AnimationManager instance = null;
 
@@ -55,4 +43,14 @@ public class AnimationManager : MonoBehaviour {
 	public void stopFormationEffect(){
 		seeResults.Stop();		
 	}
+
+    public void visualEffectsClearAll()
+    {
+        oxygenHitExplosion.Stop();
+        nitrogenHitExplosion.Stop();
+        hydrogenHitExplosion.Stop();
+        sulfurHitExplosion.Stop();
+        carbonHitExplosion.Stop();
+        commonHitExplosion.Stop();
+    }
 }

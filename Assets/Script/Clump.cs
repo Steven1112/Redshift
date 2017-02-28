@@ -55,7 +55,7 @@ public class Clump : MonoBehaviour
                     //call addMaterial() and collision parameters to be passed for visual effects
                     PlanetCreator.instance.addMaterial(gameObject);
 
-                    AnimationManager.instance.asteroidExplosion.Play();
+                    //AnimationManager.instance.asteroidExplosion.Play();
 
                     StartCoroutine(Replay());
 
@@ -159,11 +159,12 @@ public class Clump : MonoBehaviour
     IEnumerator Replay()
     {
         yield return new WaitForSeconds(2);
-		AnimationManager.instance.asteroidExplosion.Stop();
+        //AnimationManager.instance.asteroidExplosion.Stop();
+        AnimationManager.instance.commonHitExplosion.Stop();
         // soundManager.hitOn.Stop();
     }
 
-	void increaseSpin() {
+    void increaseSpin() {
 		planet.GetComponent<Spin>().speed += 0.007f;
 	}
 }
