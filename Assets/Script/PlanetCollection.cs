@@ -73,6 +73,7 @@ public class PlanetCollection : MonoBehaviour {
             for(int i = 0; i < 3; i++)
             {
                 string[] ingredients = new string[planet.ingredients.Count];
+				// convert hashset from formation class to array
                 planet.ingredients.CopyTo(ingredients);
 
                 string ingredient = ingredients[i];
@@ -88,17 +89,4 @@ public class PlanetCollection : MonoBehaviour {
         }
     }
 
-    public bool isInCollection(Formation planet)
-    {
-        /*
-        for(int i =0; i < numPlanetColelcted; i++)
-        {
-            Debug.Log("index: " + i);
-            if (string.Equals(collection[i].name, planet.name))
-            {
-                return true;
-            }
-        }*/
-        return false;
-    }
 }
