@@ -47,15 +47,16 @@ public class Clump : MonoBehaviour
                     planetScaleInc = (double)planetScale.x * 0.00002;
 
                     asteroidScale = asteroid.transform.localScale;
-                    asteroidScaleDec = (double)asteroidScale.x * 0.002;
+                    asteroidScaleDec = (double)asteroidScale.x * 0.00004;
 
 				    asteroid.transform.parent = planet.transform;
 				    //PlanetCreator.instance.collected[PlanetCreator.instance.numMaterialCollected] = asteroid;
 
                     //call addMaterial() and collision parameters to be passed for visual effects
-                    PlanetCreator.instance.addMaterial(gameObject.tag);
+                    PlanetCreator.instance.addMaterial(gameObject);
 
-				    AnimationManager.instance.simpleExplosion.Play();
+                    //AnimationManager.instance.asteroidExplosion.Play();
+
                     StartCoroutine(Replay());
 
                     numCollision++;
@@ -77,7 +78,7 @@ public class Clump : MonoBehaviour
 
                     planet.GetComponent<Rigidbody>().mass += asteroid.GetComponent<Rigidbody>().mass;
 
-				    AnimationManager.instance.simpleExplosion.Play();
+				    // AnimationManager.instance.simpleExplosion.Play();
                     StartCoroutine(Replay());
                     numCollision++;
 
@@ -97,13 +98,6 @@ public class Clump : MonoBehaviour
     {
 
         scale = gameObject.transform.localScale;
-		/*
-        if (!(numCollision > 0))
-        {
-            velocity = gameObject.GetComponent<Rigidbody>().velocity;
-            //Debug.Log(velocity);
-        }
-        */
         if (numCollision == 2)
         {
             if (hasScale(scale))
@@ -157,12 +151,13 @@ public class Clump : MonoBehaviour
 
     IEnumerator Replay()
     {
-        yield return new WaitForSeconds(1);
-		AnimationManager.instance.simpleExplosion.Stop();
+        yield return new WaitForSeconds(2);
+        //AnimationManager.instance.asteroidExplosion.Stop();
+        AnimationManager.instance.commonHitExplosion.Stop();
         // soundManager.hitOn.Stop();
     }
 
-	void increaseSpin() {
+    void increaseSpin() {
 		planet.GetComponent<Spin>().speed += 0.007f;
 	}
 }

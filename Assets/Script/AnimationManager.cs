@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class AnimationManager : MonoBehaviour {
 
-	[Header("Animations")]
+	[Header("Visual Effects")]
 	public ParticleSystem simpleExplosion;
 	public ParticleSystem seeResults;
+    public ParticleSystem oxygenHitExplosion;
+    public ParticleSystem nitrogenHitExplosion;
+    public ParticleSystem hydrogenHitExplosion;
+    public ParticleSystem sulfurHitExplosion;
+    public ParticleSystem carbonHitExplosion;
+    public ParticleSystem commonHitExplosion;
 
-	public static AnimationManager instance = null;
+    public static AnimationManager instance = null;
 
 	// Use this for initialization
 	void Start () {
@@ -37,4 +43,14 @@ public class AnimationManager : MonoBehaviour {
 	public void stopFormationEffect(){
 		seeResults.Stop();		
 	}
+
+    public void visualEffectsClearAll()
+    {
+        oxygenHitExplosion.Stop();
+        nitrogenHitExplosion.Stop();
+        hydrogenHitExplosion.Stop();
+        sulfurHitExplosion.Stop();
+        carbonHitExplosion.Stop();
+        commonHitExplosion.Stop();
+    }
 }

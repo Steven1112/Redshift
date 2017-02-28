@@ -21,6 +21,28 @@ public class PlanetCreator : MonoBehaviour {
 
     public static PlanetCreator instance = null;
 	public GameObject[] asteroidTracking = new GameObject[3];
+	public string restartSceneName;
+
+	/*
+	//[Header("Asteroid Tracking Text")]
+	public GameObject textFirstCollected;
+	public Text textFirstCollectedText;
+	public GameObject textSecondCollected;
+	public Text textSecondCollectedText;
+	public GameObject textThirdCollected;
+	public Text textThirdCollectedText;
+
+	private Sprite nitrogenSprite;
+	private Sprite hydrogenSprite;
+	private Sprite oxygenSprite;
+	private Sprite sulfurSprite;
+	private Sprite carbonSprite;
+
+	//[Header("Asteroid Tracking Image")]
+	public Image firstCollectedImage;
+	public Image secondCollectedImage;
+	public Image thirdCollectedImage;
+	*/
 
 
     void Awake() {
@@ -37,7 +59,7 @@ public class PlanetCreator : MonoBehaviour {
         //DontDestroyOnLoad(gameObject);
 
         //planets = new GameObject[10];
-        ingredients = new HashSet<string> {"nitrogen", "hydrogen", "oxygen", "sulfur", "carbon", "commonasteroids"};
+        ingredients = new HashSet<string> {"nitrogen", "hydrogen", "oxygen", "sulfur", "carbon", "common"};
         userMixture = new HashSet<string>();
 
         HashSet<string> mercuryIngredients = new HashSet<string> { "oxygen", "hydrogen", "nitrogen"};
@@ -81,45 +103,56 @@ public class PlanetCreator : MonoBehaviour {
 
     }
 
-    public void addMaterial(string material) {
+    public void addMaterial(GameObject gameObject) {
+
+        string material = gameObject.tag;
+
+        AnimationManager.instance.visualEffectsClearAll();
+
+
+        if (string.Equals(material, "common"))
+        {
+            AnimationManager.instance.commonHitExplosion.transform.position = gameObject.transform.position;
+            AnimationManager.instance.commonHitExplosion.Play();
+        }
 
         //SoundManager.instance.playSingle("effectSource",clickSound);
-		if (numMaterialCollected < MAX_NUM_MATERIAL && !userMixture.Contains(material) && material!= "common")
+        if (numMaterialCollected < MAX_NUM_MATERIAL && !userMixture.Contains(material) && material!= "common")
 		{
 			numMaterialCollected++;
 
-			// update Asteroid Tracking UI
-			GameObject curAsteroid = asteroidTracking [numMaterialCollected - 1];
+            // update Asteroid Tracking UI
+            GameObject curAsteroid = asteroidTracking [numMaterialCollected - 1];
 			Sprite asteroidImage = Resources.Load<Sprite> (material + "_2D") as Sprite;
 			curAsteroid.GetComponent<Image> ().enabled = true;
 			curAsteroid.GetComponent<Image> ().sprite = asteroidImage;
 			curAsteroid.transform.GetChild (0).GetComponent<Text> ().text = material;
 
-			if (string.Equals(material, "nitrogen"))
+            if (string.Equals(material, "nitrogen"))
 			{
-				addNitrogen();
+				addNitrogen(gameObject);
 			}
 			else if (string.Equals(material, "carbon"))
 			{
-				addCarbon();
+				addCarbon(gameObject);
 
 			}
 			else if (string.Equals(material, "oxygen"))
 			{
-				addOxygen();
+				addOxygen(gameObject);
 			}
 			else if (string.Equals(material, "hydrogen"))
 			{
-				addHydrogen();
+				addHydrogen(gameObject);
 			}
 			else if (string.Equals(material, "sulfur"))
 			{
-				addSulfur();
+				addSulfur(gameObject);
 			}
 
 			else {
-				// do nothing
-			}
+                // do nothing
+            }
 
 			growSize();
 		}
@@ -127,31 +160,48 @@ public class PlanetCreator : MonoBehaviour {
 
 		if (numMaterialCollected == 3) {
 			computeResult(userMixture).form(protoPlanet);
-			canRestart = true;
 		}
 
     }
-    void addNitrogen() {
+	void addNitrogen(GameObject gameObject) {
         userMixture.Add("nitrogen");
         Debug.Log("asteroid " + numMaterialCollected + ":nitrogen");
+        AnimationManager.instance.nitrogenHitExplosion.transform.position = gameObject.transform.position;
+        AnimationManager.instance.nitrogenHitExplosion.Play();
+
     }
-    void addCarbon()
+	void addCarbon(GameObject gameObject)
     {
         userMixture.Add("carbon");
         Debug.Log("asteroid" + numMaterialCollected + ":carbon");
+        AnimationManager.instance.carbonHitExplosion.transform.position = gameObject.transform.position;
+        AnimationManager.instance.carbonHitExplosion.Play();
+
 
     }
-    void addOxygen() {
+	void addOxygen(GameObject gameObject) {
         userMixture.Add("oxygen");
         Debug.Log("asteroid" + numMaterialCollected + ":oxygen");
+		Debug.Log ("Position" + gameObject.transform.position);
+		Debug.Log ("Position1" + AnimationManager.instance.oxygenHitExplosion.transform.position);
+        AnimationManager.instance.oxygenHitExplosion.transform.position = gameObject.transform.position;
+		Debug.Log ("Position2" +  AnimationManager.instance.oxygenHitExplosion.transform.position);
+        AnimationManager.instance.oxygenHitExplosion.Play();
+
     }
-    void addHydrogen() {
+	void addHydrogen(GameObject gameObject) {
         userMixture.Add("hydrogen");
         Debug.Log("asteroid" + numMaterialCollected + ":hydrogen");
+        AnimationManager.instance.hydrogenHitExplosion.transform.position = gameObject.transform.position;
+        AnimationManager.instance.hydrogenHitExplosion.Play();
+
+
     }
-    void addSulfur() {
+	void addSulfur(GameObject gameObject) {
         userMixture.Add("sulfur");
         Debug.Log("asteroid" + numMaterialCollected + ":sulfur");
+        AnimationManager.instance.sulfurHitExplosion.transform.position = gameObject.transform.position;
+        AnimationManager.instance.sulfurHitExplosion.Play();
     }
 
 
@@ -181,7 +231,7 @@ public class PlanetCreator : MonoBehaviour {
 
 	public void reStart(){
 
-		SceneManager.LoadScene("Scene_23Feb_EnvironmentLayout_v2");
+		SceneManager.LoadScene("VFX_24Feb_Explosion_ForallAsteroid");
 	}
 
 	void Update() {
@@ -193,4 +243,5 @@ public class PlanetCreator : MonoBehaviour {
 		}
 
 	}
+
 }
