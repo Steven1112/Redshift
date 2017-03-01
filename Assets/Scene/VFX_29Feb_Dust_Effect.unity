@@ -896,7 +896,11 @@ Transform:
   m_LocalScale: {x: 27.17376, y: 24.642242, z: 24.642242}
   m_Children: []
   m_Father: {fileID: 1278213510}
+<<<<<<< HEAD
   m_RootOrder: 14
+=======
+  m_RootOrder: 12
+>>>>>>> 5 prefabs of particle effect of the tail of movemenr and dust come from the asteroid
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &136915653
 MonoBehaviour:
@@ -1514,7 +1518,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
+<<<<<<< HEAD
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
+=======
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+>>>>>>> 5 prefabs of particle effect of the tail of movemenr and dust come from the asteroid
     m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
@@ -11720,6 +11728,7 @@ Transform:
   - {fileID: 1773307395}
   - {fileID: 1638024199}
   - {fileID: 494639452}
+<<<<<<< HEAD
   - {fileID: 348723127}
   - {fileID: 988320988}
   - {fileID: 136915652}
@@ -11728,6 +11737,16 @@ Transform:
   - {fileID: 1562030324}
   - {fileID: 531271265}
   - {fileID: 1690829807}
+=======
+  - {fileID: 136915652}
+  - {fileID: 348723127}
+  - {fileID: 988320988}
+  - {fileID: 752524230}
+  - {fileID: 483775682}
+  - {fileID: 1690829807}
+  - {fileID: 1562030324}
+  - {fileID: 531271265}
+>>>>>>> 5 prefabs of particle effect of the tail of movemenr and dust come from the asteroid
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11781,7 +11800,106 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 0
+<<<<<<< HEAD
 --- !u!43 &1299578595
+=======
+--- !u!1001 &1315210472
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1278213510}
+    m_Modifications:
+    - target: {fileID: 4931793536935210, guid: 98cab4ee73be4d64c87b1bae88f0edae, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -21.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4931793536935210, guid: 98cab4ee73be4d64c87b1bae88f0edae, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 4931793536935210, guid: 98cab4ee73be4d64c87b1bae88f0edae, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -50.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 4931793536935210, guid: 98cab4ee73be4d64c87b1bae88f0edae, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4931793536935210, guid: 98cab4ee73be4d64c87b1bae88f0edae, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4931793536935210, guid: 98cab4ee73be4d64c87b1bae88f0edae, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4931793536935210, guid: 98cab4ee73be4d64c87b1bae88f0edae, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4931793536935210, guid: 98cab4ee73be4d64c87b1bae88f0edae, type: 2}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 4931793536935210, guid: 98cab4ee73be4d64c87b1bae88f0edae, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4931793536935210, guid: 98cab4ee73be4d64c87b1bae88f0edae, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4931793536935210, guid: 98cab4ee73be4d64c87b1bae88f0edae, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1678850995313888, guid: 98cab4ee73be4d64c87b1bae88f0edae, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768708818354238, guid: 98cab4ee73be4d64c87b1bae88f0edae, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1227560421272942, guid: 98cab4ee73be4d64c87b1bae88f0edae, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1593519290426258, guid: 98cab4ee73be4d64c87b1bae88f0edae, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1312741516185810, guid: 98cab4ee73be4d64c87b1bae88f0edae, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1366636405663604, guid: 98cab4ee73be4d64c87b1bae88f0edae, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1223007457132958, guid: 98cab4ee73be4d64c87b1bae88f0edae, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979972166387882, guid: 98cab4ee73be4d64c87b1bae88f0edae, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273622040749392, guid: 98cab4ee73be4d64c87b1bae88f0edae, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 98cab4ee73be4d64c87b1bae88f0edae, type: 2}
+  m_IsPrefabParent: 0
+--- !u!198 &1315210473 stripped
+ParticleSystem:
+  m_PrefabParentObject: {fileID: 198538367981810178, guid: 98cab4ee73be4d64c87b1bae88f0edae,
+    type: 2}
+  m_PrefabInternal: {fileID: 1315210472}
+--- !u!43 &1349798611
+>>>>>>> 5 prefabs of particle effect of the tail of movemenr and dust come from the asteroid
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -11909,6 +12027,7 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+<<<<<<< HEAD
 --- !u!1001 &1315210472
 Prefab:
   m_ObjectHideFlags: 0
@@ -12004,6 +12123,8 @@ ParticleSystem:
   m_PrefabParentObject: {fileID: 198538367981810178, guid: 98cab4ee73be4d64c87b1bae88f0edae,
     type: 2}
   m_PrefabInternal: {fileID: 1315210472}
+=======
+>>>>>>> 5 prefabs of particle effect of the tail of movemenr and dust come from the asteroid
 --- !u!1 &1363162914
 GameObject:
   m_ObjectHideFlags: 0
@@ -12546,7 +12667,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
+<<<<<<< HEAD
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
+=======
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+>>>>>>> 5 prefabs of particle effect of the tail of movemenr and dust come from the asteroid
     m_FontSize: 12
     m_FontStyle: 1
     m_BestFit: 0
@@ -13701,6 +13826,38 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1596066347}
   m_Mesh: {fileID: 4300004, guid: 9691e83250530484d9bb80678f52a365, type: 3}
+<<<<<<< HEAD
+=======
+--- !u!21 &1597101812
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Sprites/Default
+  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: PixelSnap
+      second: 0
+    m_Colors:
+    - first:
+        name: _Color
+      second: {r: 1, g: 1, b: 1, a: 1}
+>>>>>>> 5 prefabs of particle effect of the tail of movemenr and dust come from the asteroid
 --- !u!1 &1624861895
 GameObject:
   m_ObjectHideFlags: 0
@@ -14242,7 +14399,11 @@ Transform:
   m_LocalScale: {x: 12.144549, y: 12.144536, z: 12.144536}
   m_Children: []
   m_Father: {fileID: 1278213510}
+<<<<<<< HEAD
   m_RootOrder: 19
+=======
+  m_RootOrder: 17
+>>>>>>> 5 prefabs of particle effect of the tail of movemenr and dust come from the asteroid
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1690829808
 MonoBehaviour:
@@ -14819,7 +14980,10 @@ MonoBehaviour:
   useOverrideButton: 3
   allowedUseControllers: 0
   usingState: 0
+<<<<<<< HEAD
   restartSceneName: VFX_29Feb_Dust_Effect
+=======
+>>>>>>> 5 prefabs of particle effect of the tail of movemenr and dust come from the asteroid
 --- !u!23 &1806808681
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15699,7 +15863,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
+<<<<<<< HEAD
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
+=======
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+>>>>>>> 5 prefabs of particle effect of the tail of movemenr and dust come from the asteroid
     m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
@@ -16300,7 +16468,11 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2035993289}
+<<<<<<< HEAD
   m_Mesh: {fileID: 1299578595}
+=======
+  m_Mesh: {fileID: 1349798611}
+>>>>>>> 5 prefabs of particle effect of the tail of movemenr and dust come from the asteroid
 --- !u!23 &2035993292
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16315,7 +16487,11 @@ MeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
+<<<<<<< HEAD
   - {fileID: 2045842450}
+=======
+  - {fileID: 1597101812}
+>>>>>>> 5 prefabs of particle effect of the tail of movemenr and dust come from the asteroid
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16366,6 +16542,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 60.761, z: 0}
+<<<<<<< HEAD
 --- !u!21 &2045842450
 Material:
   serializedVersion: 6
@@ -16395,6 +16572,8 @@ Material:
     - first:
         name: _Color
       second: {r: 1, g: 1, b: 1, a: 1}
+=======
+>>>>>>> 5 prefabs of particle effect of the tail of movemenr and dust come from the asteroid
 --- !u!1001 &2062685849
 Prefab:
   m_ObjectHideFlags: 0
