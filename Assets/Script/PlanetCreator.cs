@@ -23,27 +23,6 @@ public class PlanetCreator : MonoBehaviour {
 	public GameObject[] asteroidTracking = new GameObject[3];
 	public string restartSceneName;
 
-	/*
-	//[Header("Asteroid Tracking Text")]
-	public GameObject textFirstCollected;
-	public Text textFirstCollectedText;
-	public GameObject textSecondCollected;
-	public Text textSecondCollectedText;
-	public GameObject textThirdCollected;
-	public Text textThirdCollectedText;
-
-	private Sprite nitrogenSprite;
-	private Sprite hydrogenSprite;
-	private Sprite oxygenSprite;
-	private Sprite sulfurSprite;
-	private Sprite carbonSprite;
-
-	//[Header("Asteroid Tracking Image")]
-	public Image firstCollectedImage;
-	public Image secondCollectedImage;
-	public Image thirdCollectedImage;
-	*/
-
 
     void Awake() {
 
@@ -182,10 +161,7 @@ public class PlanetCreator : MonoBehaviour {
 	void addOxygen(GameObject gameObject) {
         userMixture.Add("oxygen");
         Debug.Log("asteroid" + numMaterialCollected + ":oxygen");
-		Debug.Log ("Position" + gameObject.transform.position);
-		Debug.Log ("Position1" + AnimationManager.instance.oxygenHitExplosion.transform.position);
         AnimationManager.instance.oxygenHitExplosion.transform.position = gameObject.transform.position;
-		Debug.Log ("Position2" +  AnimationManager.instance.oxygenHitExplosion.transform.position);
         AnimationManager.instance.oxygenHitExplosion.Play();
 
     }
@@ -231,12 +207,13 @@ public class PlanetCreator : MonoBehaviour {
 
 	public void reStart(){
 
-		SceneManager.LoadScene("VFX_24Feb_Explosion_ForallAsteroid");
-	}
+		SceneManager.LoadScene("VFX_29Feb_Dust_Effect");
+        //SceneManager.LoadScene(restartSceneName);
+    }
 
 	void Update() {
 		
-		if (canRestart && Input.GetKeyDown(KeyCode.R))
+		if (Input.GetKeyDown(KeyCode.R))
 		{
 			reStart();
 			canRestart = false;
