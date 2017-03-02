@@ -207,13 +207,13 @@ public class PlanetCreator : MonoBehaviour {
 
 	public void reStart(){
 
-		SceneManager.LoadScene("VFX_28Feb_Restart");
+		SceneManager.LoadScene("VFX_29Feb_Dust_Effect");
         //SceneManager.LoadScene(restartSceneName);
     }
 
 	void Update() {
 		
-		if (canRestart && Input.GetKeyDown(KeyCode.R))
+		if (Input.GetKeyDown(KeyCode.R))
 		{
 			reStart();
 			canRestart = false;
