@@ -30,6 +30,7 @@ TagManager:
   - ingredients
   - image
   - name
+  - Collection
   layers:
   - Default
   - TransparentFX
