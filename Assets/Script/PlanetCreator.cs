@@ -207,7 +207,7 @@ public class PlanetCreator : MonoBehaviour {
 
 	public void reStart(){
 
-		SceneManager.LoadScene("VFX_29Feb_Dust_Effect");
+		SceneManager.LoadScene("Scene_6Mar_Environment_Layout");
         //SceneManager.LoadScene(restartSceneName);
     }
 

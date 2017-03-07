@@ -7,3 +7,5 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scene/VFX_29Feb_Dust_Effect.unity
+  - enabled: 1
+    path: Assets/Scene/Scene_6Mar_Environment_Layout.unity
