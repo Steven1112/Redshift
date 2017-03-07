@@ -436,17 +436,16 @@ namespace VRTK
 
 		public void Start(){
 
-			collectionBook = GameObject.FindWithTag("Collection");
+			collectionBook = UnityEngine.GameObject.FindWithTag("Collection");
 
-			Debug.Log ("CollectionBook" + collectionBook);
+			Debug.Log ("CollectionBook" + UnityEngine.GameObject.FindWithTag("Collection"));
 
-			/*
-			if(collectionBook != null){
-				collectionBook.SetActive (false);
+
+			if(UnityEngine.GameObject.FindWithTag("Collection").gameObject != null){
+				//collectionBook.SetActive (false);
+				UnityEngine.GameObject.FindWithTag("Collection").gameObject.SetActive(false);
 			}
-
-            */
-
+				
 		}
 
         public virtual void OnTriggerPressed(ControllerInteractionEventArgs e)
@@ -1064,8 +1063,8 @@ namespace VRTK
                     uiClickPressed = true;
                     OnAliasUIClickOn(SetButtonEvent(ref buttonBool, true, buttonPressure));
 
-					if(collectionBook != null){
-						collectionBook.SetActive (true);
+					if(UnityEngine.GameObject.FindWithTag("Collection").gameObject != null){
+						UnityEngine.GameObject.FindWithTag("Collection").gameObject.SetActive (true);
 						// PlanetCollection.instance.collectionBookObject.SetActive (true);
 					}
                 }
@@ -1073,8 +1072,8 @@ namespace VRTK
                 {
                     uiClickPressed = false;
                     OnAliasUIClickOff(SetButtonEvent(ref buttonBool, false, buttonPressure));
-					if(collectionBook != null){
-						collectionBook.SetActive (false);
+					if(UnityEngine.GameObject.FindWithTag("Collection").gameObject != null){
+						UnityEngine.GameObject.FindWithTag("Collection").gameObject.SetActive (false);
 					}
                 }
             }
