@@ -31,6 +31,8 @@ TagManager:
   - image
   - name
   - Collection
+  - pivot
+  - player
   layers:
   - Default
   - TransparentFX
