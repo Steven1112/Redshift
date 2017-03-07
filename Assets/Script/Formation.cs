@@ -9,7 +9,7 @@ public class Formation : MonoBehaviour {
     AnimationClip animation;
     public GameObject finalStage;
 
-    public Formation(string name, HashSet<string> ingredients, GameObject planet) {
+	public Formation(string name, HashSet<string> ingredients, GameObject planet) {
         this.ingredients = new HashSet<string>();
         this.name = name;
         this.ingredients = ingredients;
@@ -45,8 +45,13 @@ public class Formation : MonoBehaviour {
         }
         else {}
 
-		AnimationManager.instance.seeResults.Stop();
-        Destroy(protoPlanet);
+		// triggering animation of formation
+		protoPlanet.GetComponent<Animator> ().enabled = true;
+		PlanetCreator.instance.lava.GetComponent<Animator> ().enabled = true;
+		PlanetCreator.instance.lava.GetComponent<Animator> ().Play ("growinglava");
+		protoPlanet.GetComponent<Animator> ().Play ("prototransform");
+		formed.GetComponent<Animator> ().Play (name + "transform");
+        //Destroy(protoPlanet);
     
 
         // destory asteroids
@@ -60,5 +65,7 @@ public class Formation : MonoBehaviour {
     public void setName(string name) {
         this.name = name;
     }
+
+
 		
 }

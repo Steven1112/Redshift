@@ -81,10 +81,10 @@ public class Clump : MonoBehaviour
 				    // AnimationManager.instance.simpleExplosion.Play();
                     StartCoroutine(Replay());
                     numCollision++;
-
+				/*
 				if(PlanetCreator.instance.numMaterialCollected == 3){
 					AnimationManager.instance.playFormationEffect();
-				}
+				}*/
 
                     break;
                 default:
