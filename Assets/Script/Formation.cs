@@ -48,7 +48,7 @@ public class Formation : MonoBehaviour {
 		// triggering animation of formation
 		protoPlanet.GetComponent<Animator> ().enabled = true;
 		PlanetCreator.instance.lava.GetComponent<Animator> ().enabled = true;
-		PlanetCreator.instance.lava.GetComponent<Animator> ().Play ("growinglava");
+		PlanetCreator.instance.lava.GetComponent<Animator> ().Play (name + "lava");
 		protoPlanet.GetComponent<Animator> ().Play ("prototransform");
 		formed.GetComponent<Animator> ().Play (name + "transform");
         //Destroy(protoPlanet);

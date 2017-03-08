@@ -454,7 +454,7 @@ namespace VRTK
 			}
 
 			if(controllerUI != null){
-				// controllerUI.SetActive (false);
+				//controllerUI.SetActive (false);
 			}
 
 		}
@@ -1076,7 +1076,7 @@ namespace VRTK
 
 					if(collectionBook != null){
 						collectionBook.SetActive (true);
-						// PlanetCollection.instance.collectionBookObject.SetActive (true);
+						//PlanetCollection.instance.collectionBookObject.SetActive (true);
 					}
 
 					if(controllerUI != null){

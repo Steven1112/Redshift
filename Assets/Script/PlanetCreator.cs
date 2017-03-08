@@ -80,7 +80,7 @@ public class PlanetCreator : MonoBehaviour {
 		}
 
 		protoPlanet.GetComponent<Animator> ().enabled = false;
-		lava.GetComponent<Animator> ().enabled = false;
+		//lava.GetComponent<Animator> ().enabled = false;
 
     }
 
@@ -209,7 +209,7 @@ public class PlanetCreator : MonoBehaviour {
 
 	public void reStart(){
 
-		SceneManager.LoadScene("Scene_8Mar_Lighting");
+		SceneManager.LoadScene("Animation_8Mar_Formation");
         //SceneManager.LoadScene(restartSceneName);
     }
 
