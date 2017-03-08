@@ -4601,6 +4601,23 @@ GameObject:
   m_PrefabParentObject: {fileID: 1782926487244280, guid: 395d48c3d10406b47a9dd123c2ef2093,
     type: 2}
   m_PrefabInternal: {fileID: 2062685849}
+--- !u!95 &356848709
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 356848708}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d87ab02d2a1774379985ec7cbfe5a198, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &359020403
 Prefab:
   m_ObjectHideFlags: 0
@@ -16837,6 +16854,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 0
+--- !u!1001 &1434696910
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4415224361812966, guid: 316171bed12624250980262e924ea59c, type: 2}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1577559441250040, guid: 316171bed12624250980262e924ea59c, type: 2}
+      propertyPath: m_Name
+      value: Lava
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 316171bed12624250980262e924ea59c, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1447593442
 Prefab:
   m_ObjectHideFlags: 0
@@ -17379,6 +17414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b30e98cbd6ad71a4db896fd9fcdc9401, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lava: {fileID: 0}
   protoPlanet: {fileID: 356848708}
   numMaterialCollected: 0
   canRestart: 0
