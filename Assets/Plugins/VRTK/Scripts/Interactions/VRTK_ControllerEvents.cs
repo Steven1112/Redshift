@@ -433,19 +433,29 @@ namespace VRTK
         private Vector3 controllerAngularVelocity = Vector3.zero;
 
 		public GameObject collectionBook;
+		public GameObject controllerUI;
 
 		public void Start(){
 
-			collectionBook = GameObject.FindWithTag("Collection");
+			//collectionBook = GameObject.FindWithTag("Collection");
+			collectionBook = GameObject.Find("CollectionBook/Canvas/CollectionPane");
+
+			controllerUI = GameObject.Find("CameraRig/ControllerLeft/Canvas/AsteroidTrackingUI");
+			//controllerUI = GameObject.FindWithTag("ControllerUI");
+
+			DontDestroyOnLoad(controllerUI);
 
 			Debug.Log ("CollectionBook" + collectionBook);
+			Debug.Log ("ControllerUI" + controllerUI);
 
-			/*
+
 			if(collectionBook != null){
 				collectionBook.SetActive (false);
 			}
 
-            */
+			if(controllerUI != null){
+				controllerUI.SetActive (false);
+			}
 
 		}
 
@@ -1068,13 +1078,22 @@ namespace VRTK
 						collectionBook.SetActive (true);
 						// PlanetCollection.instance.collectionBookObject.SetActive (true);
 					}
+
+					if(controllerUI != null){
+						controllerUI.SetActive (true);
+					}
                 }
                 else
                 {
                     uiClickPressed = false;
                     OnAliasUIClickOff(SetButtonEvent(ref buttonBool, false, buttonPressure));
+
 					if(collectionBook != null){
 						collectionBook.SetActive (false);
+					}
+
+					if(controllerUI != null){
+						controllerUI.SetActive (false);
 					}
                 }
             }
