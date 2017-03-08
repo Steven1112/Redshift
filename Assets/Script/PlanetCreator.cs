@@ -207,7 +207,7 @@ public class PlanetCreator : MonoBehaviour {
 
 	public void reStart(){
 
-		SceneManager.LoadScene("Scene_6Mar_Environment_Layout");
+		SceneManager.LoadScene("Scene_8Mar_Lighting");
         //SceneManager.LoadScene(restartSceneName);
     }
 

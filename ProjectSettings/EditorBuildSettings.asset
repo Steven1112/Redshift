@@ -13,3 +13,5 @@ EditorBuildSettings:
     path: Assets/Scene/Scene_7Mar_UI_Control.unity
   - enabled: 1
     path: Assets/Scene/Scene_8Mar_Trail.unity
+  - enabled: 1
+    path: Assets/Scene/Scene_8Mar_Lighting.unity
