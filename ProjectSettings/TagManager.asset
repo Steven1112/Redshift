@@ -30,6 +30,8 @@ TagManager:
   - ingredients
   - image
   - name
+  - Collection
+  - ControllerUI
   layers:
   - Default
   - TransparentFX

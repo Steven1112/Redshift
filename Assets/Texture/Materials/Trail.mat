@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: glow_lines
-  m_Shader: {fileID: 203, guid: 0000000000000000f000000000000000, type: 0}
+  m_Name: Trail
+  m_Shader: {fileID: 10720, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
@@ -16,7 +16,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
+        name: _BackTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
         name: _BumpMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _Cube
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -40,7 +52,25 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
+        name: _DownTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
         name: _EmissionMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _FrontTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _LeftTex
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -48,7 +78,7 @@ Material:
     - first:
         name: _MainTex
       second:
-        m_Texture: {fileID: 2800000, guid: ef846046fd6066d44a9442581c99967b, type: 3}
+        m_Texture: {fileID: 2800000, guid: cc610edc0ffd13e4faa3ccff4407fff0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -70,15 +100,33 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
+        name: _RightTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
         name: _SpecGlossMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _UpTex
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
+        name: PixelSnap
+      second: 0
+    - first:
         name: _BumpScale
       second: 1
+    - first:
+        name: _ColorMask
+      second: 15
     - first:
         name: _Cutoff
       second: 0.5
@@ -88,6 +136,9 @@ Material:
     - first:
         name: _DstBlend
       second: 0
+    - first:
+        name: _FPOW
+      second: 5
     - first:
         name: _GlossMapScale
       second: 1
@@ -113,6 +164,18 @@ Material:
         name: _Parallax
       second: 0.02
     - first:
+        name: _Phi0
+      second: 0
+    - first:
+        name: _Phi1
+      second: 1
+    - first:
+        name: _R0
+      second: 0.05
+    - first:
+        name: _Shininess
+      second: 0.078125
+    - first:
         name: _SmoothnessTextureChannel
       second: 0
     - first:
@@ -122,8 +185,44 @@ Material:
         name: _SrcBlend
       second: 1
     - first:
+        name: _Stencil
+      second: 0
+    - first:
+        name: _StencilComp
+      second: 8
+    - first:
+        name: _StencilOp
+      second: 0
+    - first:
+        name: _StencilReadMask
+      second: 255
+    - first:
+        name: _StencilWriteMask
+      second: 255
+    - first:
+        name: _Theta0
+      second: 0
+    - first:
+        name: _Theta1
+      second: 1
+    - first:
+        name: _Thickness
+      second: 1
+    - first:
+        name: _UScale
+      second: 1
+    - first:
         name: _UVSec
       second: 0
+    - first:
+        name: _UseUIAlphaClip
+      second: 0
+    - first:
+        name: _VScale
+      second: 1
+    - first:
+        name: _WireThickness
+      second: 100
     - first:
         name: _ZWrite
       second: 1
@@ -138,8 +237,32 @@ Material:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
     - first:
+        name: _N
+      second: {r: 0, g: 0, b: 0, a: 0}
+    - first:
+        name: _OutlineColor
+      second: {r: 1, g: 0, b: 0, a: 1}
+    - first:
+        name: _ReflectColor
+      second: {r: 1, g: 1, b: 1, a: 0.5}
+    - first:
+        name: _SceneTint
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
         name: _SpecColor
       second: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - first:
         name: _TintColor
       second: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
+    - first:
+        name: _UAxis
+      second: {r: 0, g: 0, b: 0, a: 0}
+    - first:
+        name: _UOrigin
+      second: {r: 0, g: 0, b: 0, a: 0}
+    - first:
+        name: _VAxis
+      second: {r: 0, g: 0, b: 0, a: 0}
+    - first:
+        name: _VOrigin
+      second: {r: 0, g: 0, b: 0, a: 0}
