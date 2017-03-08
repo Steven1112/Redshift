@@ -454,7 +454,7 @@ namespace VRTK
 			}
 
 			if(controllerUI != null){
-				controllerUI.SetActive (false);
+				// controllerUI.SetActive (false);
 			}
 
 		}
@@ -1093,7 +1093,7 @@ namespace VRTK
 					}
 
 					if(controllerUI != null){
-						controllerUI.SetActive (false);
+						// controllerUI.SetActive (false);
 					}
                 }
             }
