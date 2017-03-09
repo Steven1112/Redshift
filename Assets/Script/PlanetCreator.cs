@@ -207,7 +207,7 @@ public class PlanetCreator : MonoBehaviour {
 
 	public void reStart(){
 
-		SceneManager.LoadScene("Scene_8Mar_UI_Panel");
+		SceneManager.LoadScene("Scene_9Mar_AsteroidInfo");
         //SceneManager.LoadScene(restartSceneName);
     }
 
