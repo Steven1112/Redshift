@@ -54,7 +54,7 @@ public class ChemicalDetector : MonoBehaviour {
         float radius = hit.gameObject.GetComponent<SphereCollider>().radius;
         temp.y = radius + 0.005f;
         infoObject.transform.localPosition = temp;
-		infoObject.transform.GetChild (0).GetComponent<Text> ().text = "contains " + hit.transform.tag; 
+		infoObject.transform.GetChild (0).GetComponent<Text> ().text = hit.transform.tag; 
 		Debug.Log ("showed info");
     }
 }
