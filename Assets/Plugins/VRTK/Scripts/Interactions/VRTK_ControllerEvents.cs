@@ -438,12 +438,10 @@ namespace VRTK
 		public void Start(){
 
 			//collectionBook = GameObject.FindWithTag("Collection");
-			collectionBook = GameObject.Find("CollectionBook/Canvas/CollectionPane");
+			//collectionBook = GameObject.Find("CollectionBook/Canvas/CollectionPane");
 
-			controllerUI = GameObject.Find("CameraRig/ControllerLeft/Canvas/AsteroidTrackingUI");
+			//controllerUI = GameObject.Find("CameraRig/ControllerLeft/Canvas/AsteroidTrackingUI");
 			//controllerUI = GameObject.FindWithTag("ControllerUI");
-
-			DontDestroyOnLoad(controllerUI);
 
 			Debug.Log ("CollectionBook" + collectionBook);
 			Debug.Log ("ControllerUI" + controllerUI);
@@ -454,8 +452,9 @@ namespace VRTK
 			}
 
 			if(controllerUI != null){
-				// controllerUI.SetActive (false);
+				controllerUI.SetActive (false);
 			}
+
 
 		}
 
@@ -1076,12 +1075,12 @@ namespace VRTK
 
 					if(collectionBook != null){
 						collectionBook.SetActive (true);
-						// PlanetCollection.instance.collectionBookObject.SetActive (true);
 					}
 
 					if(controllerUI != null){
 						controllerUI.SetActive (true);
 					}
+						
                 }
                 else
                 {
@@ -1093,7 +1092,7 @@ namespace VRTK
 					}
 
 					if(controllerUI != null){
-						// controllerUI.SetActive (false);
+						controllerUI.SetActive (false);
 					}
                 }
             }
