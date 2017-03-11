@@ -169,73 +169,13 @@ namespace VRTK
 		{
 			if (enableTeleport && ValidLocation(e.target, e.destinationPosition) && e.enableTeleport)
 			{
-				//UnityEngine.GameObject.FindGameObjectWithTag("eye").transform.LookAt(UnityEngine.GameObject.FindGameObjectWithTag ("protoplanet").transform);
 				OnTeleporting(sender, e);
 				Vector3 newPosition = GetNewPosition(e.destinationPosition, e.target, e.forceDestinationPosition);
 				CalculateBlinkDelay(blinkTransitionSpeed, newPosition);
 				Blink(blinkTransitionSpeed);
 				SetNewPosition(newPosition, e.target, e.forceDestinationPosition);
 				OnTeleported(sender, e);
-				FaceProtoplanet (e.target);
-				UnityEngine.GameObject.FindGameObjectWithTag("player").transform.GetChild(2).localPosition = Vector3.zero;
 			}
-		}
-
-		void FaceProtoplanet(Transform platform) {
-
-			// 1: get camera forward vector on projection on x-z plane
-			GameObject player = UnityEngine.GameObject.FindGameObjectWithTag("player").transform.GetChild(1).gameObject;
-			Debug.Log (player.name + "is found");
-
-			Vector3 cameraForward3 = player.transform.forward;
-			Vector2 cameraForward = new Vector2(cameraForward3.x, cameraForward3.z);
-			Debug.Log("camera direction: " + cameraForward);
-
-			// 2: get vector between protoplanet and player on projection on x-z plane
-			GameObject protoplanet = UnityEngine.GameObject.FindGameObjectWithTag("protoplanet");
-			Vector3 offsetBetweenProtoplanetPlayer3 = new Vector3(protoplanet.transform.position.x - player.transform.position.x, protoplanet.transform.position.y - player.transform.position.y, protoplanet.transform.position.z - player.transform.position.z);
-			Vector2 offsetBetweenProtoplanetPlayer = new Vector2(protoplanet.transform.position.x - player.transform.position.x, protoplanet.transform.position.z - player.transform.position.z);
-			Debug.Log("offsetBetweenProtoplanetPlayer: " + offsetBetweenProtoplanetPlayer);
-
-			// find angle between 1 and 2
-			int sign = Vector3.Cross(cameraForward3, offsetBetweenProtoplanetPlayer3).y < 0 ? -1 : 1;
-			float angle = sign * Vector2.Angle(offsetBetweenProtoplanetPlayer, cameraForward);
-			Debug.Log("rotation angle is: " + angle);
-
-			// set pivot at player position
-			GameObject pivot = UnityEngine.GameObject.FindGameObjectWithTag("pivot");
-			//pivot.transform.position = player.transform.position;
-			pivot.transform.position = platform.position;
-			Debug.Log("pivot position is: " + pivot.transform.position);
-			Debug.Log("pivot local position is: " + pivot.transform.localPosition);
-
-			// add all objects as children to pivot
-			List<GameObject> rootObjects = new List<GameObject>();
-			Scene scene = SceneManager.GetActiveScene();
-			scene.GetRootGameObjects(rootObjects);
-			for(int i = 0; i < rootObjects.Count; i++)
-			{
-				if(rootObjects[i].tag != "pivot" && rootObjects[i].tag != "player")
-				{
-					rootObjects[i].transform.parent = pivot.transform;
-				}
-			}
-			// rotate the world at pivot in degrees of angle
-			pivot.transform.Rotate(Vector3.up, -angle);
-			Debug.Log("pivot rotation is: " + pivot.transform.rotation);
-
-			// unparent all objects in pivot
-			for (int i = 0; i < rootObjects.Count; i++)
-			{
-				if (rootObjects[i].tag != "pivot" && rootObjects[i].tag != "player")
-				{
-					rootObjects[i].transform.parent = null;
-				}
-			}
-			//initialize rotation of pivot
-			pivot.transform.rotation = Quaternion.identity;
-
-
 		}
 
 		protected virtual void SetNewPosition(Vector3 position, Transform target, bool forceDestinationPosition)
