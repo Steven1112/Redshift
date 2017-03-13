@@ -35,14 +35,14 @@ public class AnimationManager : MonoBehaviour {
 	void Update () {
 		
 	}
-
-	public void playFormationEffect(){
-		seeResults.Play();
+	/*
+	public void playFormationEffect(AnimationClip animation){
+		animation.Play();
 	}
 
 	public void stopFormationEffect(){
 		seeResults.Stop();		
-	}
+	}*/
 
     public void visualEffectsClearAll()
     {

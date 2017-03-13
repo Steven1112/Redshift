@@ -88,6 +88,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4682839698537792}
   - component: {fileID: 114935326252013662}
+  - component: {fileID: 95193790147526266}
   m_Layer: 0
   m_Name: saturn
   m_TagString: Untagged
@@ -346,6 +347,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1598031327859584}
   m_Mesh: {fileID: 4300000, guid: ae5f305f96280ba4e82fa0307bcb0cf9, type: 3}
+--- !u!95 &95193790147526266
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1951992349271412}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eb9844dc987cd49949cafbc15de93402, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114935326252013662
 MonoBehaviour:
   m_ObjectHideFlags: 1

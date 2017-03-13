@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4282604797256420}
   - component: {fileID: 114098657782932638}
+  - component: {fileID: 95292425507263836}
   m_Layer: 0
   m_Name: jupiter
   m_TagString: Untagged
@@ -113,6 +114,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1871509289954990}
   m_Mesh: {fileID: 4300002, guid: 51c69aacb28debd4985ba54571f61a06, type: 3}
+--- !u!95 &95292425507263836
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1142136617829300}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f207aae3af2174b8284c3643a506a792, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114098657782932638
 MonoBehaviour:
   m_ObjectHideFlags: 1
