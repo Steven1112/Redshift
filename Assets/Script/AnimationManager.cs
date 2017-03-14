@@ -14,6 +14,9 @@ public class AnimationManager : MonoBehaviour {
     public ParticleSystem carbonHitExplosion;
     public ParticleSystem commonHitExplosion;
 
+    [Header("Animations")]
+    public Animator asteroidSuckin;
+
     public static AnimationManager instance = null;
 
 	// Use this for initialization
@@ -29,14 +32,26 @@ public class AnimationManager : MonoBehaviour {
 		}
 		//DontDestroyOnLoad(gameObject);
 		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+        asteroidSuckin = GetComponent<Animator>();
 
-	public void playFormationEffect(){
+    }
+
+    // Update is called once per frame
+    void Update () {
+
+        //hot key for testing
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            asteroidSuckin.Play("AsteroidSuckin");
+        }
+    }
+
+    public void playAsteroidSuckinEffect()
+    {
+        asteroidSuckin.Play("AsteroidSuckin");
+    }
+
+    public void playFormationEffect(){
 		seeResults.Play();
 	}
 

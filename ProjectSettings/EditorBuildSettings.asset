@@ -9,3 +9,5 @@ EditorBuildSettings:
     path: Assets/Scene/Scene_11Mar_Master.unity
   - enabled: 1
     path: Assets/Scene/Sound_13Mar_Wireframe.unity
+  - enabled: 1
+    path: Assets/Scene/Scene_14Mar_Asteroid_Suckin_Animation.unity

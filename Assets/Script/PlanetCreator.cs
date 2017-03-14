@@ -207,7 +207,7 @@ public class PlanetCreator : MonoBehaviour {
 
 	public void reStart(){
 
-		SceneManager.LoadScene("Sound_13Mar_Wireframe");
+		SceneManager.LoadScene("Scene_14Mar_Asteroid_Suckin_Animation");
         //SceneManager.LoadScene(restartSceneName);
     }
 

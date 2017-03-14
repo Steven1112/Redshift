@@ -66,6 +66,7 @@ public class Clump : MonoBehaviour
                         // destory unused asteroids
                         GameObject asteroids = UnityEngine.GameObject.FindGameObjectWithTag("asteroids");
                         Destroy(asteroids);
+                        AnimationManager.instance.playAsteroidSuckinEffect();
                     }
 
                     break;
