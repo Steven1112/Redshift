@@ -107,6 +107,7 @@ namespace VRTK.GrabAttachMechanics
                 return false;
             }
             grabbedObject.GetComponent<OnGrabChecker>().isOnGrab = true;
+			grabbedObject.GetComponent<OnGrabChecker> ().DisableInfoPanel ();
             grabbedObjectScript = grabbedObject.GetComponent<VRTK_InteractableObject>();
             grabbedObjectRigidBody = grabbedObject.GetComponent<Rigidbody>();
             controllerAttachPoint = givenControllerAttachPoint;
