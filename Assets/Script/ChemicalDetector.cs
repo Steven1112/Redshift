@@ -20,18 +20,19 @@ public class ChemicalDetector : MonoBehaviour {
         Debug.DrawRay(transform.position, transform.forward * 3, Color.red);
         RaycastHit hit;
 		// Physics.SphereCast(transform.position,0.10,transform.forward,3,out hit)
-		if (Physics.SphereCast(transform.position,0.20f,transform.forward * 3,out hit) && hit.transform.parent != null)
+		if (Physics.SphereCast(transform.position,0.20f,transform.forward,out hit,3.0f) && hit.transform.parent != null)
         {
 			if (hit.transform.parent.tag == "asteroids") {
 				// is looking at an asteroid
-				if (hit.transform != null)
-				{
+				if (hit.transform != null) {
 					focusedObject = hit.transform.gameObject;
-                    if (hit.transform.gameObject.GetComponent<OnGrabChecker>().isOnGrab != true) {
-                        ShowInfo(hit.transform);
-                    }
+					if (hit.transform.gameObject.GetComponent<OnGrabChecker> ().isOnGrab != true) {
+						ShowInfo (hit.transform);
+					}
 				}
-				Debug.Log(hit.transform.name);
+				Debug.Log (hit.transform.name);
+			} else {
+				infoObject.SetActive (false);
 			}
         }
         else
@@ -39,7 +40,7 @@ public class ChemicalDetector : MonoBehaviour {
             // reset focused object to null when player is not looking at an asteroid
             if (focusedObject != null)
             {
-                infoObject.transform.parent = null;
+                //infoObject.transform.parent = null;
                 infoObject.SetActive(false);
                 focusedObject = null;
             }
