@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4461310433064824}
   - component: {fileID: 114395274224358716}
+  - component: {fileID: 95590006783811802}
   m_Layer: 0
   m_Name: mars
   m_TagString: Untagged
@@ -110,6 +111,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1841273674368302}
   m_Mesh: {fileID: 4300002, guid: 7616ae3ad2002c24d9ec1c3181427ac9, type: 3}
+--- !u!95 &95590006783811802
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1497426208174646}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 23a10e9ae48694ad5bf21c05b263c058, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114395274224358716
 MonoBehaviour:
   m_ObjectHideFlags: 1

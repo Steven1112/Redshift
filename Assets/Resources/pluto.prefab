@@ -37,6 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4968272229333564}
   - component: {fileID: 114307761512180364}
+  - component: {fileID: 95053135372223018}
   m_Layer: 0
   m_Name: pluto
   m_TagString: Untagged
@@ -111,6 +112,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1213586036625300}
   m_Mesh: {fileID: 4300000, guid: eaa4d1484610ec2478758d23c5614cc4, type: 3}
+--- !u!95 &95053135372223018
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1888180240915730}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9881909cf93364414946f7ed7e1d7260, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114307761512180364
 MonoBehaviour:
   m_ObjectHideFlags: 1

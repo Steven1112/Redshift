@@ -55,14 +55,20 @@ public class AnimationManager : MonoBehaviour {
 	{
 		asteroidSuckin.Stop();
 	}
+<<<<<<< HEAD
 
     public void playFormationEffect(){
 		seeResults.Play();
+=======
+	/*
+	public void playFormationEffect(AnimationClip animation){
+		animation.Play();
+>>>>>>> origin/Debugging
 	}
 
 	public void stopFormationEffect(){
 		seeResults.Stop();		
-	}
+	}*/
 
     public void visualEffectsClearAll()
     {
