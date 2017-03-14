@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Clump : MonoBehaviour
 {
-
+    ColourMixer colourMixer;
     int numCollision;
     Vector3 velocity;
     Vector3 scale;
@@ -23,6 +23,11 @@ public class Clump : MonoBehaviour
     public AudioClip colSound;
     //public AnimationManager animationManager;
 
+    void Start()
+    {
+        colourMixer = UnityEngine.GameObject.FindGameObjectWithTag("colourMixer").GetComponent<ColourMixer>();
+    }
+
     void OnCollisionEnter(Collision col)
     {
         if (string.Equals(col.gameObject.tag, "protoplanet"))
@@ -35,12 +40,10 @@ public class Clump : MonoBehaviour
 
 				planet = col.gameObject;
 				planetCenter = planet.transform.position;
-				//planet.GetComponent<Rigidbody> ().angularVelocity = new Vector3 (0, 100, 0);
 
 				asteroid = gameObject;
 				asteroid.GetComponent<SphereCollider> ().radius /= 3.0f;
 				Vector3 velocity = new Vector3 (planetCenter.x - asteroid.transform.position.x, planetCenter.y - asteroid.transform.position.y, planetCenter.z - asteroid.transform.position.z);
-				Debug.Log (velocity);
 				asteroid.GetComponent<Rigidbody>().velocity = velocity;
 
                     planetScale = planet.transform.localScale;
@@ -50,12 +53,9 @@ public class Clump : MonoBehaviour
                     asteroidScaleDec = (double)asteroidScale.x * 0.00004;
 
 				    asteroid.transform.parent = planet.transform;
-				    //PlanetCreator.instance.collected[PlanetCreator.instance.numMaterialCollected] = asteroid;
 
-                    //call addMaterial() and collision parameters to be passed for visual effects
                     PlanetCreator.instance.addMaterial(gameObject);
-
-                    //AnimationManager.instance.asteroidExplosion.Play();
+                    colourMixer.MixColour(planet,asteroid);
 
                     StartCoroutine(Replay());
 
@@ -70,22 +70,13 @@ public class Clump : MonoBehaviour
 
                     break;
                 case 1:
-                    //sparkle = (GameObject)Instantiate(Resources.Load("sparkle"));
-                    //sparkle.transform.position = asteroid.transform.position;
-                    //sparkle.transform.SetParent(asteroid.transform);
                     Debug.Log("collision " + numCollision + " happened");
                     asteroid.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
 
                     planet.GetComponent<Rigidbody>().mass += asteroid.GetComponent<Rigidbody>().mass;
 
-				    // AnimationManager.instance.simpleExplosion.Play();
                     StartCoroutine(Replay());
                     numCollision++;
-				/*
-				if(PlanetCreator.instance.numMaterialCollected == 3){
-					AnimationManager.instance.playFormationEffect();
-				}*/
-
                     break;
                 default:
                     // do nothing
@@ -121,23 +112,11 @@ public class Clump : MonoBehaviour
 				}
             }
         }
-        /*
-        if (sparkle != null) {
-            sparkle.transform.localScale = asteroid.transform.localScale;
-        }
-        */
     }
 
     bool hasScale(Vector3 scale)
     {
-        if (scale.x > 0 && scale.y > 0 && scale.z > 0)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return (scale.x > 0 && scale.y > 0 && scale.z > 0);
     }
 
     void absorb(GameObject planet, GameObject asteroid)
@@ -152,9 +131,7 @@ public class Clump : MonoBehaviour
     IEnumerator Replay()
     {
         yield return new WaitForSeconds(2);
-        //AnimationManager.instance.asteroidExplosion.Stop();
         AnimationManager.instance.commonHitExplosion.Stop();
-        // soundManager.hitOn.Stop();
     }
 
     void increaseSpin() {
