@@ -14,6 +14,9 @@ public class AnimationManager : MonoBehaviour {
     public ParticleSystem carbonHitExplosion;
     public ParticleSystem commonHitExplosion;
 
+    [Header("Animations")]
+    public Animator asteroidPullin;
+
     public static AnimationManager instance = null;
 
 	// Use this for initialization
@@ -29,20 +32,37 @@ public class AnimationManager : MonoBehaviour {
 		}
 		//DontDestroyOnLoad(gameObject);
 		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-	/*
-	public void playFormationEffect(AnimationClip animation){
-		animation.Play();
+        asteroidPullin = GetComponent<Animator>();
+
+    }
+
+    // Update is called once per frame
+    void Update () {
+
+        //hot key for testing
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            asteroidPullin.Play("AsteroidPullin");
+        }
+    }
+
+    public void playAsteroidPullinEffect()
+    {
+        asteroidPullin.Play("AsteroidPullin");
+    }
+
+    public void stopAsteroidPullinEffect()
+    {
+        asteroidPullin.Stop();
+    }
+
+    public void playFormationEffect(){
+		seeResults.Play();
 	}
 
 	public void stopFormationEffect(){
 		seeResults.Stop();		
-	}*/
+	}
 
     public void visualEffectsClearAll()
     {
