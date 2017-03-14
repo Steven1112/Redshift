@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlanetCreator : MonoBehaviour {
+	public GameObject lava;
 
     [SerializeField]
     public GameObject protoPlanet;
@@ -53,10 +54,8 @@ public class PlanetCreator : MonoBehaviour {
         HashSet<string> failIngredients = new HashSet<string> { "nitrogen", "oxygen", "sulfur" };
 
         Formation mercury = new Formation("mercury", mercuryIngredients,Resources.Load("mercury") as GameObject);
-        Debug.Log("the name of the object is: "+ mercury.finalStage.name);
         Formation venus = new Formation("venus", venusIngredients, Resources.Load("venus") as GameObject);
-        Formation earth = new Formation("earth", earthIngredients, Resources.Load("earth") as GameObject);
-		Debug.Log("the name of the object is: "+ earth.finalStage.name);
+		Formation earth = new Formation("earth", earthIngredients, Resources.Load("earth") as GameObject);
         Formation mars = new Formation("mars", marsIngredients, Resources.Load("mars") as GameObject);
         Formation jupiter = new Formation("jupiter", jupiterIngredients, Resources.Load("jupiter") as GameObject);
         Formation saturn = new Formation("saturn", saturnIngredients, Resources.Load("saturn") as GameObject);
@@ -79,6 +78,9 @@ public class PlanetCreator : MonoBehaviour {
 		foreach (GameObject image in asteroidTracking) {
 			image.GetComponent<Image> ().enabled = false;
 		}
+
+		protoPlanet.GetComponent<Animator> ().enabled = false;
+		//lava.GetComponent<Animator> ().enabled = false;
 
     }
 
@@ -207,7 +209,7 @@ public class PlanetCreator : MonoBehaviour {
 
 	public void reStart(){
 
-		SceneManager.LoadScene("Scene_9Mar_AsteroidInfo");
+		SceneManager.LoadScene("Scene_13Mar_Master");
         //SceneManager.LoadScene(restartSceneName);
     }
 

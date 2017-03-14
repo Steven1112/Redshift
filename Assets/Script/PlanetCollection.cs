@@ -15,8 +15,6 @@ public class PlanetCollection : MonoBehaviour {
     public GameObject canvas;
     public GameObject[] collectionBook = new GameObject[9];
 
-	public GameObject collectionBookObject;
-
 
     // Use this for initialization
     void Start () {

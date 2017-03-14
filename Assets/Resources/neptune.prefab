@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4340203747799134}
   - component: {fileID: 114237595121440154}
+  - component: {fileID: 95651748364967952}
   m_Layer: 0
   m_Name: neptune
   m_TagString: Untagged
@@ -111,6 +112,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1959001647359146}
   m_Mesh: {fileID: 4300002, guid: 16df279efcdec614a9deed9e765ae4c1, type: 3}
+--- !u!95 &95651748364967952
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1573134792781340}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f995c9f4dc6c43fba2ad970c82ee55e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114237595121440154
 MonoBehaviour:
   m_ObjectHideFlags: 1
