@@ -106,7 +106,7 @@ namespace VRTK.GrabAttachMechanics
             {
                 return false;
             }
-
+            grabbedObject.GetComponent<OnGrabChecker>().isOnGrab = true;
             grabbedObjectScript = grabbedObject.GetComponent<VRTK_InteractableObject>();
             grabbedObjectRigidBody = grabbedObject.GetComponent<Rigidbody>();
             controllerAttachPoint = givenControllerAttachPoint;
@@ -122,6 +122,7 @@ namespace VRTK.GrabAttachMechanics
         /// <param name="applyGrabbingObjectVelocity">If true will apply the current velocity of the grabbing object to the grabbed object on release.</param>
         public virtual void StopGrab(bool applyGrabbingObjectVelocity)
         {
+            grabbedObject.GetComponent<OnGrabChecker>().isOnGrab = false;
             grabbedObject = null;
             grabbedObjectScript = null;
             trackPoint = null;

@@ -27,7 +27,9 @@ public class ChemicalDetector : MonoBehaviour {
 				if (hit.transform != null)
 				{
 					focusedObject = hit.transform.gameObject;
-					ShowInfo(hit.transform);
+                    if (hit.transform.gameObject.GetComponent<OnGrabChecker>().isOnGrab != true) {
+                        ShowInfo(hit.transform);
+                    }
 				}
 				Debug.Log(hit.transform.name);
 			}
