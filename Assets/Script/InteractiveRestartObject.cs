@@ -13,8 +13,8 @@
             base.StartUsing(usingObject);
 
 			SceneManager.LoadScene(restartSceneName);
-			AnimationManager.instance.stopAsteroidSuckinEffect ();
 			Debug.Log ("Restart!");
+            AnimationManager.instance.stopAsteroidPullinEffect();
         }
 
         public override void StopUsing(GameObject usingObject)

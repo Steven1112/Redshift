@@ -15,7 +15,7 @@ public class AnimationManager : MonoBehaviour {
     public ParticleSystem commonHitExplosion;
 
     [Header("Animations")]
-    public Animator asteroidSuckin;
+    public Animator asteroidPullin;
 
     public static AnimationManager instance = null;
 
@@ -32,7 +32,7 @@ public class AnimationManager : MonoBehaviour {
 		}
 		//DontDestroyOnLoad(gameObject);
 		
-        asteroidSuckin = GetComponent<Animator>();
+        asteroidPullin = GetComponent<Animator>();
 
     }
 
@@ -42,33 +42,27 @@ public class AnimationManager : MonoBehaviour {
         //hot key for testing
         if (Input.GetKeyDown(KeyCode.T))
         {
-            asteroidSuckin.Play("AsteroidSuckin");
+            asteroidPullin.Play("AsteroidPullin");
         }
     }
 
-    public void playAsteroidSuckinEffect()
+    public void playAsteroidPullinEffect()
     {
-        asteroidSuckin.Play("AsteroidSuckin");
+        asteroidPullin.Play("AsteroidPullin");
     }
 
-	public void stopAsteroidSuckinEffect()
-	{
-		asteroidSuckin.Stop();
-	}
-<<<<<<< HEAD
+    public void stopAsteroidPullinEffect()
+    {
+        asteroidPullin.Stop();
+    }
 
     public void playFormationEffect(){
 		seeResults.Play();
-=======
-	/*
-	public void playFormationEffect(AnimationClip animation){
-		animation.Play();
->>>>>>> origin/Debugging
 	}
 
 	public void stopFormationEffect(){
 		seeResults.Stop();		
-	}*/
+	}
 
     public void visualEffectsClearAll()
     {

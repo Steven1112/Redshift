@@ -66,7 +66,7 @@ public class Clump : MonoBehaviour
                         // destory unused asteroids
                         GameObject asteroids = UnityEngine.GameObject.FindGameObjectWithTag("asteroids");
                         Destroy(asteroids);
-                        AnimationManager.instance.playAsteroidSuckinEffect();
+                        AnimationManager.instance.playAsteroidPullinEffect();
                     }
 
                     break;
@@ -82,10 +82,10 @@ public class Clump : MonoBehaviour
 				    // AnimationManager.instance.simpleExplosion.Play();
                     StartCoroutine(Replay());
                     numCollision++;
-				/*
+
 				if(PlanetCreator.instance.numMaterialCollected == 3){
 					AnimationManager.instance.playFormationEffect();
-				}*/
+				}
 
                     break;
                 default:
