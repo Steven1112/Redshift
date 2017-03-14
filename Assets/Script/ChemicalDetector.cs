@@ -56,7 +56,7 @@ public class ChemicalDetector : MonoBehaviour {
 		float scale = hit.gameObject.transform.localScale.y;
 		float temp_y = radius*scale + 0.05f;
         infoObject.transform.Translate(0,temp_y,0,Space.World);
-		infoObject.transform.GetChild (0).GetComponent<Text> ().text = hit.transform.tag; 
+		infoObject.transform.GetChild (0).GetComponent<Text> ().text = hit.transform.tag.ToUpper(); 
 		Debug.Log ("showed info");
     }
 }
