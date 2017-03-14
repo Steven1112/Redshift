@@ -51,6 +51,11 @@ public class AnimationManager : MonoBehaviour {
         asteroidSuckin.Play("AsteroidSuckin");
     }
 
+	public void stopAsteroidSuckinEffect()
+	{
+		asteroidSuckin.Stop();
+	}
+
     public void playFormationEffect(){
 		seeResults.Play();
 	}

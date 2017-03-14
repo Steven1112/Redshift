@@ -13,6 +13,7 @@
             base.StartUsing(usingObject);
 
 			SceneManager.LoadScene(restartSceneName);
+			AnimationManager.instance.stopAsteroidSuckinEffect ();
 			Debug.Log ("Restart!");
         }
 

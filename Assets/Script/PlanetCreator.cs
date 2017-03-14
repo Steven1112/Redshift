@@ -217,6 +217,7 @@ public class PlanetCreator : MonoBehaviour {
 		{
 			reStart();
 			canRestart = false;
+			AnimationManager.instance.stopAsteroidSuckinEffect ();
 		}
 
 	}
