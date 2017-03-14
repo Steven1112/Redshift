@@ -17,10 +17,10 @@ public class ChemicalDetector : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.DrawRay(transform.position, transform.forward * 10, Color.red);
+        Debug.DrawRay(transform.position, transform.forward * 3, Color.red);
         RaycastHit hit;
-		// Physics.SphereCast(transform.position,thickness,transform.forward, out hit)
-		if (Physics.Raycast(transform.position,transform.forward, out hit) && hit.transform.parent != null)
+		// Physics.SphereCast(transform.position,0.10,transform.forward,3,out hit)
+		if (Physics.SphereCast(transform.position,0.20f,transform.forward * 3,out hit) && hit.transform.parent != null)
         {
 			if (hit.transform.parent.tag == "asteroids") {
 				// is looking at an asteroid
@@ -53,7 +53,8 @@ public class ChemicalDetector : MonoBehaviour {
         //Vector3 temp = Vector3.zero;
         infoObject.transform.position = hit.transform.position;
         float radius = hit.gameObject.GetComponent<SphereCollider>().radius;
-        float temp_y = radius + 0.005f;
+		float scale = hit.gameObject.transform.localScale.y;
+		float temp_y = radius*scale + 0.05f;
         infoObject.transform.Translate(0,temp_y,0,Space.World);
 		infoObject.transform.GetChild (0).GetComponent<Text> ().text = hit.transform.tag; 
 		Debug.Log ("showed info");
