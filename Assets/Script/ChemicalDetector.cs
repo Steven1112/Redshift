@@ -48,12 +48,13 @@ public class ChemicalDetector : MonoBehaviour {
     void ShowInfo(Transform hit)
     {
         infoObject.SetActive(true);
-        infoObject.transform.parent = hit;
+        //infoObject.transform.parent = hit;
 		infoObject.transform.rotation = Quaternion.identity;
-        Vector3 temp = Vector3.zero;
+        //Vector3 temp = Vector3.zero;
+        infoObject.transform.position = hit.transform.position;
         float radius = hit.gameObject.GetComponent<SphereCollider>().radius;
-        temp.y = radius + 0.005f;
-        infoObject.transform.localPosition = temp;
+        float temp_y = radius + 0.005f;
+        infoObject.transform.Translate(0,temp_y,0,Space.World);
 		infoObject.transform.GetChild (0).GetComponent<Text> ().text = hit.transform.tag; 
 		Debug.Log ("showed info");
     }
