@@ -434,8 +434,9 @@ namespace VRTK
 
 		public GameObject collectionBook;
 		public GameObject controllerUI;
+        public AudioClip triggerUISound;
 
-		public void Start(){
+        public void Start(){
 
 			//collectionBook = GameObject.FindWithTag("Collection");
 			//collectionBook = GameObject.Find("CollectionBook/Canvas/CollectionPane");
@@ -1080,7 +1081,9 @@ namespace VRTK
 					if(controllerUI != null){
 						controllerUI.SetActive (true);
 					}
-						
+
+                    SoundManager.instance.playSingle("triggerUISound", triggerUISound);
+
                 }
                 else
                 {
@@ -1094,6 +1097,8 @@ namespace VRTK
 					if(controllerUI != null){
 						controllerUI.SetActive (false);
 					}
+
+                    SoundManager.instance.stopSingle("triggerUISound", triggerUISound);
                 }
             }
 

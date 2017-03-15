@@ -11018,6 +11018,8 @@ MonoBehaviour:
   explosionCarbon: {fileID: 853009135}
   explosionNitrogen: {fileID: 853009135}
   explosionHydrogen: {fileID: 853009135}
+  transformingSound: {fileID: 853009135}
+  triggerUISound: {fileID: 853009135}
 --- !u!4 &853009137
 Transform:
   m_ObjectHideFlags: 0
@@ -12986,6 +12988,7 @@ MonoBehaviour:
   menuPressed: 0
   collectionBook: {fileID: 0}
   controllerUI: {fileID: 366042322}
+  triggerUISound: {fileID: 8300000, guid: 982f24b67fdcdcc4c9dbec08b87a86ee, type: 3}
 --- !u!4 &1033020078
 Transform:
   m_ObjectHideFlags: 0
@@ -15354,6 +15357,7 @@ MonoBehaviour:
   menuPressed: 0
   collectionBook: {fileID: 0}
   controllerUI: {fileID: 0}
+  triggerUISound: {fileID: 8300000, guid: 982f24b67fdcdcc4c9dbec08b87a86ee, type: 3}
 --- !u!4 &1206297482
 Transform:
   m_ObjectHideFlags: 0
@@ -15674,7 +15678,6 @@ MonoBehaviour:
   carbonHitExplosion: {fileID: 515949698}
   commonHitExplosion: {fileID: 181616358}
   asteroidPullin: {fileID: 0}
-  colOxygenSound: {fileID: 8300000, guid: 24aa8061ceef35b4b97e7b84ab3660b7, type: 3}
 --- !u!4 &1222933107
 Transform:
   m_ObjectHideFlags: 0
@@ -19211,6 +19214,7 @@ MonoBehaviour:
   colCarbonSound: {fileID: 8300000, guid: 0951fcb6fce3e914da27a09b0f396468, type: 3}
   colNitrogenSound: {fileID: 8300000, guid: 2c25f349654964e4b8d1dd132c17749c, type: 3}
   colHydrogenSound: {fileID: 8300000, guid: 744587e510e0a51449eecdb030e4d1c2, type: 3}
+  transformingSound: {fileID: 8300000, guid: 2413f2da68963ca4cac0886162b44af1, type: 3}
 --- !u!4 &1522355904
 Transform:
   m_ObjectHideFlags: 0

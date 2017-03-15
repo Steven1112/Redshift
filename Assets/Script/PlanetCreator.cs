@@ -24,12 +24,13 @@ public class PlanetCreator : MonoBehaviour {
 	public GameObject[] asteroidTracking = new GameObject[3];
 	public string restartSceneName;
 
-    [Header("Explosion Sound")]
+    [Header("Sound Triggers")]
     public AudioClip colOxygenSound;
     public AudioClip colSulfurSound;
     public AudioClip colCarbonSound;
     public AudioClip colNitrogenSound;
     public AudioClip colHydrogenSound;
+    public AudioClip transformingSound;
 
 
     void Awake() {
@@ -148,7 +149,9 @@ public class PlanetCreator : MonoBehaviour {
 
 		if (numMaterialCollected == 3) {
 			computeResult(userMixture).form(protoPlanet);
-		}
+            SoundManager.instance.playSingle("transformingSound", transformingSound);
+            StartCoroutine(stopSound());
+        }
 
     }
 	void addNitrogen(GameObject gameObject) {
@@ -234,5 +237,11 @@ public class PlanetCreator : MonoBehaviour {
 		}
 
 	}
+
+    IEnumerator stopSound()
+    {
+        yield return new WaitForSeconds(4);
+        SoundManager.instance.stopSingle("transformingSound", transformingSound);
+    }
 
 }
