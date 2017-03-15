@@ -6016,8 +6016,8 @@ Light:
   serializedVersion: 7
   m_Type: 0
   m_Color: {r: 1, g: 0.99634886, b: 0.86764705, a: 1}
-  m_Intensity: 2.13
-  m_Range: 17.700254
+  m_Intensity: 2.34
+  m_Range: 19.924864
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -20882,6 +20882,10 @@ Prefab:
     - target: {fileID: 100014, guid: 33902146086d5428b9851ac4b9c87d87, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100034, guid: 33902146086d5428b9851ac4b9c87d87, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33902146086d5428b9851ac4b9c87d87, type: 3}
