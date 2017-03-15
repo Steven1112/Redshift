@@ -30,7 +30,7 @@ public class Clump : MonoBehaviour
             switch (numCollision)
             {
 			case 0:
-				SoundManager.instance.playSingle ("effectSource", colSound);
+				//SoundManager.instance.playSingle ("effectSource", colSound);
 				Debug.Log ("collision " + numCollision + " happened");
 
 				planet = col.gameObject;

@@ -17,6 +17,9 @@ public class AnimationManager : MonoBehaviour {
     [Header("Animations")]
     public Animator asteroidPullin;
 
+    [Header("Explosion Sound")]
+    public AudioClip colOxygenSound;
+
     public static AnimationManager instance = null;
 
 	// Use this for initialization
@@ -43,6 +46,8 @@ public class AnimationManager : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.T))
         {
             asteroidPullin.Play("AsteroidPullin");
+            //SoundManager.instance.explosionOxygen.Play();
+            SoundManager.instance.playSingle("explosionOxygen", colOxygenSound);
         }
     }
 

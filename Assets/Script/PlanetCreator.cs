@@ -24,6 +24,13 @@ public class PlanetCreator : MonoBehaviour {
 	public GameObject[] asteroidTracking = new GameObject[3];
 	public string restartSceneName;
 
+    [Header("Explosion Sound")]
+    public AudioClip colOxygenSound;
+    public AudioClip colSulfurSound;
+    public AudioClip colCarbonSound;
+    public AudioClip colNitrogenSound;
+    public AudioClip colHydrogenSound;
+
 
     void Awake() {
 
@@ -149,6 +156,7 @@ public class PlanetCreator : MonoBehaviour {
         Debug.Log("asteroid " + numMaterialCollected + ":nitrogen");
         AnimationManager.instance.nitrogenHitExplosion.transform.position = gameObject.transform.position;
         AnimationManager.instance.nitrogenHitExplosion.Play();
+        SoundManager.instance.playSingle("explosionNitrogen", colNitrogenSound);
 
     }
 	void addCarbon(GameObject gameObject)
@@ -157,7 +165,7 @@ public class PlanetCreator : MonoBehaviour {
         Debug.Log("asteroid" + numMaterialCollected + ":carbon");
         AnimationManager.instance.carbonHitExplosion.transform.position = gameObject.transform.position;
         AnimationManager.instance.carbonHitExplosion.Play();
-
+        SoundManager.instance.playSingle("explosionCarbon", colCarbonSound);
 
     }
 	void addOxygen(GameObject gameObject) {
@@ -165,6 +173,7 @@ public class PlanetCreator : MonoBehaviour {
         Debug.Log("asteroid" + numMaterialCollected + ":oxygen");
         AnimationManager.instance.oxygenHitExplosion.transform.position = gameObject.transform.position;
         AnimationManager.instance.oxygenHitExplosion.Play();
+        SoundManager.instance.playSingle("explosionOxygen", colOxygenSound);
 
     }
 	void addHydrogen(GameObject gameObject) {
@@ -172,7 +181,7 @@ public class PlanetCreator : MonoBehaviour {
         Debug.Log("asteroid" + numMaterialCollected + ":hydrogen");
         AnimationManager.instance.hydrogenHitExplosion.transform.position = gameObject.transform.position;
         AnimationManager.instance.hydrogenHitExplosion.Play();
-
+        SoundManager.instance.playSingle("explosionHydrogen", colHydrogenSound);
 
     }
 	void addSulfur(GameObject gameObject) {
@@ -180,6 +189,9 @@ public class PlanetCreator : MonoBehaviour {
         Debug.Log("asteroid" + numMaterialCollected + ":sulfur");
         AnimationManager.instance.sulfurHitExplosion.transform.position = gameObject.transform.position;
         AnimationManager.instance.sulfurHitExplosion.Play();
+        SoundManager.instance.playSingle("explosionSulfur", colSulfurSound);
+
+
     }
 
 
