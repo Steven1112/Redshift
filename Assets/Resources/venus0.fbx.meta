@@ -19,6 +19,7 @@ ModelImporter:
     3300002: //RootNode
     4300000: Icosphere
     4300002: Venus V2
+    4300004: Venus V3
   materials:
     importMaterials: 1
     materialName: 0

@@ -25,6 +25,7 @@ ModelImporter:
     3300004: //RootNode
     4300000: Icosphere
     4300002: Pluto
+    4300004: Pluto V3
   materials:
     importMaterials: 1
     materialName: 0
