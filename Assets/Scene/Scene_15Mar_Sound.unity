@@ -436,7 +436,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 57787807}
-  - component: {fileID: 57787806}
   m_Layer: 8
   m_Name: OxygenSound
   m_TagString: Untagged
@@ -444,27 +443,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &57787806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 57787805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 610015885e363dd4481eda9fc4ed90a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  placementStrategy: 2
-  horizontalSpacing: 5
-  heightAboveFloor: 1.5
-  maxNumTriangles: 64
-  maxOctreeDepth: 2
-  probeBoxData: 
-  probeSpherePoints: []
-  probeSphereRadii: []
-  probeDataName: []
-  probeDataNameSizes: 
 --- !u!4 &57787807
 Transform:
   m_ObjectHideFlags: 0
@@ -473,7 +451,7 @@ Transform:
   m_GameObject: {fileID: 57787805}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -55.14, y: -1.1, z: -29.11}
-  m_LocalScale: {x: 1.6239108, y: 1.3824677, z: 1.0951368}
+  m_LocalScale: {x: 0.88956535, y: 0.7573052, z: 0.59990746}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 32
@@ -842,6 +820,8 @@ GameObject:
   - component: {fileID: 100390523}
   - component: {fileID: 100390522}
   - component: {fileID: 100390521}
+  - component: {fileID: 100390526}
+  - component: {fileID: 100390525}
   m_Layer: 10
   m_Name: Boundary
   m_TagString: Untagged
@@ -912,6 +892,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &100390525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 100390520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d36177410bf27346bd2ba1aec598d4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Preset: 1
+  Value:
+    LowFreqAbsorption: 0.03
+    MidFreqAbsorption: 0.04
+    HighFreqAbsorption: 0.07
+    Scattering: 0.05
+--- !u!114 &100390526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 100390520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d6ea69d3db1acc479d2513b9c80c368, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TerrainSimplificationLevel: 0
+  exportAllChildren: 0
 --- !u!1001 &108482396
 Prefab:
   m_ObjectHideFlags: 0
@@ -3072,7 +3082,6 @@ GameObject:
   - component: {fileID: 234677798}
   - component: {fileID: 234677801}
   - component: {fileID: 234677800}
-  - component: {fileID: 234677802}
   m_Layer: 10
   m_Name: Camera (ears)
   m_TagString: Untagged
@@ -3136,28 +3145,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b78aad1d314d9e84c8623b5a2c1dd8fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &234677802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 234677796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb051ddb45ce9747974bf00a06ebc3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  totalProbeBoxes: 0
-  probeBoxBakingCurrently: 0
-  probeBoxBakingProgress: 0
-  bakeConvolution: 1
-  bakeParameteric: 0
-  useAllProbeBoxes: 1
-  cancelBake: 0
-  probeBoxes: []
-  bakeStatus: 0
-  duringBakeEnvComponent: {fileID: 0}
-  duringBakeProbeBoxes: []
 --- !u!1001 &241830255
 Prefab:
   m_ObjectHideFlags: 0
@@ -4485,6 +4472,47 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 329935662}
+--- !u!1 &336003074
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 336003076}
+  - component: {fileID: 336003075}
+  m_Layer: 0
+  m_Name: Phonon General Settings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &336003075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 336003074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c1cc44a29f94ed4d9732b6b36bdf324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioEngine: 0
+--- !u!4 &336003076
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 336003074}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 35
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &346883586
 GameObject:
   m_ObjectHideFlags: 0
@@ -5059,6 +5087,52 @@ Camera:
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
   m_StereoMirrorMode: 0
+--- !u!1 &365275414
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 365275416}
+  - component: {fileID: 365275415}
+  m_Layer: 0
+  m_Name: Phonon Material Settings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &365275415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 365275414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d36177410bf27346bd2ba1aec598d4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Preset: 2
+  Value:
+    LowFreqAbsorption: 0.05
+    MidFreqAbsorption: 0.07
+    HighFreqAbsorption: 0.08
+    Scattering: 0.05
+--- !u!4 &365275416
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 365275414}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 36
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &366042322
 GameObject:
   m_ObjectHideFlags: 0
@@ -16474,6 +16548,10 @@ Prefab:
       propertyPath: m_Name
       value: TestingOxygen
       objectReference: {fileID: 0}
+    - target: {fileID: 1460732458516572, guid: 11477b98341be034087c1fb7654e914a, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 11477b98341be034087c1fb7654e914a, type: 2}
   m_IsPrefabParent: 0
@@ -16496,11 +16574,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 994779b8f8bcba44daac11162763f192, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 604d777714cc3eb429cb5ee5b395edb8, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -16567,32 +16645,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &1364220334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1364220332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 083e66868ec4e154c9a0b4176e616a0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  totalProbeBoxes: 0
-  probeBoxBakingCurrently: 0
-  probeBoxBakingProgress: 0
-  useBakedStaticListener: 0
-  bakedListenerIdentifier: 
-  uniqueIdentifier: 
-  bakingRadius: 16
-  bakeConvolution: 1
-  bakeParameteric: 0
-  useAllProbeBoxes: 1
-  cancelBake: 0
-  probeBoxes: []
-  bakeStatus: 0
-  duringBakeEnvComponent: {fileID: 0}
-  duringBakeProbeBoxes: []
 --- !u!114 &1364220335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16611,7 +16663,7 @@ MonoBehaviour:
   physicsBasedAttenuation: 1
   directMixFraction: 1
   enableReflections: 1
-  simulationMode: 1
+  simulationMode: 0
   indirectMixFraction: 1
   indirectBinauralEnabled: 0
 --- !u!1001 &1364715196
@@ -17131,14 +17183,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c1bbdcc877f4754b9f4f0589c71b1e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Preset: 0
+  Preset: 1
   Value:
-    RealtimeRays: 4096
+    RealtimeRays: 8192
     RealtimeSecondaryRays: 1024
-    RealtimeBounces: 2
-    BakeRays: 16384
+    RealtimeBounces: 4
+    BakeRays: 32768
     BakeSecondaryRays: 4096
-    BakeBounces: 32
+    BakeBounces: 64
     Duration: 1
     AmbisonicsOrder: 1
     MaxSources: 32
