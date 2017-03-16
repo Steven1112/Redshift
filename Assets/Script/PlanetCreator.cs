@@ -149,7 +149,7 @@ public class PlanetCreator : MonoBehaviour {
 
 		if (numMaterialCollected == 3) {
 			computeResult(userMixture).form(protoPlanet);
-            SoundManager.instance.playSingle("transformingSound", transformingSound);
+            AnimationManager.instance.playSingle("transformingSound", transformingSound);
             StartCoroutine(stopSound());
         }
 
@@ -240,8 +240,8 @@ public class PlanetCreator : MonoBehaviour {
 
     IEnumerator stopSound()
     {
-        yield return new WaitForSeconds(4);
-        SoundManager.instance.stopSingle("transformingSound", transformingSound);
+        yield return new WaitForSeconds(7);
+        AnimationManager.instance.stopSingle("transformingSound", transformingSound);
     }
 
 }

@@ -17,6 +17,8 @@ public class AnimationManager : MonoBehaviour {
     [Header("Animations")]
     public Animator asteroidPullin;
 
+	public AudioSource transformingSound;
+
     // [Header("Explosion Sound")]
     // public AudioClip colOxygenSound;
 
@@ -79,4 +81,35 @@ public class AnimationManager : MonoBehaviour {
         carbonHitExplosion.Stop();
         commonHitExplosion.Stop();
     }
+
+	public void playSingle(string audioSource, AudioClip sound)
+	{
+
+		if (audioSource == "transformingSound")
+		{
+			transformingSound.clip = sound;
+			transformingSound.volume = 0.2f;
+			transformingSound.Play();
+			transformingSound.loop = false;
+			Debug.Log("is playing the transforming sound!");
+		}
+		else
+		{
+			//
+		}
+	}
+
+	public void stopSingle(string audioSource, AudioClip sound)
+	{
+		if (audioSource == "transformingSound")
+		{
+			transformingSound.clip = sound;
+			transformingSound.Stop();
+			Debug.Log("is stoping the transforming sound!");
+		}
+		else
+		{
+			//
+		}
+	}
 }

@@ -9,7 +9,6 @@ public class SoundManager : MonoBehaviour
     public AudioSource explosionCarbon;
     public AudioSource explosionNitrogen;
     public AudioSource explosionHydrogen;
-    public AudioSource transformingSound;
     public AudioSource triggerUISound;
 
     public static SoundManager instance = null;
@@ -41,50 +40,49 @@ public class SoundManager : MonoBehaviour
         if (audioSource == "explosionOxygen")
         {
             explosionOxygen.clip = sound;
-            explosionOxygen.volume = 1;
+            explosionOxygen.volume = 0.2f;
             explosionOxygen.Play();
+			explosionOxygen.loop = false;
             Debug.Log("is playing the oxygen explosion sound!");
         }
         if (audioSource == "explosionSulfur")
         {
             explosionSulfur.clip = sound;
-            explosionSulfur.volume = 1;
+			explosionSulfur.volume = 0.2f;
             explosionSulfur.Play();
+			explosionSulfur.loop = false;
             Debug.Log("is playing the sulfur explosion sound!");
         }
         if (audioSource == "explosionCarbon")
         {
             explosionCarbon.clip = sound;
-            explosionCarbon.volume = 1;
+			explosionCarbon.volume = 0.2f;
             explosionCarbon.Play();
+			explosionCarbon.loop = false;
             Debug.Log("is playing the carbon explosion sound!");
         }
         if (audioSource == "explosionNitrogen")
         {
             explosionNitrogen.clip = sound;
-            explosionNitrogen.volume = 1;
+			explosionNitrogen.volume = 0.1f;
             explosionNitrogen.Play();
+			explosionNitrogen.loop = false;
             Debug.Log("is playing the nitrogen explosion sound!");
         }
         if (audioSource == "explosionHydrogen")
         {
             explosionHydrogen.clip = sound;
-            explosionHydrogen.volume = 1;
+			explosionHydrogen.volume = 0.2f;
             explosionHydrogen.Play();
+			explosionHydrogen.loop = false;
             Debug.Log("is playing the hydrogen explosion sound!");
-        }
-        if (audioSource == "transformingSound")
-        {
-            transformingSound.clip = sound;
-            transformingSound.volume = 1;
-            transformingSound.Play();
-            Debug.Log("is playing the transforming sound!");
         }
         if (audioSource == "triggerUISound")
         {
             triggerUISound.clip = sound;
-            triggerUISound.volume = 1;
+			triggerUISound.volume = 0.2f;
             triggerUISound.Play();
+			triggerUISound.loop = false;
             Debug.Log("is playing the trigger UI sound!");
         }
         else
@@ -95,12 +93,6 @@ public class SoundManager : MonoBehaviour
 
     public void stopSingle(string audioSource, AudioClip sound)
     {
-        if (audioSource == "transformingSound")
-        {
-            transformingSound.clip = sound;
-            transformingSound.Stop();
-            Debug.Log("is stoping the transforming sound!");
-        }
         if (audioSource == "triggerUISound")
         {
             triggerUISound.clip = sound;
