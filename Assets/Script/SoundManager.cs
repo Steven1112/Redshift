@@ -10,6 +10,7 @@ public class SoundManager : MonoBehaviour
     public AudioSource explosionNitrogen;
     public AudioSource explosionHydrogen;
     public AudioSource triggerUISound;
+    public AudioSource teleportSound;
 
     public static SoundManager instance = null;
 
@@ -85,6 +86,14 @@ public class SoundManager : MonoBehaviour
 			triggerUISound.loop = false;
             Debug.Log("is playing the trigger UI sound!");
         }
+        if (audioSource == "teleportSound")
+        {
+            teleportSound.clip = sound;
+            teleportSound.volume = 0.2f;
+            teleportSound.Play();
+            teleportSound.loop = false;
+            Debug.Log("is playing the teleporting sound!");
+        }
         else
         {
             //
@@ -98,6 +107,14 @@ public class SoundManager : MonoBehaviour
             triggerUISound.clip = sound;
             triggerUISound.Stop();
             Debug.Log("is stopping the trigger UI sound!");
+        }
+        if (audioSource == "teleportSound")
+        {
+            teleportSound.clip = sound;
+            teleportSound.volume = 0.2f;
+            teleportSound.Stop();
+            teleportSound.loop = false;
+            Debug.Log("is stopping the teleporting sound!");
         }
         else
         {
