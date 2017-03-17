@@ -3490,6 +3490,8 @@ MonoBehaviour:
   pointerActivatesUseAction: 0
   useOverrideButton: 0
   allowedUseControllers: 0
+  pickupSound: {fileID: 0}
+  throwingSound: {fileID: 0}
   usingState: 0
 --- !u!114 &93046035
 MonoBehaviour:
@@ -4377,6 +4379,8 @@ MonoBehaviour:
   pointerActivatesUseAction: 0
   useOverrideButton: 0
   allowedUseControllers: 0
+  pickupSound: {fileID: 0}
+  throwingSound: {fileID: 0}
   usingState: 0
 --- !u!114 &158116204
 MonoBehaviour:
@@ -4564,6 +4568,8 @@ MonoBehaviour:
   pointerActivatesUseAction: 0
   useOverrideButton: 0
   allowedUseControllers: 0
+  pickupSound: {fileID: 0}
+  throwingSound: {fileID: 0}
   usingState: 0
 --- !u!114 &160462355
 MonoBehaviour:
@@ -7708,6 +7714,8 @@ MonoBehaviour:
   pointerActivatesUseAction: 0
   useOverrideButton: 0
   allowedUseControllers: 0
+  pickupSound: {fileID: 0}
+  throwingSound: {fileID: 0}
   usingState: 0
 --- !u!114 &183475158
 MonoBehaviour:
@@ -8004,6 +8012,16 @@ Prefab:
       propertyPath: breakForce
       value: 1e+13
       objectReference: {fileID: 0}
+    - target: {fileID: 114156755233005090, guid: 11477b98341be034087c1fb7654e914a,
+        type: 2}
+      propertyPath: throwingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a92bca1a913e3944c8b0da3142b8e479, type: 3}
+    - target: {fileID: 114156755233005090, guid: 11477b98341be034087c1fb7654e914a,
+        type: 2}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a68b9502aa4018a4e88ea973791bb973, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 11477b98341be034087c1fb7654e914a, type: 2}
   m_IsPrefabParent: 0
@@ -8146,6 +8164,8 @@ MonoBehaviour:
   pointerActivatesUseAction: 0
   useOverrideButton: 0
   allowedUseControllers: 0
+  pickupSound: {fileID: 0}
+  throwingSound: {fileID: 0}
   usingState: 0
 --- !u!114 &208457191
 MonoBehaviour:
@@ -8556,6 +8576,16 @@ Prefab:
       propertyPath: breakForce
       value: 1e+13
       objectReference: {fileID: 0}
+    - target: {fileID: 114084490471849278, guid: 8943a4dd7eac16241b4332c1b502248a,
+        type: 2}
+      propertyPath: throwingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a92bca1a913e3944c8b0da3142b8e479, type: 3}
+    - target: {fileID: 114084490471849278, guid: 8943a4dd7eac16241b4332c1b502248a,
+        type: 2}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a68b9502aa4018a4e88ea973791bb973, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8943a4dd7eac16241b4332c1b502248a, type: 2}
   m_IsPrefabParent: 0
@@ -12208,6 +12238,8 @@ MonoBehaviour:
   pointerActivatesUseAction: 0
   useOverrideButton: 0
   allowedUseControllers: 0
+  pickupSound: {fileID: 0}
+  throwingSound: {fileID: 0}
   usingState: 0
 --- !u!114 &310960673
 MonoBehaviour:
@@ -12598,6 +12630,8 @@ MonoBehaviour:
   pointerActivatesUseAction: 0
   useOverrideButton: 0
   allowedUseControllers: 0
+  pickupSound: {fileID: 0}
+  throwingSound: {fileID: 0}
   usingState: 0
 --- !u!114 &352217791
 MonoBehaviour:
@@ -12784,6 +12818,16 @@ Prefab:
       propertyPath: breakForce
       value: 1e+13
       objectReference: {fileID: 0}
+    - target: {fileID: 114851937713270008, guid: f0a3bbdc9bcb58c4ab40947e3652f77e,
+        type: 2}
+      propertyPath: throwingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a92bca1a913e3944c8b0da3142b8e479, type: 3}
+    - target: {fileID: 114851937713270008, guid: f0a3bbdc9bcb58c4ab40947e3652f77e,
+        type: 2}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a68b9502aa4018a4e88ea973791bb973, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0a3bbdc9bcb58c4ab40947e3652f77e, type: 2}
   m_IsPrefabParent: 0
@@ -16815,6 +16859,16 @@ Prefab:
       propertyPath: breakForce
       value: 1e+13
       objectReference: {fileID: 0}
+    - target: {fileID: 114285714368229692, guid: d1ff1e2b3d26480458abcc7b9eaea225,
+        type: 2}
+      propertyPath: throwingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a92bca1a913e3944c8b0da3142b8e479, type: 3}
+    - target: {fileID: 114285714368229692, guid: d1ff1e2b3d26480458abcc7b9eaea225,
+        type: 2}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a68b9502aa4018a4e88ea973791bb973, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d1ff1e2b3d26480458abcc7b9eaea225, type: 2}
   m_IsPrefabParent: 0
@@ -17104,6 +17158,8 @@ MonoBehaviour:
   pointerActivatesUseAction: 0
   useOverrideButton: 0
   allowedUseControllers: 0
+  pickupSound: {fileID: 0}
+  throwingSound: {fileID: 0}
   usingState: 0
 --- !u!114 &464561956
 MonoBehaviour:
@@ -22805,6 +22861,16 @@ Prefab:
       propertyPath: breakForce
       value: 1e+13
       objectReference: {fileID: 0}
+    - target: {fileID: 114285714368229692, guid: d1ff1e2b3d26480458abcc7b9eaea225,
+        type: 2}
+      propertyPath: throwingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a92bca1a913e3944c8b0da3142b8e479, type: 3}
+    - target: {fileID: 114285714368229692, guid: d1ff1e2b3d26480458abcc7b9eaea225,
+        type: 2}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a68b9502aa4018a4e88ea973791bb973, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d1ff1e2b3d26480458abcc7b9eaea225, type: 2}
   m_IsPrefabParent: 0
@@ -24241,6 +24307,8 @@ MonoBehaviour:
   pointerActivatesUseAction: 0
   useOverrideButton: 0
   allowedUseControllers: 0
+  pickupSound: {fileID: 0}
+  throwingSound: {fileID: 0}
   usingState: 0
 --- !u!114 &588950047
 MonoBehaviour:
@@ -24580,6 +24648,8 @@ MonoBehaviour:
   pointerActivatesUseAction: 0
   useOverrideButton: 0
   allowedUseControllers: 0
+  pickupSound: {fileID: 0}
+  throwingSound: {fileID: 0}
   usingState: 0
 --- !u!114 &628908305
 MonoBehaviour:
@@ -24876,6 +24946,16 @@ Prefab:
       propertyPath: breakForce
       value: 1e+13
       objectReference: {fileID: 0}
+    - target: {fileID: 114423560275882812, guid: e96f5538d4a3f35419eba6aa0c53417c,
+        type: 2}
+      propertyPath: throwingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a92bca1a913e3944c8b0da3142b8e479, type: 3}
+    - target: {fileID: 114423560275882812, guid: e96f5538d4a3f35419eba6aa0c53417c,
+        type: 2}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a68b9502aa4018a4e88ea973791bb973, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e96f5538d4a3f35419eba6aa0c53417c, type: 2}
   m_IsPrefabParent: 0
@@ -25438,6 +25518,8 @@ MonoBehaviour:
   pointerActivatesUseAction: 0
   useOverrideButton: 0
   allowedUseControllers: 0
+  pickupSound: {fileID: 0}
+  throwingSound: {fileID: 0}
   usingState: 0
 --- !u!114 &685697571
 MonoBehaviour:
@@ -25902,6 +25984,8 @@ MonoBehaviour:
   pointerActivatesUseAction: 0
   useOverrideButton: 0
   allowedUseControllers: 0
+  pickupSound: {fileID: 0}
+  throwingSound: {fileID: 0}
   usingState: 0
 --- !u!114 &722682248
 MonoBehaviour:
@@ -26954,6 +27038,8 @@ MonoBehaviour:
   explosionHydrogen: {fileID: 853009135}
   triggerUISound: {fileID: 853009135}
   teleportSound: {fileID: 853009135}
+  pickupSound: {fileID: 853009135}
+  throwingSound: {fileID: 853009135}
 --- !u!4 &853009137
 Transform:
   m_ObjectHideFlags: 0
@@ -27338,6 +27424,8 @@ MonoBehaviour:
   pointerActivatesUseAction: 0
   useOverrideButton: 0
   allowedUseControllers: 0
+  pickupSound: {fileID: 0}
+  throwingSound: {fileID: 0}
   usingState: 0
 --- !u!114 &874873706
 MonoBehaviour:
@@ -27671,6 +27759,16 @@ Prefab:
       propertyPath: breakForce
       value: 1e+13
       objectReference: {fileID: 0}
+    - target: {fileID: 114285714368229692, guid: d1ff1e2b3d26480458abcc7b9eaea225,
+        type: 2}
+      propertyPath: throwingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a92bca1a913e3944c8b0da3142b8e479, type: 3}
+    - target: {fileID: 114285714368229692, guid: d1ff1e2b3d26480458abcc7b9eaea225,
+        type: 2}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a68b9502aa4018a4e88ea973791bb973, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d1ff1e2b3d26480458abcc7b9eaea225, type: 2}
   m_IsPrefabParent: 0
@@ -27739,6 +27837,16 @@ Prefab:
       propertyPath: breakForce
       value: 1e+13
       objectReference: {fileID: 0}
+    - target: {fileID: 114285714368229692, guid: d1ff1e2b3d26480458abcc7b9eaea225,
+        type: 2}
+      propertyPath: throwingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a92bca1a913e3944c8b0da3142b8e479, type: 3}
+    - target: {fileID: 114285714368229692, guid: d1ff1e2b3d26480458abcc7b9eaea225,
+        type: 2}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a68b9502aa4018a4e88ea973791bb973, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d1ff1e2b3d26480458abcc7b9eaea225, type: 2}
   m_IsPrefabParent: 0
@@ -27996,6 +28104,16 @@ Prefab:
       propertyPath: breakForce
       value: 1e+13
       objectReference: {fileID: 0}
+    - target: {fileID: 114851937713270008, guid: f0a3bbdc9bcb58c4ab40947e3652f77e,
+        type: 2}
+      propertyPath: throwingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a92bca1a913e3944c8b0da3142b8e479, type: 3}
+    - target: {fileID: 114851937713270008, guid: f0a3bbdc9bcb58c4ab40947e3652f77e,
+        type: 2}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a68b9502aa4018a4e88ea973791bb973, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0a3bbdc9bcb58c4ab40947e3652f77e, type: 2}
   m_IsPrefabParent: 0
@@ -28156,6 +28274,8 @@ MonoBehaviour:
   pointerActivatesUseAction: 0
   useOverrideButton: 0
   allowedUseControllers: 0
+  pickupSound: {fileID: 0}
+  throwingSound: {fileID: 0}
   usingState: 0
 --- !u!114 &930480125
 MonoBehaviour:
@@ -28709,6 +28829,16 @@ Prefab:
       propertyPath: breakForce
       value: 1e+13
       objectReference: {fileID: 0}
+    - target: {fileID: 114285714368229692, guid: d1ff1e2b3d26480458abcc7b9eaea225,
+        type: 2}
+      propertyPath: throwingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a92bca1a913e3944c8b0da3142b8e479, type: 3}
+    - target: {fileID: 114285714368229692, guid: d1ff1e2b3d26480458abcc7b9eaea225,
+        type: 2}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a68b9502aa4018a4e88ea973791bb973, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d1ff1e2b3d26480458abcc7b9eaea225, type: 2}
   m_IsPrefabParent: 0
@@ -28924,6 +29054,8 @@ MonoBehaviour:
   controllerUI: {fileID: 366042322}
   triggerUISound: {fileID: 8300000, guid: 982f24b67fdcdcc4c9dbec08b87a86ee, type: 3}
   teleportSound: {fileID: 8300000, guid: ca095f88da11aa74dbcc0cee891241df, type: 3}
+  pickupSound: {fileID: 8300000, guid: a68b9502aa4018a4e88ea973791bb973, type: 3}
+  throwingSound: {fileID: 8300000, guid: a92bca1a913e3944c8b0da3142b8e479, type: 3}
 --- !u!4 &1033020078
 Transform:
   m_ObjectHideFlags: 0
@@ -29060,6 +29192,16 @@ Prefab:
       propertyPath: breakForce
       value: 1e+13
       objectReference: {fileID: 0}
+    - target: {fileID: 114423560275882812, guid: e96f5538d4a3f35419eba6aa0c53417c,
+        type: 2}
+      propertyPath: throwingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a92bca1a913e3944c8b0da3142b8e479, type: 3}
+    - target: {fileID: 114423560275882812, guid: e96f5538d4a3f35419eba6aa0c53417c,
+        type: 2}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a68b9502aa4018a4e88ea973791bb973, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e96f5538d4a3f35419eba6aa0c53417c, type: 2}
   m_IsPrefabParent: 0
@@ -29350,6 +29492,16 @@ Prefab:
       propertyPath: breakForce
       value: 1e+13
       objectReference: {fileID: 0}
+    - target: {fileID: 114851937713270008, guid: f0a3bbdc9bcb58c4ab40947e3652f77e,
+        type: 2}
+      propertyPath: throwingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a92bca1a913e3944c8b0da3142b8e479, type: 3}
+    - target: {fileID: 114851937713270008, guid: f0a3bbdc9bcb58c4ab40947e3652f77e,
+        type: 2}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a68b9502aa4018a4e88ea973791bb973, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0a3bbdc9bcb58c4ab40947e3652f77e, type: 2}
   m_IsPrefabParent: 0
@@ -29441,6 +29593,8 @@ MonoBehaviour:
   pointerActivatesUseAction: 0
   useOverrideButton: 0
   allowedUseControllers: 0
+  pickupSound: {fileID: 0}
+  throwingSound: {fileID: 0}
   usingState: 0
 --- !u!114 &1136244857
 MonoBehaviour:
@@ -29691,6 +29845,16 @@ Prefab:
       propertyPath: breakForce
       value: 1e+13
       objectReference: {fileID: 0}
+    - target: {fileID: 114156755233005090, guid: 11477b98341be034087c1fb7654e914a,
+        type: 2}
+      propertyPath: throwingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a92bca1a913e3944c8b0da3142b8e479, type: 3}
+    - target: {fileID: 114156755233005090, guid: 11477b98341be034087c1fb7654e914a,
+        type: 2}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a68b9502aa4018a4e88ea973791bb973, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 11477b98341be034087c1fb7654e914a, type: 2}
   m_IsPrefabParent: 0
@@ -29956,6 +30120,8 @@ MonoBehaviour:
   pointerActivatesUseAction: 0
   useOverrideButton: 0
   allowedUseControllers: 0
+  pickupSound: {fileID: 0}
+  throwingSound: {fileID: 0}
   usingState: 0
 --- !u!114 &1153910735
 MonoBehaviour:
@@ -30054,6 +30220,8 @@ MonoBehaviour:
   pointerActivatesUseAction: 0
   useOverrideButton: 0
   allowedUseControllers: 0
+  pickupSound: {fileID: 0}
+  throwingSound: {fileID: 0}
   usingState: 0
 --- !u!114 &1153910741
 MonoBehaviour:
@@ -30152,6 +30320,8 @@ MonoBehaviour:
   pointerActivatesUseAction: 0
   useOverrideButton: 0
   allowedUseControllers: 0
+  pickupSound: {fileID: 0}
+  throwingSound: {fileID: 0}
   usingState: 0
 --- !u!114 &1153910747
 MonoBehaviour:
@@ -30250,6 +30420,8 @@ MonoBehaviour:
   pointerActivatesUseAction: 0
   useOverrideButton: 0
   allowedUseControllers: 0
+  pickupSound: {fileID: 0}
+  throwingSound: {fileID: 0}
   usingState: 0
 --- !u!114 &1153910759
 MonoBehaviour:
@@ -31023,6 +31195,8 @@ MonoBehaviour:
   pointerActivatesUseAction: 0
   useOverrideButton: 0
   allowedUseControllers: 0
+  pickupSound: {fileID: 0}
+  throwingSound: {fileID: 0}
   usingState: 0
 --- !u!114 &1199867674
 MonoBehaviour:
@@ -31294,6 +31468,8 @@ MonoBehaviour:
   controllerUI: {fileID: 0}
   triggerUISound: {fileID: 8300000, guid: 982f24b67fdcdcc4c9dbec08b87a86ee, type: 3}
   teleportSound: {fileID: 8300000, guid: ca095f88da11aa74dbcc0cee891241df, type: 3}
+  pickupSound: {fileID: 8300000, guid: a68b9502aa4018a4e88ea973791bb973, type: 3}
+  throwingSound: {fileID: 8300000, guid: a92bca1a913e3944c8b0da3142b8e479, type: 3}
 --- !u!4 &1206297482
 Transform:
   m_ObjectHideFlags: 0
@@ -31501,6 +31677,16 @@ Prefab:
       propertyPath: breakForce
       value: 1e+13
       objectReference: {fileID: 0}
+    - target: {fileID: 114084490471849278, guid: 8943a4dd7eac16241b4332c1b502248a,
+        type: 2}
+      propertyPath: throwingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a92bca1a913e3944c8b0da3142b8e479, type: 3}
+    - target: {fileID: 114084490471849278, guid: 8943a4dd7eac16241b4332c1b502248a,
+        type: 2}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a68b9502aa4018a4e88ea973791bb973, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8943a4dd7eac16241b4332c1b502248a, type: 2}
   m_IsPrefabParent: 0
@@ -32530,6 +32716,16 @@ Prefab:
       propertyPath: breakForce
       value: 1e+13
       objectReference: {fileID: 0}
+    - target: {fileID: 114423560275882812, guid: e96f5538d4a3f35419eba6aa0c53417c,
+        type: 2}
+      propertyPath: throwingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a92bca1a913e3944c8b0da3142b8e479, type: 3}
+    - target: {fileID: 114423560275882812, guid: e96f5538d4a3f35419eba6aa0c53417c,
+        type: 2}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a68b9502aa4018a4e88ea973791bb973, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e96f5538d4a3f35419eba6aa0c53417c, type: 2}
   m_IsPrefabParent: 0
@@ -33108,6 +33304,16 @@ Prefab:
       propertyPath: breakForce
       value: 1e+13
       objectReference: {fileID: 0}
+    - target: {fileID: 114423560275882812, guid: e96f5538d4a3f35419eba6aa0c53417c,
+        type: 2}
+      propertyPath: throwingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a92bca1a913e3944c8b0da3142b8e479, type: 3}
+    - target: {fileID: 114423560275882812, guid: e96f5538d4a3f35419eba6aa0c53417c,
+        type: 2}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a68b9502aa4018a4e88ea973791bb973, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e96f5538d4a3f35419eba6aa0c53417c, type: 2}
   m_IsPrefabParent: 0
@@ -35098,7 +35304,7 @@ MonoBehaviour:
   - {fileID: 1980842652}
   - {fileID: 1986179417}
   - {fileID: 822498224}
-  restartSceneName: Scene_13Mar_Master
+  restartSceneName: Scene_16Mar_Button_Sound
   colOxygenSound: {fileID: 8300000, guid: 24aa8061ceef35b4b97e7b84ab3660b7, type: 3}
   colSulfurSound: {fileID: 8300000, guid: b0041bdcaa86a094680ffbba7e8d3712, type: 3}
   colCarbonSound: {fileID: 8300000, guid: 0951fcb6fce3e914da27a09b0f396468, type: 3}
@@ -35297,6 +35503,16 @@ Prefab:
       propertyPath: breakForce
       value: 1e+13
       objectReference: {fileID: 0}
+    - target: {fileID: 114851937713270008, guid: f0a3bbdc9bcb58c4ab40947e3652f77e,
+        type: 2}
+      propertyPath: throwingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a92bca1a913e3944c8b0da3142b8e479, type: 3}
+    - target: {fileID: 114851937713270008, guid: f0a3bbdc9bcb58c4ab40947e3652f77e,
+        type: 2}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a68b9502aa4018a4e88ea973791bb973, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0a3bbdc9bcb58c4ab40947e3652f77e, type: 2}
   m_IsPrefabParent: 0
@@ -35781,6 +35997,8 @@ MonoBehaviour:
   pointerActivatesUseAction: 0
   useOverrideButton: 0
   allowedUseControllers: 0
+  pickupSound: {fileID: 0}
+  throwingSound: {fileID: 0}
   usingState: 0
 --- !u!114 &1587139348
 MonoBehaviour:
@@ -35968,6 +36186,8 @@ MonoBehaviour:
   pointerActivatesUseAction: 0
   useOverrideButton: 0
   allowedUseControllers: 0
+  pickupSound: {fileID: 0}
+  throwingSound: {fileID: 0}
   usingState: 0
 --- !u!114 &1596066352
 MonoBehaviour:
@@ -36330,6 +36550,16 @@ Prefab:
       propertyPath: breakForce
       value: 1e+13
       objectReference: {fileID: 0}
+    - target: {fileID: 114851937713270008, guid: f0a3bbdc9bcb58c4ab40947e3652f77e,
+        type: 2}
+      propertyPath: throwingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a92bca1a913e3944c8b0da3142b8e479, type: 3}
+    - target: {fileID: 114851937713270008, guid: f0a3bbdc9bcb58c4ab40947e3652f77e,
+        type: 2}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a68b9502aa4018a4e88ea973791bb973, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0a3bbdc9bcb58c4ab40947e3652f77e, type: 2}
   m_IsPrefabParent: 0
@@ -42473,6 +42703,16 @@ Prefab:
       propertyPath: breakForce
       value: 1e+13
       objectReference: {fileID: 0}
+    - target: {fileID: 114156755233005090, guid: 11477b98341be034087c1fb7654e914a,
+        type: 2}
+      propertyPath: throwingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a92bca1a913e3944c8b0da3142b8e479, type: 3}
+    - target: {fileID: 114156755233005090, guid: 11477b98341be034087c1fb7654e914a,
+        type: 2}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a68b9502aa4018a4e88ea973791bb973, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 11477b98341be034087c1fb7654e914a, type: 2}
   m_IsPrefabParent: 0
@@ -42679,6 +42919,16 @@ Prefab:
       propertyPath: breakForce
       value: 1e+13
       objectReference: {fileID: 0}
+    - target: {fileID: 114084490471849278, guid: 8943a4dd7eac16241b4332c1b502248a,
+        type: 2}
+      propertyPath: throwingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a92bca1a913e3944c8b0da3142b8e479, type: 3}
+    - target: {fileID: 114084490471849278, guid: 8943a4dd7eac16241b4332c1b502248a,
+        type: 2}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a68b9502aa4018a4e88ea973791bb973, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8943a4dd7eac16241b4332c1b502248a, type: 2}
   m_IsPrefabParent: 0
@@ -43131,6 +43381,16 @@ Prefab:
       propertyPath: breakForce
       value: 1e+13
       objectReference: {fileID: 0}
+    - target: {fileID: 114084490471849278, guid: 8943a4dd7eac16241b4332c1b502248a,
+        type: 2}
+      propertyPath: throwingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a92bca1a913e3944c8b0da3142b8e479, type: 3}
+    - target: {fileID: 114084490471849278, guid: 8943a4dd7eac16241b4332c1b502248a,
+        type: 2}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a68b9502aa4018a4e88ea973791bb973, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8943a4dd7eac16241b4332c1b502248a, type: 2}
   m_IsPrefabParent: 0
@@ -46425,8 +46685,10 @@ MonoBehaviour:
   pointerActivatesUseAction: 0
   useOverrideButton: 2
   allowedUseControllers: 0
+  pickupSound: {fileID: 0}
+  throwingSound: {fileID: 0}
   usingState: 0
-  restartSceneName: Scene_15Mar_PostionSound
+  restartSceneName: Scene_16Mar_Button_Sound
 --- !u!23 &1806808681
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -52243,6 +52505,16 @@ Prefab:
       propertyPath: breakForce
       value: 1e+13
       objectReference: {fileID: 0}
+    - target: {fileID: 114084490471849278, guid: 8943a4dd7eac16241b4332c1b502248a,
+        type: 2}
+      propertyPath: throwingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a92bca1a913e3944c8b0da3142b8e479, type: 3}
+    - target: {fileID: 114084490471849278, guid: 8943a4dd7eac16241b4332c1b502248a,
+        type: 2}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a68b9502aa4018a4e88ea973791bb973, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8943a4dd7eac16241b4332c1b502248a, type: 2}
   m_IsPrefabParent: 0
@@ -52995,6 +53267,8 @@ MonoBehaviour:
   pointerActivatesUseAction: 0
   useOverrideButton: 0
   allowedUseControllers: 0
+  pickupSound: {fileID: 0}
+  throwingSound: {fileID: 0}
   usingState: 0
 --- !u!114 &1929018668
 MonoBehaviour:
@@ -62170,6 +62444,16 @@ Prefab:
       propertyPath: breakForce
       value: 1e+13
       objectReference: {fileID: 0}
+    - target: {fileID: 114156755233005090, guid: 11477b98341be034087c1fb7654e914a,
+        type: 2}
+      propertyPath: throwingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a92bca1a913e3944c8b0da3142b8e479, type: 3}
+    - target: {fileID: 114156755233005090, guid: 11477b98341be034087c1fb7654e914a,
+        type: 2}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a68b9502aa4018a4e88ea973791bb973, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 11477b98341be034087c1fb7654e914a, type: 2}
   m_IsPrefabParent: 0
@@ -62459,6 +62743,8 @@ MonoBehaviour:
   pointerActivatesUseAction: 0
   useOverrideButton: 0
   allowedUseControllers: 0
+  pickupSound: {fileID: 0}
+  throwingSound: {fileID: 0}
   usingState: 0
 --- !u!114 &2025177951
 MonoBehaviour:
@@ -69359,6 +69645,16 @@ Prefab:
       propertyPath: breakForce
       value: 1e+13
       objectReference: {fileID: 0}
+    - target: {fileID: 114423560275882812, guid: e96f5538d4a3f35419eba6aa0c53417c,
+        type: 2}
+      propertyPath: throwingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a92bca1a913e3944c8b0da3142b8e479, type: 3}
+    - target: {fileID: 114423560275882812, guid: e96f5538d4a3f35419eba6aa0c53417c,
+        type: 2}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a68b9502aa4018a4e88ea973791bb973, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e96f5538d4a3f35419eba6aa0c53417c, type: 2}
   m_IsPrefabParent: 0
@@ -69599,6 +69895,16 @@ Prefab:
       propertyPath: breakForce
       value: 1e+13
       objectReference: {fileID: 0}
+    - target: {fileID: 114156755233005090, guid: 11477b98341be034087c1fb7654e914a,
+        type: 2}
+      propertyPath: throwingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a92bca1a913e3944c8b0da3142b8e479, type: 3}
+    - target: {fileID: 114156755233005090, guid: 11477b98341be034087c1fb7654e914a,
+        type: 2}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a68b9502aa4018a4e88ea973791bb973, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 11477b98341be034087c1fb7654e914a, type: 2}
   m_IsPrefabParent: 0

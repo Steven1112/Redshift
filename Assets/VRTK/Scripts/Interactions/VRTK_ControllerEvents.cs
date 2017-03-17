@@ -436,6 +436,8 @@ namespace VRTK
 		public GameObject controllerUI;
         public AudioClip triggerUISound;
         public AudioClip teleportSound;
+        public AudioClip pickupSound;
+        public AudioClip throwingSound;
 
         public void Start(){
 
@@ -1048,11 +1050,13 @@ namespace VRTK
                 {
                     grabPressed = true;
                     OnAliasGrabOn(SetButtonEvent(ref buttonBool, true, buttonPressure));
+                    //SoundManager.instance.playSingle("pickupSound", pickupSound);
                 }
                 else
                 {
                     grabPressed = false;
                     OnAliasGrabOff(SetButtonEvent(ref buttonBool, false, buttonPressure));
+                    // SoundManager.instance.playSingle("throwingSound", throwingSound);
                 }
             }
 

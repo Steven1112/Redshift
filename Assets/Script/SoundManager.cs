@@ -11,6 +11,9 @@ public class SoundManager : MonoBehaviour
     public AudioSource explosionHydrogen;
     public AudioSource triggerUISound;
     public AudioSource teleportSound;
+    public AudioSource pickupSound;
+    public AudioSource throwingSound;
+
 
     public static SoundManager instance = null;
 
@@ -93,6 +96,22 @@ public class SoundManager : MonoBehaviour
             teleportSound.Play();
             teleportSound.loop = false;
             Debug.Log("is playing the teleporting sound!");
+        }
+        if (audioSource == "pickupSound")
+        {
+            pickupSound.clip = sound;
+            pickupSound.volume = 0.2f;
+            pickupSound.Play();
+            pickupSound.loop = false;
+            Debug.Log("is playing the pickup asteroid sound!");
+        }
+        if (audioSource == "throwingSound")
+        {
+            throwingSound.clip = sound;
+            throwingSound.volume = 0.2f;
+            throwingSound.Play();
+            throwingSound.loop = false;
+            Debug.Log("is playing the throwing asteroid sound!");
         }
         else
         {

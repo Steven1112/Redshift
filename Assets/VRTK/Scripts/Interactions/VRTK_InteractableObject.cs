@@ -137,8 +137,13 @@ namespace VRTK
         /// <summary>
         /// The current using state of the object. `0` not being used, `1` being used.
         /// </summary>
+        /// 
+        public AudioClip pickupSound;
+        public AudioClip throwingSound;
+
         [HideInInspector]
         public int usingState = 0;
+
 
         /// <summary>
         /// isKinematic is a pass through to the `isKinematic` getter/setter on the object's rigidbody component.
@@ -255,8 +260,10 @@ namespace VRTK
         {
             if (grabbingObjects.Count > 0 && grabbedBy != null)
             {
+                SoundManager.instance.playSingle("pickupSound", pickupSound);
                 return (grabbingObjects.Contains(grabbedBy));
             }
+            SoundManager.instance.playSingle("throwingSound", throwingSound);
             return (grabbingObjects.Count > 0);
         }
 
