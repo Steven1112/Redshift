@@ -41,6 +41,8 @@ namespace VRTK
 		[Tooltip("The max distance the teleport destination can be outside the nav mesh to be considered valid. If a value of `0` is given then the nav mesh restrictions will be ignored.")]
 		public float navMeshLimitDistance = 0f;
 
+        WorldRotater worldRotater;
+
 		/// <summary>
 		/// Emitted when the teleport process has begun.
 		/// </summary>
@@ -122,6 +124,9 @@ namespace VRTK
 			VRTK_PlayerObject.SetPlayerObject(gameObject, VRTK_PlayerObject.ObjectTypes.CameraRig);
 			headset = VRTK_SharedMethods.AddCameraFade();
 			playArea = VRTK_DeviceFinder.PlayAreaTransform();
+
+            // initialize world rotater
+            worldRotater = UnityEngine.GameObject.FindGameObjectWithTag("rotater").GetComponent<WorldRotater>();
 		}
 
 		protected virtual void OnEnable()
@@ -169,12 +174,19 @@ namespace VRTK
 		{
 			if (enableTeleport && ValidLocation(e.target, e.destinationPosition) && e.enableTeleport)
 			{
+                // find player and get its position before teleport then feed into faceprotoplanet
+                Vector3 playerPositionBeforeTeleport = UnityEngine.GameObject.FindGameObjectWithTag("player").transform.position;
+
 				OnTeleporting(sender, e);
 				Vector3 newPosition = GetNewPosition(e.destinationPosition, e.target, e.forceDestinationPosition);
 				CalculateBlinkDelay(blinkTransitionSpeed, newPosition);
 				Blink(blinkTransitionSpeed);
 				SetNewPosition(newPosition, e.target, e.forceDestinationPosition);
 				OnTeleported(sender, e);
+
+                // call world rotater to rotate the world upon teleporation
+				// use new position?
+                worldRotater.FaceProtoplanet(playerPositionBeforeTeleport);
 			}
 		}
 

@@ -24,6 +24,8 @@ public class PlanetCreator : MonoBehaviour {
 	public GameObject[] asteroidTracking = new GameObject[3];
 	public string restartSceneName;
 
+    public static PlanetCollection collectionBook;
+
 
     void Awake() {
 
@@ -37,6 +39,10 @@ public class PlanetCreator : MonoBehaviour {
             Destroy(gameObject);
         }
         //DontDestroyOnLoad(gameObject);
+
+        // reloads collection book for each planet creator instance
+        collectionBook = UnityEngine.GameObject.FindGameObjectWithTag("Collection").GetComponent<PlanetCollection>();
+        collectionBook.ReloadCollectionBook();
 
         //planets = new GameObject[10];
         ingredients = new HashSet<string> {"nitrogen", "hydrogen", "oxygen", "sulfur", "carbon", "common"};
