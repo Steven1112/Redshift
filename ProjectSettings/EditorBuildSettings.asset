@@ -5,9 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene/Scene_14Mar_Asteroid_Pullin_Animation.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene/Scene_15Mar_Sound.unity
   - enabled: 1
     path: Assets/Scene/Scene_16Mar_Button_Sound.unity

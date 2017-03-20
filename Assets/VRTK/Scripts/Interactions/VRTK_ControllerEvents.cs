@@ -436,8 +436,7 @@ namespace VRTK
 		public GameObject controllerUI;
         public AudioClip triggerUISound;
         public AudioClip teleportSound;
-        public AudioClip pickupSound;
-        public AudioClip throwingSound;
+
 
         public void Start(){
 
@@ -1031,8 +1030,6 @@ namespace VRTK
                 {
                     pointerPressed = false;
                     OnAliasPointerOff(SetButtonEvent(ref buttonBool, false, buttonPressure));
-                    SoundManager.instance.playSingle("teleportSound", teleportSound);
-                    StartCoroutine(stopSound());
                 }
             }
 
@@ -1041,6 +1038,8 @@ namespace VRTK
                 if (!touchDown)
                 {
                     OnAliasPointerSet(SetButtonEvent(ref buttonBool, false, buttonPressure));
+					//SoundManager.instance.playSingle("teleportSound", teleportSound);
+					//StartCoroutine(stopSound());
                 }
             }
 
@@ -1467,10 +1466,13 @@ namespace VRTK
             controllerAngularVelocity = VRTK_SDK_Bridge.GetAngularVelocityOnIndex(controllerIndex);
         }
 
+		/*
         IEnumerator stopSound()
         {
             yield return new WaitForSeconds(1);
             SoundManager.instance.stopSingle("teleportSound", teleportSound);
         }
+
+       */
     }
 }

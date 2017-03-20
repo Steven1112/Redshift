@@ -38,7 +38,7 @@ namespace VRTK
         [Tooltip("The material to use on the rendered version of the pointer. If no material is selected then the default `WorldPointer` material will be used.")]
         public Material pointerMaterial;
         [Tooltip("The colour of the beam when it is colliding with a valid target. It can be set to a different colour for each controller.")]
-        public Color pointerHitColor = new Color(0f, 0.5f, 0f, 1f);
+        public Color pointerHitColor = new Color(0f, 1f, 0f, 1f);
         [Tooltip("The colour of the beam when it is not hitting a valid target. It can be set to a different colour for each controller.")]
         public Color pointerMissColor = new Color(0.8f, 0f, 0f, 1f);
         [Tooltip("If this is checked then the pointer beam will be activated on first press of the pointer alias button and will stay active until the pointer alias button is pressed again. The destination set event is emitted when the beam is deactivated on the second button press.")]

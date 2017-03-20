@@ -258,13 +258,14 @@ namespace VRTK
         /// <returns>Returns `true` if the object is currently being grabbed.</returns>
         public bool IsGrabbed(GameObject grabbedBy = null)
         {
-            if (grabbingObjects.Count > 0 && grabbedBy != null)
-            {
-                SoundManager.instance.playSingle("pickupSound", pickupSound);
-                return (grabbingObjects.Contains(grabbedBy));
-            }
-            SoundManager.instance.playSingle("throwingSound", throwingSound);
-            return (grabbingObjects.Count > 0);
+			if (grabbingObjects.Count > 0 && grabbedBy != null) {
+				//SoundManager.instance.playSingle ("pickupSound", pickupSound);
+				return (grabbingObjects.Contains (grabbedBy));
+			} 
+			else {
+				//SoundManager.instance.playSingle ("throwingSound", throwingSound);
+				return (grabbingObjects.Count > 0);
+			}
         }
 
         /// <summary>
@@ -325,6 +326,8 @@ namespace VRTK
                 SecondaryControllerGrab(currentGrabbingObject);
             }
             OnInteractableObjectGrabbed(SetInteractableObjectEvent(currentGrabbingObject));
+			SoundManager.instance.stopSingle ("throwingSound", throwingSound);
+			SoundManager.instance.playSingle ("pickupSound", pickupSound);
         }
 
         /// <summary>
@@ -344,6 +347,8 @@ namespace VRTK
                 SecondaryControllerUngrab(previousGrabbingObject);
             }
             OnInteractableObjectUngrabbed(SetInteractableObjectEvent(previousGrabbingObject));
+			SoundManager.instance.stopSingle ("pickupSound", pickupSound);
+			SoundManager.instance.playSingle ("throwingSound", throwingSound);
         }
 
         /// <summary>

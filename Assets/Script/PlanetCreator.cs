@@ -25,6 +25,7 @@ public class PlanetCreator : MonoBehaviour {
 	public string restartSceneName;
 
     [Header("Sound Triggers")]
+	public AudioClip backgroundSound;
     public AudioClip colOxygenSound;
     public AudioClip colSulfurSound;
     public AudioClip colCarbonSound;
@@ -89,6 +90,8 @@ public class PlanetCreator : MonoBehaviour {
 
 		protoPlanet.GetComponent<Animator> ().enabled = false;
 		//lava.GetComponent<Animator> ().enabled = false;
+
+		SoundManager.instance.playBackgroundSound ("backgroundSound", backgroundSound);
 
     }
 

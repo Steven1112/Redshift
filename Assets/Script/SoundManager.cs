@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SoundManager : MonoBehaviour
 {
-    public AudioSource effectSource;
+	public AudioSource backgroundSound;
     public AudioSource explosionOxygen;
     public AudioSource explosionSulfur;
     public AudioSource explosionCarbon;
@@ -35,12 +35,6 @@ public class SoundManager : MonoBehaviour
 
     public void playSingle(string audioSource, AudioClip sound)
     {
-        if (audioSource == "effectSource")
-        {
-            effectSource.clip = sound;
-            effectSource.Play();
-            Debug.Log("is playing the effect sound!");
-        }
         if (audioSource == "explosionOxygen")
         {
             explosionOxygen.clip = sound;
@@ -135,9 +129,41 @@ public class SoundManager : MonoBehaviour
             teleportSound.loop = false;
             Debug.Log("is stopping the teleporting sound!");
         }
+		if (audioSource == "pickupSound")
+		{
+			pickupSound.clip = sound;
+			pickupSound.volume = 0.2f;
+			pickupSound.Stop();
+			pickupSound.loop = false;
+			Debug.Log("is stopping the pickup asteroid sound!");
+		}
+		if (audioSource == "throwingSound")
+		{
+			throwingSound.clip = sound;
+			throwingSound.volume = 0.2f;
+			throwingSound.Stop();
+			throwingSound.loop = false;
+			Debug.Log("is stopping the throwing asteroid sound!");
+		}
         else
         {
             //
         }
     }
+
+	public void playBackgroundSound(string audioSource, AudioClip sound)
+	{
+		if (audioSource == "backgroundSound")
+		{
+			backgroundSound.clip = sound;
+			backgroundSound.Play();
+			explosionOxygen.loop = true;
+			Debug.Log("is playing the background sound!");
+		}
+
+		else
+		{
+			//
+		}
+	}
 }
