@@ -29,6 +29,7 @@ public class Formation : MonoBehaviour {
 		//display animation
 
 		//replace finalStage with the current protoplanet object
+
 		GameObject formed = (GameObject)Instantiate (finalStage);
 		formed.AddComponent<Spin> ();
 		formed.GetComponent<Spin> ().speed = protoPlanet.GetComponent<Spin> ().speed;
@@ -48,8 +49,8 @@ public class Formation : MonoBehaviour {
     
 
         // destory asteroids
-        GameObject collected = UnityEngine.GameObject.FindGameObjectWithTag("collected");
-        Destroy(collected);
+        //GameObject collected = UnityEngine.GameObject.FindGameObjectWithTag("collected");
+        //Destroy(collected);
     }
 
     public void setIngredients(HashSet<string> ingredients) {

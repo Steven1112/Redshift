@@ -50,7 +50,7 @@ public class Clump : MonoBehaviour
 				planetScaleInc = (double)planetScale.x * 0.00002;
 
 				asteroidScale = asteroid.transform.localScale;
-				asteroidScaleDec = (double)asteroidScale.x * 0.04;
+				asteroidScaleDec = (double)asteroidScale.x * 0.004;
 
 				asteroid.transform.parent = planet.transform;
 

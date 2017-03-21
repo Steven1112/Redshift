@@ -40,7 +40,7 @@ namespace VRTK
 		public VRTK_PolicyList targetListPolicy;
 		[Tooltip("The max distance the teleport destination can be outside the nav mesh to be considered valid. If a value of `0` is given then the nav mesh restrictions will be ignored.")]
 		public float navMeshLimitDistance = 0f;
-		WorldRotater1 worldRotater;
+		WorldRotater worldRotater;
 
 		/// <summary>
 		/// Emitted when the teleport process has begun.
@@ -125,7 +125,7 @@ namespace VRTK
 			playArea = VRTK_DeviceFinder.PlayAreaTransform();
 
 			// initialize world rotater
-			worldRotater = UnityEngine.GameObject.FindGameObjectWithTag("rotater").GetComponent<WorldRotater1>();
+			worldRotater = UnityEngine.GameObject.FindGameObjectWithTag("rotater").GetComponent<WorldRotater>();
 		}
 
 		protected virtual void OnEnable()
