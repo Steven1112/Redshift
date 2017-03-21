@@ -86,7 +86,7 @@ public class SoundManager : MonoBehaviour
         if (audioSource == "teleportSound")
         {
             teleportSound.clip = sound;
-            teleportSound.volume = 0.2f;
+            teleportSound.volume = 0.4f;
             teleportSound.Play();
             teleportSound.loop = false;
             Debug.Log("is playing the teleporting sound!");
