@@ -35,6 +35,8 @@ TagManager:
   - pivot
   - player
   - colourMixer
+  - cameraRig
+  - rotater
   layers:
   - Default
   - TransparentFX

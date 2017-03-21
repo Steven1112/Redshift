@@ -38,13 +38,6 @@ public class Formation : MonoBehaviour {
 		formed.transform.rotation = protoPlanet.transform.rotation;
 		//formed.transform.localScale = protoPlanet.transform.localScale;
 
-        if (protoPlanet.transform.parent != null)
-        {
-            Destroy(protoPlanet.transform.parent.gameObject);
-			Debug.Log ("protoplanet has parent");
-        }
-        else {}
-
 		// triggering animation of formation
 		protoPlanet.GetComponent<Animator> ().enabled = true;
 		PlanetCreator.instance.lava.GetComponent<Animator> ().enabled = true;
