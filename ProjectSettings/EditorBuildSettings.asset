@@ -11,3 +11,5 @@ EditorBuildSettings:
     path: Assets/Scene/Scene_15Mar_Sound.unity
   - enabled: 1
     path: Assets/Scene/Scene_16Mar_Button_Sound.unity
+  - enabled: 1
+    path: Assets/Scene/Scene_21Mar_Explosion_Asteroid_Prefabs.unity

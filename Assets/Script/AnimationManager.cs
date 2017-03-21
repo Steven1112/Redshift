@@ -13,6 +13,7 @@ public class AnimationManager : MonoBehaviour {
     public ParticleSystem sulfurHitExplosion;
     public ParticleSystem carbonHitExplosion;
     public ParticleSystem commonHitExplosion;
+    public ParticleSystem hitBigAsteroid;
 
     [Header("Animations")]
     public Animator asteroidPullin;

@@ -25,6 +25,17 @@ public class Clump : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
+        /*
+        Debug.Log("Tag name:" + col.gameObject.tag);
+        if (string.Equals(col.gameObject.tag, "bigasteroid"))
+        {
+            AnimationManager.instance.hitBigAsteroid.Play();
+            Debug.Log("asteroid hit the big asteroid collision happened");
+            StartCoroutine(ClearBackendEffect());
+        }
+
+        */
+
         if (string.Equals(col.gameObject.tag, "protoplanet"))
         {
             switch (numCollision)
@@ -84,7 +95,7 @@ public class Clump : MonoBehaviour
                     numCollision++;
 
 				if(PlanetCreator.instance.numMaterialCollected == 3){
-					AnimationManager.instance.playFormationEffect();
+					//AnimationManager.instance.playFormationEffect();
 				}
 
                     break;
@@ -117,7 +128,7 @@ public class Clump : MonoBehaviour
 
                     Debug.Log("The third asteroid is completely absorbed");
                     PlanetCreator.instance.lastAbsorbed();
-					AnimationManager.instance.seeResults.Stop();
+					//AnimationManager.instance.seeResults.Stop();
 					PlanetCreator.instance.canRestart = true;
 				}
             }
@@ -161,5 +172,11 @@ public class Clump : MonoBehaviour
     void increaseSpin() {
 		planet.GetComponent<Spin>().speed += 0.007f;
 	}
+
+    IEnumerator ClearBackendEffect()
+    {
+        yield return new WaitForSeconds(1.5f);
+        AnimationManager.instance.hitBigAsteroid.Stop();
+    }
 }
 
