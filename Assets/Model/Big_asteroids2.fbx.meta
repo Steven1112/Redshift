@@ -1,34 +1,15 @@
 fileFormatVersion: 2
-guid: d73d2d8c84c174778ae9aef591a12df3
-timeCreated: 1490135949
+guid: 35b259a71696d46f7aca6f2d4f830a65
+timeCreated: 1490137267
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: big_rocks_01
-    100004: big_rocks_02
-    100006: Icosphere
-    100008: big_rocks_03
     400000: //RootNode
-    400002: big_rocks_01
-    400004: big_rocks_02
-    400006: Icosphere
-    400008: big_rocks_03
-    2300000: big_rocks_01
-    2300002: big_rocks_02
-    2300004: Icosphere
-    2300006: //RootNode
-    2300008: big_rocks_03
-    3300000: big_rocks_01
-    3300002: big_rocks_02
-    3300004: Icosphere
-    3300006: //RootNode
-    3300008: big_rocks_03
-    4300000: Icosphere
-    4300002: big_rocks_02
-    4300004: big_rocks_01
-    4300006: big_rocks_03
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: big_rocks_02
   materials:
     importMaterials: 1
     materialName: 0
