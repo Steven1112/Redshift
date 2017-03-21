@@ -13,6 +13,15 @@ public class AnimationManager : MonoBehaviour {
     public ParticleSystem sulfurHitExplosion;
     public ParticleSystem carbonHitExplosion;
     public ParticleSystem commonHitExplosion;
+    public ParticleSystem hitBigAsteroid;
+
+    [Header("Animations")]
+    public Animator asteroidPullin;
+
+	public AudioSource transformingSound;
+
+    // [Header("Explosion Sound")]
+    // public AudioClip colOxygenSound;
 
     public static AnimationManager instance = null;
 
@@ -29,20 +38,40 @@ public class AnimationManager : MonoBehaviour {
 		}
 		//DontDestroyOnLoad(gameObject);
 		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-	/*
-	public void playFormationEffect(AnimationClip animation){
-		animation.Play();
+        asteroidPullin = GetComponent<Animator>();
+
+    }
+
+    // Update is called once per frame
+    void Update () {
+
+        //hot key for testing
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            asteroidPullin.Play("AsteroidPullin");
+            // hot key for testing sound
+            //SoundManager.instance.explosionOxygen.Play();
+            //SoundManager.instance.playSingle("explosionOxygen", colOxygenSound);
+        }
+    }
+
+    public void playAsteroidPullinEffect()
+    {
+        asteroidPullin.Play("AsteroidPullin");
+    }
+
+    public void stopAsteroidPullinEffect()
+    {
+        asteroidPullin.Stop();
+    }
+
+    public void playFormationEffect(){
+		seeResults.Play();
 	}
 
 	public void stopFormationEffect(){
 		seeResults.Stop();		
-	}*/
+	}
 
     public void visualEffectsClearAll()
     {
@@ -53,4 +82,35 @@ public class AnimationManager : MonoBehaviour {
         carbonHitExplosion.Stop();
         commonHitExplosion.Stop();
     }
+
+	public void playSingle(string audioSource, AudioClip sound)
+	{
+
+		if (audioSource == "transformingSound")
+		{
+			transformingSound.clip = sound;
+			transformingSound.volume = 0.2f;
+			transformingSound.Play();
+			transformingSound.loop = false;
+			Debug.Log("is playing the transforming sound!");
+		}
+		else
+		{
+			//
+		}
+	}
+
+	public void stopSingle(string audioSource, AudioClip sound)
+	{
+		if (audioSource == "transformingSound")
+		{
+			transformingSound.clip = sound;
+			transformingSound.Stop();
+			Debug.Log("is stoping the transforming sound!");
+		}
+		else
+		{
+			//
+		}
+	}
 }

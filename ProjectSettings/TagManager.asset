@@ -34,7 +34,7 @@ TagManager:
   - ControllerUI
   - pivot
   - player
-  - colourMixer
+  - bigasteroid
   layers:
   - Default
   - TransparentFX

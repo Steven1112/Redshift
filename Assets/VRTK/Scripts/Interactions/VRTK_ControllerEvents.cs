@@ -434,8 +434,11 @@ namespace VRTK
 
 		public GameObject collectionBook;
 		public GameObject controllerUI;
+        public AudioClip triggerUISound;
+        public AudioClip teleportSound;
 
-		public void Start(){
+
+        public void Start(){
 
 			//collectionBook = GameObject.FindWithTag("Collection");
 			//collectionBook = GameObject.Find("CollectionBook/Canvas/CollectionPane");
@@ -1035,6 +1038,8 @@ namespace VRTK
                 if (!touchDown)
                 {
                     OnAliasPointerSet(SetButtonEvent(ref buttonBool, false, buttonPressure));
+					//SoundManager.instance.playSingle("teleportSound", teleportSound);
+					//StartCoroutine(stopSound());
                 }
             }
 
@@ -1044,11 +1049,13 @@ namespace VRTK
                 {
                     grabPressed = true;
                     OnAliasGrabOn(SetButtonEvent(ref buttonBool, true, buttonPressure));
+                    //SoundManager.instance.playSingle("pickupSound", pickupSound);
                 }
                 else
                 {
                     grabPressed = false;
                     OnAliasGrabOff(SetButtonEvent(ref buttonBool, false, buttonPressure));
+                    // SoundManager.instance.playSingle("throwingSound", throwingSound);
                 }
             }
 
@@ -1080,7 +1087,9 @@ namespace VRTK
 					if(controllerUI != null){
 						controllerUI.SetActive (true);
 					}
-						
+
+                    SoundManager.instance.playSingle("triggerUISound", triggerUISound);
+
                 }
                 else
                 {
@@ -1094,6 +1103,8 @@ namespace VRTK
 					if(controllerUI != null){
 						controllerUI.SetActive (false);
 					}
+
+                    SoundManager.instance.stopSingle("triggerUISound", triggerUISound);
                 }
             }
 
@@ -1454,5 +1465,14 @@ namespace VRTK
             controllerVelocity = VRTK_SDK_Bridge.GetVelocityOnIndex(controllerIndex);
             controllerAngularVelocity = VRTK_SDK_Bridge.GetAngularVelocityOnIndex(controllerIndex);
         }
+
+		/*
+        IEnumerator stopSound()
+        {
+            yield return new WaitForSeconds(1);
+            SoundManager.instance.stopSingle("teleportSound", teleportSound);
+        }
+
+       */
     }
 }

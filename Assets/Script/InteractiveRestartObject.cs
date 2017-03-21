@@ -14,6 +14,7 @@
 
 			SceneManager.LoadScene(restartSceneName);
 			Debug.Log ("Restart!");
+            AnimationManager.instance.stopAsteroidPullinEffect();
         }
 
         public override void StopUsing(GameObject usingObject)

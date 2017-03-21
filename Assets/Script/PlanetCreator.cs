@@ -24,6 +24,15 @@ public class PlanetCreator : MonoBehaviour {
 	public GameObject[] asteroidTracking = new GameObject[3];
 	public string restartSceneName;
 
+    [Header("Sound Triggers")]
+	public AudioClip backgroundSound;
+    public AudioClip colOxygenSound;
+    public AudioClip colSulfurSound;
+    public AudioClip colCarbonSound;
+    public AudioClip colNitrogenSound;
+    public AudioClip colHydrogenSound;
+    public AudioClip transformingSound;
+
 
     void Awake() {
 
@@ -81,6 +90,8 @@ public class PlanetCreator : MonoBehaviour {
 
 		protoPlanet.GetComponent<Animator> ().enabled = false;
 		//lava.GetComponent<Animator> ().enabled = false;
+
+		SoundManager.instance.playBackgroundSound ("backgroundSound", backgroundSound);
 
     }
 
@@ -141,7 +152,9 @@ public class PlanetCreator : MonoBehaviour {
 
 		if (numMaterialCollected == 3) {
 			computeResult(userMixture).form(protoPlanet);
-		}
+            AnimationManager.instance.playSingle("transformingSound", transformingSound);
+            StartCoroutine(stopSound());
+        }
 
     }
 	void addNitrogen(GameObject gameObject) {
@@ -149,6 +162,7 @@ public class PlanetCreator : MonoBehaviour {
         Debug.Log("asteroid " + numMaterialCollected + ":nitrogen");
         AnimationManager.instance.nitrogenHitExplosion.transform.position = gameObject.transform.position;
         AnimationManager.instance.nitrogenHitExplosion.Play();
+        SoundManager.instance.playSingle("explosionNitrogen", colNitrogenSound);
 
     }
 	void addCarbon(GameObject gameObject)
@@ -157,7 +171,7 @@ public class PlanetCreator : MonoBehaviour {
         Debug.Log("asteroid" + numMaterialCollected + ":carbon");
         AnimationManager.instance.carbonHitExplosion.transform.position = gameObject.transform.position;
         AnimationManager.instance.carbonHitExplosion.Play();
-
+        SoundManager.instance.playSingle("explosionCarbon", colCarbonSound);
 
     }
 	void addOxygen(GameObject gameObject) {
@@ -165,6 +179,7 @@ public class PlanetCreator : MonoBehaviour {
         Debug.Log("asteroid" + numMaterialCollected + ":oxygen");
         AnimationManager.instance.oxygenHitExplosion.transform.position = gameObject.transform.position;
         AnimationManager.instance.oxygenHitExplosion.Play();
+        SoundManager.instance.playSingle("explosionOxygen", colOxygenSound);
 
     }
 	void addHydrogen(GameObject gameObject) {
@@ -172,7 +187,7 @@ public class PlanetCreator : MonoBehaviour {
         Debug.Log("asteroid" + numMaterialCollected + ":hydrogen");
         AnimationManager.instance.hydrogenHitExplosion.transform.position = gameObject.transform.position;
         AnimationManager.instance.hydrogenHitExplosion.Play();
-
+        SoundManager.instance.playSingle("explosionHydrogen", colHydrogenSound);
 
     }
 	void addSulfur(GameObject gameObject) {
@@ -180,6 +195,9 @@ public class PlanetCreator : MonoBehaviour {
         Debug.Log("asteroid" + numMaterialCollected + ":sulfur");
         AnimationManager.instance.sulfurHitExplosion.transform.position = gameObject.transform.position;
         AnimationManager.instance.sulfurHitExplosion.Play();
+        SoundManager.instance.playSingle("explosionSulfur", colSulfurSound);
+
+
     }
 
 
@@ -209,7 +227,7 @@ public class PlanetCreator : MonoBehaviour {
 
 	public void reStart(){
 
-		SceneManager.LoadScene("Scene_13Mar_Master");
+		SceneManager.LoadScene("Scene_15Mar_Sound");
         //SceneManager.LoadScene(restartSceneName);
     }
 
@@ -222,5 +240,11 @@ public class PlanetCreator : MonoBehaviour {
 		}
 
 	}
+
+    IEnumerator stopSound()
+    {
+        yield return new WaitForSeconds(7);
+        AnimationManager.instance.stopSingle("transformingSound", transformingSound);
+    }
 
 }
