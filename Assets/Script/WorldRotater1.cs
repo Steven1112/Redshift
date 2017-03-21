@@ -71,7 +71,7 @@ public class WorldRotater1 : MonoBehaviour {
     {
         for (int i = 0; i < objectsInScene.Count; i++)
         {
-            if (objectsInScene[i].tag != "pivot" && objectsInScene[i].tag != "player")
+			if (objectsInScene[i].tag != "pivot" && objectsInScene[i].tag != "cameraRig")
             {
                 objectsInScene[i].transform.parent = pivot.transform;
             }

@@ -44,6 +44,7 @@ public class PlanetCollection : MonoBehaviour {
         if (collection!=null && collection.Count > 0)
         {
             string[] planetsInCollection = new string[collection.Count];
+			collection.CopyTo(planetsInCollection);
             for (int i = 0; i < planetsInCollection.Length; i++)
             {
                 for (int j = 0; j < collectionBook.Length; i++)
