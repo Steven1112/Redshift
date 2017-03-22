@@ -7,3 +7,5 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scene/Scene_21Mar_Master.unity
+  - enabled: 1
+    path: Assets/Scene/Scene_22Mar_Big_Asteroid_Feedback.unity
