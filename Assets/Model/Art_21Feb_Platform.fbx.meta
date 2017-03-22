@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 33f69543ca5a5964cab1a088d8cd748a
-timeCreated: 1487787890
+timeCreated: 1490135626
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -45,63 +45,66 @@ ModelImporter:
     400034: PlatformDecoration.016
     400036: platorm
     400038: top
-    2300000: PlatformDecoration
-    2300002: PlatformDecoration.001
-    2300004: PlatformDecoration.002
-    2300006: PlatformDecoration.003
-    2300008: PlatformDecoration.004
-    2300010: PlatformDecoration.005
-    2300012: PlatformDecoration.006
-    2300014: PlatformDecoration.007
-    2300016: PlatformDecoration.008
-    2300018: PlatformDecoration.009
-    2300020: PlatformDecoration.010
-    2300022: PlatformDecoration.011
-    2300024: PlatformDecoration.012
-    2300026: PlatformDecoration.013
-    2300028: PlatformDecoration.014
-    2300030: PlatformDecoration.015
-    2300032: PlatformDecoration.016
-    2300034: platorm
-    2300036: top
-    3300000: PlatformDecoration
-    3300002: PlatformDecoration.001
-    3300004: PlatformDecoration.002
-    3300006: PlatformDecoration.003
-    3300008: PlatformDecoration.004
-    3300010: PlatformDecoration.005
-    3300012: PlatformDecoration.006
-    3300014: PlatformDecoration.007
-    3300016: PlatformDecoration.008
-    3300018: PlatformDecoration.009
-    3300020: PlatformDecoration.010
-    3300022: PlatformDecoration.011
-    3300024: PlatformDecoration.012
-    3300026: PlatformDecoration.013
-    3300028: PlatformDecoration.014
-    3300030: PlatformDecoration.015
-    3300032: PlatformDecoration.016
-    3300034: platorm
-    3300036: top
-    4300000: PlatformDecoration.008
-    4300002: PlatformDecoration.001
-    4300004: PlatformDecoration.002
-    4300006: PlatformDecoration.003
-    4300008: PlatformDecoration.004
-    4300010: PlatformDecoration.009
-    4300012: PlatformDecoration.005
-    4300014: PlatformDecoration.014
-    4300016: PlatformDecoration
-    4300018: PlatformDecoration.015
-    4300020: PlatformDecoration.006
-    4300022: PlatformDecoration.007
-    4300024: PlatformDecoration.010
-    4300026: PlatformDecoration.016
-    4300028: PlatformDecoration.013
-    4300030: PlatformDecoration.012
-    4300032: PlatformDecoration.011
-    4300034: top
-    4300036: platorm
+    2300000: //RootNode
+    2300002: PlatformDecoration
+    2300004: PlatformDecoration.001
+    2300006: PlatformDecoration.002
+    2300008: PlatformDecoration.003
+    2300010: PlatformDecoration.004
+    2300012: PlatformDecoration.005
+    2300014: PlatformDecoration.006
+    2300016: PlatformDecoration.007
+    2300018: PlatformDecoration.008
+    2300020: PlatformDecoration.009
+    2300022: PlatformDecoration.010
+    2300024: PlatformDecoration.011
+    2300026: PlatformDecoration.012
+    2300028: PlatformDecoration.013
+    2300030: PlatformDecoration.014
+    2300032: PlatformDecoration.015
+    2300034: PlatformDecoration.016
+    2300036: platorm
+    2300038: top
+    3300000: //RootNode
+    3300002: PlatformDecoration
+    3300004: PlatformDecoration.001
+    3300006: PlatformDecoration.002
+    3300008: PlatformDecoration.003
+    3300010: PlatformDecoration.004
+    3300012: PlatformDecoration.005
+    3300014: PlatformDecoration.006
+    3300016: PlatformDecoration.007
+    3300018: PlatformDecoration.008
+    3300020: PlatformDecoration.009
+    3300022: PlatformDecoration.010
+    3300024: PlatformDecoration.011
+    3300026: PlatformDecoration.012
+    3300028: PlatformDecoration.013
+    3300030: PlatformDecoration.014
+    3300032: PlatformDecoration.015
+    3300034: PlatformDecoration.016
+    3300036: platorm
+    3300038: top
+    4300000: big_rocks_03
+    4300002: PlatformDecoration.008
+    4300004: PlatformDecoration.001
+    4300006: PlatformDecoration.002
+    4300008: PlatformDecoration.003
+    4300010: PlatformDecoration.004
+    4300012: PlatformDecoration.009
+    4300014: PlatformDecoration.005
+    4300016: PlatformDecoration.014
+    4300018: PlatformDecoration
+    4300020: PlatformDecoration.015
+    4300022: PlatformDecoration.006
+    4300024: PlatformDecoration.007
+    4300026: PlatformDecoration.010
+    4300028: PlatformDecoration.016
+    4300030: PlatformDecoration.013
+    4300032: PlatformDecoration.012
+    4300034: PlatformDecoration.011
+    4300036: top
+    4300038: platorm
   materials:
     importMaterials: 1
     materialName: 0
