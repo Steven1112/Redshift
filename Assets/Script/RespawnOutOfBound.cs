@@ -13,8 +13,9 @@ public class RespawnOutOfBound : MonoBehaviour {
     Vector3 curPosition;
     Vector3 initialPosition;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
+
         scale = boundary.transform.localScale.x;
         center = boundary.transform.localPosition;
         radius = boundary.GetComponent<SphereCollider>().radius * scale;
