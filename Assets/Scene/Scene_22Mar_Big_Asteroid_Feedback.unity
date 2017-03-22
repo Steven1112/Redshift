@@ -458,35 +458,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81bab5748f2b32c408d6be384e3abcf6, type: 2}
   m_IsPrefabParent: 0
---- !u!21 &45971516
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Sprites/Default
-  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-    - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - first:
-        name: PixelSnap
-      second: 0
-    m_Colors:
-    - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &46455369
 GameObject:
   m_ObjectHideFlags: 0
@@ -1070,6 +1041,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 94cfc33c5c6bc0b4ea113257464885fe, type: 2}
+    - target: {fileID: 1020856868459860, guid: 7f4ee677352478745a26f6f98dc8ba16, type: 2}
+      propertyPath: m_TagString
+      value: bigasteroid
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f4ee677352478745a26f6f98dc8ba16, type: 2}
   m_IsPrefabParent: 0
@@ -3990,7 +3965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f52561e8aba2c3b449c19b0a7c554881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitBigAsteroid: {fileID: 0}
+  hitBigAsteroid: {fileID: 397464480}
 --- !u!1001 &228302577
 Prefab:
   m_ObjectHideFlags: 0
@@ -6062,6 +6037,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &373820361
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Sprites/Default
+  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: PixelSnap
+      second: 0
+    m_Colors:
+    - first:
+        name: _Color
+      second: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &373888632
 GameObject:
   m_ObjectHideFlags: 0
@@ -9465,6 +9469,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 94cfc33c5c6bc0b4ea113257464885fe, type: 2}
+    - target: {fileID: 1729218108644486, guid: 6d23cc809a099e24b9b4bfc516cc3618, type: 2}
+      propertyPath: m_TagString
+      value: bigasteroid
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d23cc809a099e24b9b4bfc516cc3618, type: 2}
   m_IsPrefabParent: 0
@@ -14145,7 +14153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f52561e8aba2c3b449c19b0a7c554881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitBigAsteroid: {fileID: 0}
+  hitBigAsteroid: {fileID: 397464480}
 --- !u!1 &1044754258
 GameObject:
   m_ObjectHideFlags: 0
@@ -17080,7 +17088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f52561e8aba2c3b449c19b0a7c554881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitBigAsteroid: {fileID: 0}
+  hitBigAsteroid: {fileID: 397464480}
 --- !u!1 &1206297475
 GameObject:
   m_ObjectHideFlags: 0
@@ -17349,6 +17357,10 @@ Prefab:
     - target: {fileID: 1695985033896912, guid: b0c83a4b74f56124ea459c426764f61a, type: 2}
       propertyPath: m_Name
       value: big_rocks_07
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695985033896912, guid: b0c83a4b74f56124ea459c426764f61a, type: 2}
+      propertyPath: m_TagString
+      value: bigasteroid
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b0c83a4b74f56124ea459c426764f61a, type: 2}
@@ -20903,6 +20915,10 @@ Prefab:
       propertyPath: m_Name
       value: big_rocks_06
       objectReference: {fileID: 0}
+    - target: {fileID: 1729218108644486, guid: 6d23cc809a099e24b9b4bfc516cc3618, type: 2}
+      propertyPath: m_TagString
+      value: bigasteroid
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d23cc809a099e24b9b4bfc516cc3618, type: 2}
   m_IsPrefabParent: 0
@@ -21088,7 +21104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f52561e8aba2c3b449c19b0a7c554881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitBigAsteroid: {fileID: 0}
+  hitBigAsteroid: {fileID: 397464480}
 --- !u!1 &1530774827
 GameObject:
   m_ObjectHideFlags: 0
@@ -21718,6 +21734,10 @@ Prefab:
     - target: {fileID: 1729218108644486, guid: 6d23cc809a099e24b9b4bfc516cc3618, type: 2}
       propertyPath: m_Name
       value: big_rocks_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1729218108644486, guid: 6d23cc809a099e24b9b4bfc516cc3618, type: 2}
+      propertyPath: m_TagString
+      value: bigasteroid
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d23cc809a099e24b9b4bfc516cc3618, type: 2}
@@ -23049,7 +23069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f52561e8aba2c3b449c19b0a7c554881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitBigAsteroid: {fileID: 0}
+  hitBigAsteroid: {fileID: 397464480}
 --- !u!1 &1669994618
 GameObject:
   m_ObjectHideFlags: 0
@@ -23254,7 +23274,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 94cfc33c5c6bc0b4ea113257464885fe, type: 2}
     - target: {fileID: 1695985033896912, guid: b0c83a4b74f56124ea459c426764f61a, type: 2}
       propertyPath: m_TagString
-      value: Untagged
+      value: bigasteroid
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b0c83a4b74f56124ea459c426764f61a, type: 2}
@@ -24258,7 +24278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f52561e8aba2c3b449c19b0a7c554881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitBigAsteroid: {fileID: 0}
+  hitBigAsteroid: {fileID: 397464480}
 --- !u!1 &1724961762
 GameObject:
   m_ObjectHideFlags: 0
@@ -24575,6 +24595,134 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d676e2ea03317a144af2a505933bc716, type: 2}
   m_IsPrefabParent: 0
+--- !u!43 &1787848398
+Mesh:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  serializedVersion: 8
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 24
+    topology: 0
+    firstVertex: 0
+    vertexCount: 8
+    localAABB:
+      m_Center: {x: 0, y: 0.01, z: 0}
+      m_Extent: {x: 2.1499994, y: 0, z: 1.5499998}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexBuffer: 000004000100010004000500010005000200020005000600020006000300030006000700030007000000000007000400
+  m_Skin: []
+  m_VertexData:
+    m_CurrentChannels: 13
+    m_VertexCount: 8
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 4
+    - stream: 0
+      offset: 28
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_DataSize: 288
+    _typelessdata: fbffff3f0ad7233c3233b3bf0000803f0000803f0000803f0000803f0000000000000000fbffffbf0ad7233c3233b3bf0000803f0000803f0000803f0000803f0000803f00000000fbffffbf0ad7233c3233b33f0000803f0000803f0000803f0000803f0000000000000000fbffff3f0ad7233c3233b33f0000803f0000803f0000803f0000803f0000803f00000000979909400ad7233c6566c6bf0000803f0000803f0000803f00000000000000000000803f979909c00ad7233c6566c6bf0000803f0000803f0000803f000000000000803f0000803f979909c00ad7233c6566c63f0000803f0000803f0000803f00000000000000000000803f979909400ad7233c6566c63f0000803f0000803f0000803f000000000000803f0000803f
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: 0, y: 0.01, z: 0}
+    m_Extent: {x: 2.1499994, y: 0, z: 1.5499998}
+  m_MeshUsageFlags: 0
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  m_MeshOptimized: 0
 --- !u!1 &1791172501
 GameObject:
   m_ObjectHideFlags: 0
@@ -26179,7 +26327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f52561e8aba2c3b449c19b0a7c554881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitBigAsteroid: {fileID: 0}
+  hitBigAsteroid: {fileID: 397464480}
 --- !u!1 &1962605499 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1988386885576318, guid: 8943a4dd7eac16241b4332c1b502248a,
@@ -26855,134 +27003,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1997638784}
---- !u!43 &2004942063
-Mesh:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  serializedVersion: 8
-  m_SubMeshes:
-  - serializedVersion: 2
-    firstByte: 0
-    indexCount: 24
-    topology: 0
-    firstVertex: 0
-    vertexCount: 8
-    localAABB:
-      m_Center: {x: 0, y: 0.01, z: 0}
-      m_Extent: {x: 2.1499994, y: 0, z: 1.5499998}
-  m_Shapes:
-    vertices: []
-    shapes: []
-    channels: []
-    fullWeights: []
-  m_BindPose: []
-  m_BoneNameHashes: 
-  m_RootBoneNameHash: 0
-  m_MeshCompression: 0
-  m_IsReadable: 1
-  m_KeepVertices: 1
-  m_KeepIndices: 1
-  m_IndexBuffer: 000004000100010004000500010005000200020005000600020006000300030006000700030007000000000007000400
-  m_Skin: []
-  m_VertexData:
-    m_CurrentChannels: 13
-    m_VertexCount: 8
-    m_Channels:
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 12
-      format: 0
-      dimension: 4
-    - stream: 0
-      offset: 28
-      format: 0
-      dimension: 2
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    m_DataSize: 288
-    _typelessdata: fbffff3f0ad7233c3233b3bf0000803f0000803f0000803f0000803f0000000000000000fbffffbf0ad7233c3233b3bf0000803f0000803f0000803f0000803f0000803f00000000fbffffbf0ad7233c3233b33f0000803f0000803f0000803f0000803f0000000000000000fbffff3f0ad7233c3233b33f0000803f0000803f0000803f0000803f0000803f00000000979909400ad7233c6566c6bf0000803f0000803f0000803f00000000000000000000803f979909c00ad7233c6566c6bf0000803f0000803f0000803f000000000000803f0000803f979909c00ad7233c6566c63f0000803f0000803f0000803f00000000000000000000803f979909400ad7233c6566c63f0000803f0000803f0000803f000000000000803f0000803f
-  m_CompressedMesh:
-    m_Vertices:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UV:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Normals:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Tangents:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Weights:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_NormalSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_TangentSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_FloatColors:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_BoneIndices:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Triangles:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UVInfo: 0
-  m_LocalAABB:
-    m_Center: {x: 0, y: 0.01, z: 0}
-    m_Extent: {x: 2.1499994, y: 0, z: 1.5499998}
-  m_MeshUsageFlags: 0
-  m_BakedConvexCollisionMesh: 
-  m_BakedTriangleCollisionMesh: 
-  m_MeshOptimized: 0
 --- !u!1 &2008591979
 GameObject:
   m_ObjectHideFlags: 0
@@ -27787,6 +27807,10 @@ Prefab:
       propertyPath: m_Name
       value: big_rocks_08
       objectReference: {fileID: 0}
+    - target: {fileID: 1729218108644486, guid: 6d23cc809a099e24b9b4bfc516cc3618, type: 2}
+      propertyPath: m_TagString
+      value: bigasteroid
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d23cc809a099e24b9b4bfc516cc3618, type: 2}
   m_IsPrefabParent: 0
@@ -27843,7 +27867,7 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2035993289}
-  m_Mesh: {fileID: 2004942063}
+  m_Mesh: {fileID: 1787848398}
 --- !u!23 &2035993292
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27858,7 +27882,7 @@ MeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 45971516}
+  - {fileID: 373820361}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
