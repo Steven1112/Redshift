@@ -89,6 +89,8 @@ public class PlanetCreator : MonoBehaviour {
 		}
 
 		protoPlanet.GetComponent<Animator> ().enabled = false;
+		GameObject bigAsteroids = UnityEngine.GameObject.FindGameObjectWithTag ("bigAsteroids");
+		bigAsteroids.gameObject.GetComponent<Animator> ().enabled = false;
 		//lava.GetComponent<Animator> ().enabled = false;
 
 		SoundManager.instance.playBackgroundSound ("backgroundSound", backgroundSound);
@@ -153,7 +155,7 @@ public class PlanetCreator : MonoBehaviour {
 		if (numMaterialCollected == 3) {
 			//computeResult(userMixture).form(protoPlanet);
             AnimationManager.instance.playSingle("transformingSound", transformingSound);
-			PullinScript.instance.asteroidPullin.Play("AsteroidPullin");
+			//PullinScript.instance.asteroidPullin.Play("AsteroidPullin");
             StartCoroutine(stopSound());
         }
 

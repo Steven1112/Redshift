@@ -47,6 +47,9 @@ public class Formation : MonoBehaviour {
 
 		// triggering animation of formation
 		protoPlanet.GetComponent<Animator> ().enabled = true;
+		GameObject bigAsteroids = UnityEngine.GameObject.FindGameObjectWithTag ("bigAsteroids");
+		bigAsteroids.GetComponent<Animator> ().enabled = true;
+		bigAsteroids.GetComponent<Animator> ().Play ("AsteroidPullin");
 		PlanetCreator.instance.lava.GetComponent<Animator> ().enabled = true;
 		PlanetCreator.instance.lava.GetComponent<Animator> ().Play (name + "lava");
 		protoPlanet.GetComponent<Animator> ().Play ("prototransform");

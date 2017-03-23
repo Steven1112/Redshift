@@ -35,6 +35,8 @@ TagManager:
   - pivot
   - player
   - bigasteroid
+  - colourMixer
+  - bigAsteroids
   layers:
   - Default
   - TransparentFX
