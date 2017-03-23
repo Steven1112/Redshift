@@ -230,7 +230,7 @@ public class PlanetCreator : MonoBehaviour {
 
 	public void reStart(){
 
-		SceneManager.LoadScene("Scene_21Mar_Master");
+		SceneManager.LoadScene("Scene_23Mar_High_Quality_Sound");
         //SceneManager.LoadScene(restartSceneName);
     }
 
