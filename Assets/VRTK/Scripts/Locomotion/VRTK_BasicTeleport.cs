@@ -185,13 +185,20 @@ namespace VRTK
 
 				// call world rotater to rotate the world upon teleporation
 				worldRotater.FaceProtoplanet(playerPositionBeforeTeleport);
+				float newX = e.target.position.x;
+				float newY = playArea.position.y;
+				float newZ = e.target.position.z;
+
+				UnityEngine.GameObject.FindGameObjectWithTag ("cameraRig").transform.position = new Vector3(newX,newY,newZ);
+
+				UnityEngine.GameObject.FindGameObjectWithTag ("player").transform.localPosition = Vector3.zero;
+				Debug.Log (UnityEngine.GameObject.FindGameObjectWithTag ("player").transform.localPosition);
 			}
 		}
 
 		protected virtual void SetNewPosition(Vector3 position, Transform target, bool forceDestinationPosition)
 		{
 			playArea.position = CheckTerrainCollision(position, target, forceDestinationPosition);
-			UnityEngine.GameObject.FindGameObjectWithTag ("player").transform.localPosition = Vector3.zero;
 		}
 
 		protected virtual Vector3 GetNewPosition(Vector3 tipPosition, Transform target, bool returnOriginalPosition)
