@@ -153,6 +153,7 @@ public class PlanetCreator : MonoBehaviour {
 		if (numMaterialCollected == 3) {
 			//computeResult(userMixture).form(protoPlanet);
             AnimationManager.instance.playSingle("transformingSound", transformingSound);
+			PullinScript.instance.asteroidPullin.Play("AsteroidPullin");
             StartCoroutine(stopSound());
         }
 
