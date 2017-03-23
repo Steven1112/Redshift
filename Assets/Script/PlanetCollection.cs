@@ -121,7 +121,7 @@ public class PlanetCollection : MonoBehaviour {
 			Sprite image = Resources.Load<Sprite> (planet.name + "_2D") as Sprite;
 			planetImage.GetComponent<Image>().sprite = image;
 			// update the name of the planet on UI
-			planetName.GetComponent<Text>().text = name;
+			planetName.GetComponent<Text>().text = name.ToUpper();
 			/*
 			for(int i = 0; i < 3; i++)
 			{

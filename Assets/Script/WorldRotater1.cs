@@ -101,14 +101,17 @@ public class WorldRotater1 : MonoBehaviour {
     void RotateWorld(Transform pivot, float angle)
     {
         // rotate velocities of asteroids
-        GameObject asteroidGroup = UnityEngine.GameObject.FindGameObjectWithTag("asteroids");
-        foreach (Transform child in asteroidGroup.transform)
-        {
-            Rigidbody asteroidRB = child.gameObject.GetComponent<Rigidbody>();
-            Vector3 velocity = asteroidRB.velocity;
-            velocity = Quaternion.Euler(0, -angle, 0) * velocity;
-            asteroidRB.velocity = velocity;
-        }
+
+		GameObject asteroidGroup = UnityEngine.GameObject.FindGameObjectWithTag("asteroids");
+		if (asteroidGroup != null) {
+			foreach (Transform child in asteroidGroup.transform)
+			{
+				Rigidbody asteroidRB = child.gameObject.GetComponent<Rigidbody>();
+				Vector3 velocity = asteroidRB.velocity;
+				velocity = Quaternion.Euler(0, -angle, 0) * velocity;
+				asteroidRB.velocity = velocity;
+			}
+		}
 
         pivot.transform.Rotate(Vector3.up, -angle);
     }

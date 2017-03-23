@@ -143,10 +143,10 @@ public class PlanetCreator : MonoBehaviour {
 			growSize();
 		}
 
-
+		/*
 		if (numMaterialCollected == 3) {
 			computeResult(userMixture).form(protoPlanet);
-		}
+		}*/
 
 	}
 	void addNitrogen(GameObject gameObject) {
