@@ -10137,7 +10137,7 @@ GameObject:
   - component: {fileID: 791731382}
   - component: {fileID: 791731381}
   m_Layer: 10
-  m_Name: CollectionPane
+  m_Name: TutorialPane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

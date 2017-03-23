@@ -38,6 +38,7 @@ TagManager:
   - colourMixer
   - cameraRig
   - rotater
+  - tutorial
   layers:
   - Default
   - TransparentFX

@@ -8,8 +8,9 @@ public class Formation : MonoBehaviour {
     public HashSet<string> ingredients;
     AnimationClip animation;
     public GameObject finalStage;
+    AudioClip voiceOver;
 
-	public Formation(string name, HashSet<string> ingredients, GameObject planet) {
+	public Formation(string name, HashSet<string> ingredients, GameObject planet,AudioClip voiceOver) {
         this.ingredients = new HashSet<string>();
         this.name = name;
         this.ingredients = ingredients;
@@ -52,11 +53,8 @@ public class Formation : MonoBehaviour {
 		protoPlanet.GetComponent<Animator> ().Play ("prototransform");
 		formed.GetComponent<Animator> ().Play (name + "transform");
         //Destroy(protoPlanet);
-    
 
-        // destory asteroids
-        GameObject collected = UnityEngine.GameObject.FindGameObjectWithTag("collected");
-        Destroy(collected);
+        SoundManager.instance.playSingle("effectSource", voiceOver);
     }
 
     public void setIngredients(HashSet<string> ingredients) {

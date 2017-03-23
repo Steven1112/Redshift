@@ -3,6 +3,7 @@ using System.Collections;
 
 public class SoundManager : MonoBehaviour
 {
+    public AudioSource effectSource;
 	public AudioSource backgroundSound;
     public AudioSource explosionOxygen;
     public AudioSource explosionSulfur;
@@ -35,7 +36,12 @@ public class SoundManager : MonoBehaviour
 
     public void playSingle(string audioSource, AudioClip sound)
     {
-        if (audioSource == "explosionOxygen")
+        if (audioSource == "effectSource")
+        {
+            effectSource.clip = sound;
+            effectSource.Play();
+        }
+        else if (audioSource == "explosionOxygen")
         {
             explosionOxygen.clip = sound;
             explosionOxygen.volume = 0.2f;

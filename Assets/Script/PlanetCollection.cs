@@ -10,6 +10,7 @@ public class PlanetCollection : MonoBehaviour {
 	HashSet<string> collection;
 	HashSet<Formation> formations;
 	public static int maxNumPlanet = 9;
+    List<string> planetsNotInCollection;
 
 	// UI
 	[SerializeField]
@@ -31,7 +32,19 @@ public class PlanetCollection : MonoBehaviour {
 		DontDestroyOnLoad(gameObject);
 
 		collection = new HashSet<string>();
-	}
+
+        // initialize planetsNotInCollection
+        planetsNotInCollection = new List<string>();
+        planetsNotInCollection.Add("mercury");
+        planetsNotInCollection.Add("venus");
+        planetsNotInCollection.Add("earth");
+        planetsNotInCollection.Add("mars");
+        planetsNotInCollection.Add("jupiter");
+        planetsNotInCollection.Add("saturn");
+        planetsNotInCollection.Add("uranus");
+        planetsNotInCollection.Add("neptune");
+        planetsNotInCollection.Add("pluto");
+    }
 
 	// Update is called once per frame
 	void Update () {
