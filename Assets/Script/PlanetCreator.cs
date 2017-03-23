@@ -24,6 +24,8 @@ public class PlanetCreator : MonoBehaviour {
 	public GameObject[] asteroidTracking = new GameObject[3];
 	public string restartSceneName;
 
+	public PlanetCollection collectionBook;
+
     [Header("Sound Triggers")]
 	public AudioClip backgroundSound;
     public AudioClip colOxygenSound;
@@ -46,6 +48,10 @@ public class PlanetCreator : MonoBehaviour {
             Destroy(gameObject);
         }
         //DontDestroyOnLoad(gameObject);
+
+		// reloads collection book for each planet creator instance
+		collectionBook = UnityEngine.GameObject.FindGameObjectWithTag("Collection").GetComponent<PlanetCollection>();
+		collectionBook.ReloadCollectionBook();
 
         //planets = new GameObject[10];
         ingredients = new HashSet<string> {"nitrogen", "hydrogen", "oxygen", "sulfur", "carbon", "common"};
@@ -106,12 +112,38 @@ public class PlanetCreator : MonoBehaviour {
         {
             AnimationManager.instance.commonHitExplosion.transform.position = gameObject.transform.position;
             AnimationManager.instance.commonHitExplosion.Play();
-        }
+		}
+		else if (string.Equals(material, "nitrogen"))
+		{
+			addNitrogen(gameObject);
+		}
+		else if (string.Equals(material, "carbon"))
+		{
+			addCarbon(gameObject);
+
+		}
+		else if (string.Equals(material, "oxygen"))
+		{
+			addOxygen(gameObject);
+		}
+		else if (string.Equals(material, "hydrogen"))
+		{
+			addHydrogen(gameObject);
+		}
+		else if (string.Equals(material, "sulfur"))
+		{
+			addSulfur(gameObject);
+		}
+
+		else {
+			// do nothing
+		}
 
         //SoundManager.instance.playSingle("effectSource",clickSound);
         if (numMaterialCollected < MAX_NUM_MATERIAL && !userMixture.Contains(material) && material!= "common")
 		{
 			numMaterialCollected++;
+			userMixture.Add (material);
 
             // update Asteroid Tracking UI
             GameObject curAsteroid = asteroidTracking [numMaterialCollected - 1];
@@ -119,32 +151,6 @@ public class PlanetCreator : MonoBehaviour {
 			curAsteroid.GetComponent<Image> ().enabled = true;
 			curAsteroid.GetComponent<Image> ().sprite = asteroidImage;
 			curAsteroid.transform.GetChild (0).GetComponent<Text> ().text = material;
-
-            if (string.Equals(material, "nitrogen"))
-			{
-				addNitrogen(gameObject);
-			}
-			else if (string.Equals(material, "carbon"))
-			{
-				addCarbon(gameObject);
-
-			}
-			else if (string.Equals(material, "oxygen"))
-			{
-				addOxygen(gameObject);
-			}
-			else if (string.Equals(material, "hydrogen"))
-			{
-				addHydrogen(gameObject);
-			}
-			else if (string.Equals(material, "sulfur"))
-			{
-				addSulfur(gameObject);
-			}
-
-			else {
-                // do nothing
-            }
 
 			growSize();
 		}
@@ -158,8 +164,6 @@ public class PlanetCreator : MonoBehaviour {
 
     }
 	void addNitrogen(GameObject gameObject) {
-        userMixture.Add("nitrogen");
-        Debug.Log("asteroid " + numMaterialCollected + ":nitrogen");
         AnimationManager.instance.nitrogenHitExplosion.transform.position = gameObject.transform.position;
         AnimationManager.instance.nitrogenHitExplosion.Play();
         SoundManager.instance.playSingle("explosionNitrogen", colNitrogenSound);
@@ -167,32 +171,24 @@ public class PlanetCreator : MonoBehaviour {
     }
 	void addCarbon(GameObject gameObject)
     {
-        userMixture.Add("carbon");
-        Debug.Log("asteroid" + numMaterialCollected + ":carbon");
         AnimationManager.instance.carbonHitExplosion.transform.position = gameObject.transform.position;
         AnimationManager.instance.carbonHitExplosion.Play();
         SoundManager.instance.playSingle("explosionCarbon", colCarbonSound);
 
     }
 	void addOxygen(GameObject gameObject) {
-        userMixture.Add("oxygen");
-        Debug.Log("asteroid" + numMaterialCollected + ":oxygen");
         AnimationManager.instance.oxygenHitExplosion.transform.position = gameObject.transform.position;
         AnimationManager.instance.oxygenHitExplosion.Play();
         SoundManager.instance.playSingle("explosionOxygen", colOxygenSound);
 
     }
 	void addHydrogen(GameObject gameObject) {
-        userMixture.Add("hydrogen");
-        Debug.Log("asteroid" + numMaterialCollected + ":hydrogen");
         AnimationManager.instance.hydrogenHitExplosion.transform.position = gameObject.transform.position;
         AnimationManager.instance.hydrogenHitExplosion.Play();
         SoundManager.instance.playSingle("explosionHydrogen", colHydrogenSound);
 
     }
 	void addSulfur(GameObject gameObject) {
-        userMixture.Add("sulfur");
-        Debug.Log("asteroid" + numMaterialCollected + ":sulfur");
         AnimationManager.instance.sulfurHitExplosion.transform.position = gameObject.transform.position;
         AnimationManager.instance.sulfurHitExplosion.Play();
         SoundManager.instance.playSingle("explosionSulfur", colSulfurSound);

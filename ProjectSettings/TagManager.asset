@@ -35,6 +35,9 @@ TagManager:
   - pivot
   - player
   - bigasteroid
+  - colourMixer
+  - cameraRig
+  - rotater
   layers:
   - Default
   - TransparentFX
