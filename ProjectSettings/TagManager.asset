@@ -4,44 +4,35 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - protoplanet
-  - hydrogen
+  - pluto
+  - image
+  - common
+  - name
+  - ControllerUI
+  - colourMixer
+  - Collection
+  - jupiter
+  - uranus
+  - asteroids
+  - earth
+  - mars
+  - mercury
+  - saturn
+  - pivot
+  - venus
+  - rotater
+  - player
+  - neptune
+  - cameraRig
   - oxygen
   - carbon
   - sulfur
+  - hydrogen
   - nitrogen
-  - collected
-  - asteroids
-  - commonasteroids
-  - eye
-  - FxTemporaire
-  - projectile
-  - TeleportIgnore
-  - common
-  - earth
-  - mercury
-  - pluto
-  - mars
-  - neptune
-  - saturn
-  - jupiter
-  - venus
-  - uranus
-  - ingredients
-  - image
-  - name
-  - Collection
-  - ControllerUI
-  - pivot
-  - player
   - bigasteroid
-  - colourMixer
-<<<<<<< HEAD
-  - cameraRig
-  - rotater
-=======
+  - protoplanet
   - bigAsteroids
->>>>>>> bigasteroidfeedback
+  - ingredients
   layers:
   - Default
   - TransparentFX
@@ -51,9 +42,9 @@ TagManager:
   - UI
   - 
   - 
-  - Asteroids
-  - NoLighting
   - Cannot_Teleport
+  - 
+  - 
   - 
   - 
   - 
@@ -78,7 +69,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: UI
-    uniqueID: 2333035245
     locked: 0
