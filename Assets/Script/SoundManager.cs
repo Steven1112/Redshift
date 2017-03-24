@@ -40,6 +40,7 @@ public class SoundManager : MonoBehaviour
         {
             effectSource.clip = sound;
             effectSource.Play();
+			Debug.Log("is playing " + sound.name);
         }
         else if (audioSource == "explosionOxygen")
         {

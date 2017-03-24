@@ -8,13 +8,14 @@ public class Formation : MonoBehaviour {
     public HashSet<string> ingredients;
     AnimationClip animation;
     public GameObject finalStage;
-    AudioClip voiceOver;
+    public AudioClip voiceOver;
 
 	public Formation(string name, HashSet<string> ingredients, GameObject planet,AudioClip voiceOver) {
         this.ingredients = new HashSet<string>();
         this.name = name;
         this.ingredients = ingredients;
         this.finalStage = planet;
+		this.voiceOver = voiceOver;
     }
 
     public HashSet<string> getIngredients() {
