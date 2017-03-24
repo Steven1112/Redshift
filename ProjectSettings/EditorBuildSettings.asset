@@ -6,4 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/Scene/Scene_23Mar_Master.unity
+=======
+    path: Assets/Scene/Scene_23Mar_High_Quality_Sound.unity
+>>>>>>> bigasteroidfeedback

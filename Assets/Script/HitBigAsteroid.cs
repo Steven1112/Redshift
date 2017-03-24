@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class HitBigAsteroid : MonoBehaviour {
 
+    public GameObject hitBigAsteroid;
+    
 	// Use this for initialization
 	void Start () {
 		
@@ -20,6 +22,8 @@ public class HitBigAsteroid : MonoBehaviour {
         Debug.Log("Tag name:" + col.gameObject.tag);
         if (string.Equals(col.gameObject.tag, "oxygen") || string.Equals(col.gameObject.tag, "nitrogen") || string.Equals(col.gameObject.tag, "hydrogen") || string.Equals(col.gameObject.tag, "sulfur") || string.Equals(col.gameObject.tag, "carbon"))
         {
+            hitBigAsteroid.transform.position = col.gameObject.transform.position;
+			Debug.Log(hitBigAsteroid.transform.position);
             AnimationManager.instance.hitBigAsteroid.Play();
             Debug.Log("asteroid hit the big asteroid collision happened");
             StartCoroutine(ClearBackendEffect());
@@ -28,7 +32,7 @@ public class HitBigAsteroid : MonoBehaviour {
 
     IEnumerator ClearBackendEffect()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1);
         AnimationManager.instance.hitBigAsteroid.Stop();
     }
 }

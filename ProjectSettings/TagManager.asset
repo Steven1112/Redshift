@@ -36,8 +36,12 @@ TagManager:
   - player
   - bigasteroid
   - colourMixer
+<<<<<<< HEAD
   - cameraRig
   - rotater
+=======
+  - bigAsteroids
+>>>>>>> bigasteroidfeedback
   layers:
   - Default
   - TransparentFX
