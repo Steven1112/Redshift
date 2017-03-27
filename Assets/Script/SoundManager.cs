@@ -86,7 +86,7 @@ public class SoundManager : MonoBehaviour
         if (audioSource == "teleportSound")
         {
             teleportSound.clip = sound;
-            teleportSound.volume = 0.4f;
+            teleportSound.volume = 0.2f;
             teleportSound.Play();
             teleportSound.loop = false;
             Debug.Log("is playing the teleporting sound!");
@@ -102,7 +102,7 @@ public class SoundManager : MonoBehaviour
         if (audioSource == "throwingSound")
         {
             throwingSound.clip = sound;
-            throwingSound.volume = 0.2f;
+            throwingSound.volume = 0.4f;
             throwingSound.Play();
             throwingSound.loop = false;
             Debug.Log("is playing the throwing asteroid sound!");
