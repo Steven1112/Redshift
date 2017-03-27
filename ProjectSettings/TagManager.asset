@@ -32,6 +32,8 @@ TagManager:
   - name
   - Collection
   - ControllerUI
+  - pivot
+  - player
   layers:
   - Default
   - TransparentFX

@@ -6,14 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scene/VFX_29Feb_Dust_Effect.unity
+    path: Assets/Scene/Scene_11Mar_Master.unity
   - enabled: 1
-    path: Assets/Scene/Scene_6Mar_Environment_Layout.unity
-  - enabled: 1
-    path: Assets/Scene/Scene_7Mar_UI_Control.unity
-  - enabled: 1
-    path: Assets/Scene/Scene_8Mar_Trail.unity
-  - enabled: 1
-    path: Assets/Scene/Scene_8Mar_Lighting.unity
-  - enabled: 1
-    path: Assets/Scene/Scene_8Mar_UI_Panel.unity
+    path: Assets/Scene/Scene_13Mar_Master.unity

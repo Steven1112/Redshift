@@ -209,7 +209,7 @@ public class PlanetCreator : MonoBehaviour {
 
 	public void reStart(){
 
-		SceneManager.LoadScene("Scene_8Mar_Controller");
+		SceneManager.LoadScene("Scene_13Mar_Master");
         //SceneManager.LoadScene(restartSceneName);
     }
 
