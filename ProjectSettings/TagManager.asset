@@ -33,6 +33,7 @@ TagManager:
   - protoplanet
   - bigAsteroids
   - ingredients
+  - collected
   layers:
   - Default
   - TransparentFX

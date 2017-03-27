@@ -54,15 +54,15 @@ public class AnimationManager : MonoBehaviour {
             //SoundManager.instance.playSingle("explosionOxygen", colOxygenSound);
         }
     }
-
+		
     public void playAsteroidPullinEffect()
     {
-        asteroidPullin.Play("AsteroidPullin");
+        //asteroidPullin.Play("AsteroidPullin");
     }
 
     public void stopAsteroidPullinEffect()
     {
-        asteroidPullin.Stop();
+        //asteroidPullin.Stop();
     }
 
     public void playFormationEffect(){
