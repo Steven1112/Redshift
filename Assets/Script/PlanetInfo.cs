@@ -7,6 +7,11 @@ public class PlanetInfo : MonoBehaviour {
     PlanetCollection planetCollection;
     public GameObject tutorialPane;
 
+	public string currentPlanet = "";
+	public string currentState = "";
+
+	public AudioClip tutorialVoice;
+
     // Use this for initialization
     void Start () {
         planetCollection = UnityEngine.GameObject.FindGameObjectWithTag("Collection").GetComponent<PlanetCollection>();       		
@@ -16,6 +21,7 @@ public class PlanetInfo : MonoBehaviour {
 	void Update () {
 		
 	}
+
     public void ShowPlanetInfo(string planet)
     {
         Sprite planetInfoImage;
@@ -24,14 +30,30 @@ public class PlanetInfo : MonoBehaviour {
         {
             // show planet facts
             planetInfoImage = Resources.Load<Sprite>("PlanetInfo/Unlocked/" + planet + "Info_unlocked") as Sprite;
+			currentState = "Unlocked";
 
         }
         else
         {
             // show tutorial
             planetInfoImage = Resources.Load<Sprite>("PlanetInfo/Locked/" + planet + "Info_locked") as Sprite;
+			currentState = "Locked";
         }
 
+		currentPlanet = planet;
         tutorialPane.GetComponent<Image>().sprite = planetInfoImage;
     }
+
+	public void PlayTutorialVoice(){
+		/*
+		if (currentPlanet == "" && currentState == "") {
+			// play tutorial voice
+			SoundManager.instance.playSingle("effectSource", tutorialVoice);
+
+		} else {
+			SoundManager.instance.playSingle ("effectSource", Resources.Load ("PlanetInfo/" + currentState + "/" + "Voice/" + currentPlanet) as AudioClip);
+		}*/
+		SoundManager.instance.playSingle("effectSource", tutorialVoice);
+	}
+
 }
