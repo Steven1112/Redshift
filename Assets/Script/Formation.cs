@@ -8,12 +8,14 @@ public class Formation : MonoBehaviour {
     public HashSet<string> ingredients;
     AnimationClip animation;
     public GameObject finalStage;
+	public AudioClip voiceOver;
 
-	public Formation(string name, HashSet<string> ingredients, GameObject planet) {
+	public Formation(string name, HashSet<string> ingredients, GameObject planet, AudioClip voiceOver) {
         this.ingredients = new HashSet<string>();
         this.name = name;
         this.ingredients = ingredients;
         this.finalStage = planet;
+		this.voiceOver = voiceOver;
     }
 
     public HashSet<string> getIngredients() {
@@ -54,12 +56,8 @@ public class Formation : MonoBehaviour {
 		PlanetCreator.instance.lava.GetComponent<Animator> ().Play (name + "lava");
 		protoPlanet.GetComponent<Animator> ().Play ("prototransform");
 		formed.GetComponent<Animator> ().Play (name + "transform");
-        //Destroy(protoPlanet);
-    
 
-        // destory asteroids
-        GameObject collected = UnityEngine.GameObject.FindGameObjectWithTag("collected");
-        Destroy(collected);
+		SoundManager.instance.playSingle ("voiceOverSource", voiceOver);
     }
 
     public void setIngredients(HashSet<string> ingredients) {
