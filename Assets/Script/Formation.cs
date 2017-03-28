@@ -15,6 +15,7 @@ public class Formation : MonoBehaviour {
         this.name = name;
         this.ingredients = ingredients;
         this.finalStage = planet;
+        this.voiceOver = voiceOver;
     }
 
     public HashSet<string> getIngredients() {
@@ -63,7 +64,6 @@ public class Formation : MonoBehaviour {
     public void setName(string name) {
         this.name = name;
     }
-
 
 		
 }

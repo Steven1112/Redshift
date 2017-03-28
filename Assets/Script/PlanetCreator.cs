@@ -47,14 +47,9 @@ public class PlanetCreator : MonoBehaviour {
         {
             Destroy(gameObject);
         }
-        //DontDestroyOnLoad(gameObject);
-
-		// reloads collection book for each planet creator instance
-		collectionBook = UnityEngine.GameObject.FindGameObjectWithTag("Collection").GetComponent<PlanetCollection>();
-		collectionBook.ReloadCollectionBook();
 
         //planets = new GameObject[10];
-        ingredients = new HashSet<string> {"nitrogen", "hydrogen", "oxygen", "sulfur", "carbon", "common"};
+        ingredients = new HashSet<string> {"nitrogen", "hydrogen", "oxygen", "sulfur", "carbon"};
         userMixture = new HashSet<string>();
 
         HashSet<string> mercuryIngredients = new HashSet<string> { "oxygen", "hydrogen", "nitrogen"};
@@ -68,16 +63,16 @@ public class PlanetCreator : MonoBehaviour {
         HashSet<string> plutoIngredients = new HashSet<string> { "nitrogen", "carbon", "sulfur" };
         HashSet<string> failIngredients = new HashSet<string> { "nitrogen", "oxygen", "sulfur" };
 
-        Formation mercury = new Formation("mercury", mercuryIngredients,Resources.Load("mercury") as GameObject, Resources.Load("PlanetsVoiceOver/MercuryVoiceOver") as AudioClip);
-        Formation venus = new Formation("venus", venusIngredients, Resources.Load("venus") as GameObject, Resources.Load("PlanetsVoiceOver/VenusVoiceOver") as AudioClip);
-		Formation earth = new Formation("earth", earthIngredients, Resources.Load("earth") as GameObject, Resources.Load("PlanetsVoiceOver/EarthVoiceOver") as AudioClip);
-        Formation mars = new Formation("mars", marsIngredients, Resources.Load("mars") as GameObject, Resources.Load("PlanetsVoiceOver/MarsVoiceOver") as AudioClip);
-        Formation jupiter = new Formation("jupiter", jupiterIngredients, Resources.Load("jupiter") as GameObject, Resources.Load("PlanetsVoiceOver/JupiterVoiceOver") as AudioClip);
-        Formation saturn = new Formation("saturn", saturnIngredients, Resources.Load("saturn") as GameObject, Resources.Load("PlanetsVoiceOver/SaturnVoiceOver") as AudioClip);
-        Formation uranus = new Formation("uranus", uranusIngredients, Resources.Load("uranus") as GameObject, Resources.Load("PlanetsVoiceOver/UranusVoiceOver") as AudioClip);
-        Formation neptune = new Formation("neptune", neptuneIngredients, Resources.Load("neptune") as GameObject, Resources.Load("PlanetsVoiceOver/NeptuneVoiceOver") as AudioClip);
-        Formation pluto = new Formation("pluto", plutoIngredients, Resources.Load("pluto") as GameObject, Resources.Load("PlanetsVoiceOver/PlutoVoiceOver") as AudioClip);
-        Formation fail = new Formation("fail", failIngredients, Resources.Load("fail") as GameObject, Resources.Load("PlanetsVoiceOver/FailVoiceOver") as AudioClip);
+        Formation mercury = new Formation("mercury", mercuryIngredients,Resources.Load("mercury") as GameObject, Resources.Load("PlanetsVoiceOver/MercuryVoice") as AudioClip);
+        Formation venus = new Formation("venus", venusIngredients, Resources.Load("venus") as GameObject, Resources.Load("PlanetsVoiceOver/VenusVoice") as AudioClip);
+		Formation earth = new Formation("earth", earthIngredients, Resources.Load("earth") as GameObject, Resources.Load("PlanetsVoiceOver/EarthVoice") as AudioClip);
+        Formation mars = new Formation("mars", marsIngredients, Resources.Load("mars") as GameObject, Resources.Load("PlanetsVoiceOver/MarsVoice") as AudioClip);
+        Formation jupiter = new Formation("jupiter", jupiterIngredients, Resources.Load("jupiter") as GameObject, Resources.Load("PlanetsVoiceOver/JupiterVoice") as AudioClip);
+        Formation saturn = new Formation("saturn", saturnIngredients, Resources.Load("saturn") as GameObject, Resources.Load("PlanetsVoiceOver/SaturnVoice") as AudioClip);
+        Formation uranus = new Formation("uranus", uranusIngredients, Resources.Load("uranus") as GameObject, Resources.Load("PlanetsVoiceOver/UranusVoice") as AudioClip);
+        Formation neptune = new Formation("neptune", neptuneIngredients, Resources.Load("neptune") as GameObject, Resources.Load("PlanetsVoiceOver/NeptuneVoice") as AudioClip);
+        Formation pluto = new Formation("pluto", plutoIngredients, Resources.Load("pluto") as GameObject, Resources.Load("PlanetsVoiceOver/PlutoVoice") as AudioClip);
+        Formation fail = new Formation("fail", failIngredients, Resources.Load("fail") as GameObject, Resources.Load("PlanetsVoiceOver/FailVoice") as AudioClip);
 
         results[0] = mercury;
         results[1] = venus;
@@ -98,6 +93,10 @@ public class PlanetCreator : MonoBehaviour {
 		//lava.GetComponent<Animator> ().enabled = false;
 
 		SoundManager.instance.playBackgroundSound ("backgroundSound", backgroundSound);
+
+        // reloads collection book for each planet creator instance
+        collectionBook = UnityEngine.GameObject.FindGameObjectWithTag("Collection").GetComponent<PlanetCollection>();
+        collectionBook.ReloadCollectionBook();
 
     }
 
@@ -223,7 +222,7 @@ public class PlanetCreator : MonoBehaviour {
 
 	public void reStart(){
 
-		SceneManager.LoadScene("Scene_21Mar_Master");
+		SceneManager.LoadScene("Scene_27Mar_PlanetInfo");
         //SceneManager.LoadScene(restartSceneName);
     }
 

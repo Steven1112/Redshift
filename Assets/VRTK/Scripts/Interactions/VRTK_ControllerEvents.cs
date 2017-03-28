@@ -440,16 +440,6 @@ namespace VRTK
 
         public void Start(){
 
-			//collectionBook = GameObject.FindWithTag("Collection");
-			//collectionBook = GameObject.Find("CollectionBook/Canvas/CollectionPane");
-
-			//controllerUI = GameObject.Find("CameraRig/ControllerLeft/Canvas/AsteroidTrackingUI");
-			//controllerUI = GameObject.FindWithTag("ControllerUI");
-
-			Debug.Log ("CollectionBook" + collectionBook);
-			Debug.Log ("ControllerUI" + controllerUI);
-
-
 			if(collectionBook != null){
 				collectionBook.SetActive (false);
 			}
