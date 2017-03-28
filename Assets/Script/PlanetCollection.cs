@@ -11,12 +11,14 @@ public class PlanetCollection : MonoBehaviour {
 	public HashSet<Formation> formations;
 	public static int maxNumPlanet = 9;
 
-    List<string> planetsNotInCollection;
+    List<string> planetsNotInCollection = new List<string>() {"mercury", "venus", "earth", "mars", "jupiter","saturn", "uranus", "neptune", "pluto"};
 
 	// UI
 	[SerializeField]
     public GameObject tutorialPane;
     public GameObject[] collectionBook = new GameObject[9];
+
+    public bool isTutorialShown = false;
 
 
 	// Use this for initialization
@@ -33,18 +35,6 @@ public class PlanetCollection : MonoBehaviour {
 		DontDestroyOnLoad(gameObject);
 
 		collection = new HashSet<string>();
-
-        // initialize planetsNotInCollection
-        planetsNotInCollection = new List<string>();
-        planetsNotInCollection.Add("mercury");
-        planetsNotInCollection.Add("venus");
-        planetsNotInCollection.Add("earth");
-        planetsNotInCollection.Add("mars");
-        planetsNotInCollection.Add("jupiter");
-        planetsNotInCollection.Add("saturn");
-        planetsNotInCollection.Add("uranus");
-        planetsNotInCollection.Add("neptune");
-        planetsNotInCollection.Add("pluto");
     }
 
 	// Update is called once per frame
@@ -56,8 +46,11 @@ public class PlanetCollection : MonoBehaviour {
 	{
         tutorialPane = UnityEngine.GameObject.FindGameObjectWithTag("tutorial");
 
-        //Debug.Log(planetsNotInCollection[1]);
-        //tutorialPane.GetComponent<Image>().sprite = Resources.Load("PlanetInfo/Locked/" + planetsNotInCollection[0] + "Info_locked") as Sprite;
+        if (isTutorialShown == true)
+        {
+            Sprite planetInfoImage = Resources.Load<Sprite>("PlanetInfo/Locked/" + planetsNotInCollection[0] + "Info_locked") as Sprite;
+            tutorialPane.GetComponent<Image>().sprite = planetInfoImage;
+        }
 
         collectionBook [0] = UnityEngine.GameObject.FindGameObjectWithTag ("earth");
 		collectionBook [1] = UnityEngine.GameObject.FindGameObjectWithTag ("jupiter");

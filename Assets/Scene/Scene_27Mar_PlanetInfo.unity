@@ -759,8 +759,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.98417854, b: 0.42647058, a: 1}
-    m_PressedColor: {r: 0.9264706, g: 0.5647148, b: 0.17711937, a: 1}
+    m_HighlightedColor: {r: 0.9744422, g: 1, b: 0.53676474, a: 1}
+    m_PressedColor: {r: 1, g: 0.50735295, b: 0.50735295, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -778,7 +778,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 362379328}
+      - m_Target: {fileID: 363375780}
         m_MethodName: ShowPlanetInfo
         m_Mode: 5
         m_Arguments:
@@ -1921,8 +1921,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.98417854, b: 0.42647058, a: 1}
-    m_PressedColor: {r: 0.9264706, g: 0.5647148, b: 0.17711937, a: 1}
+    m_HighlightedColor: {r: 0.9744422, g: 1, b: 0.53676474, a: 1}
+    m_PressedColor: {r: 1, g: 0.50735295, b: 0.50735295, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1940,7 +1940,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 362379328}
+      - m_Target: {fileID: 363375780}
         m_MethodName: ShowPlanetInfo
         m_Mode: 5
         m_Arguments:
@@ -3284,8 +3284,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.98417854, b: 0.42647058, a: 1}
-    m_PressedColor: {r: 0.9264706, g: 0.5647148, b: 0.17711937, a: 1}
+    m_HighlightedColor: {r: 0.9744422, g: 1, b: 0.53676474, a: 1}
+    m_PressedColor: {r: 1, g: 0.50735295, b: 0.50735295, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -3303,7 +3303,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 362379328}
+      - m_Target: {fileID: 363375780}
         m_MethodName: ShowPlanetInfo
         m_Mode: 5
         m_Arguments:
@@ -3562,8 +3562,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.98417854, b: 0.42647058, a: 1}
-    m_PressedColor: {r: 0.9264706, g: 0.5647148, b: 0.17711937, a: 1}
+    m_HighlightedColor: {r: 0.9744422, g: 1, b: 0.53676474, a: 1}
+    m_PressedColor: {r: 1, g: 0.50735295, b: 0.50735295, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -3581,7 +3581,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 362379328}
+      - m_Target: {fileID: 363375780}
         m_MethodName: ShowPlanetInfo
         m_Mode: 5
         m_Arguments:
@@ -4017,8 +4017,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.98417854, b: 0.42647058, a: 1}
-    m_PressedColor: {r: 0.9264706, g: 0.5647148, b: 0.17711937, a: 1}
+    m_HighlightedColor: {r: 0.9744422, g: 1, b: 0.53676474, a: 1}
+    m_PressedColor: {r: 1, g: 0.50735295, b: 0.50735295, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -4036,7 +4036,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 362379328}
+      - m_Target: {fileID: 363375780}
         m_MethodName: ShowPlanetInfo
         m_Mode: 5
         m_Arguments:
@@ -4614,8 +4614,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.98417854, b: 0.42647058, a: 1}
-    m_PressedColor: {r: 0.9264706, g: 0.5647148, b: 0.17711937, a: 1}
+    m_HighlightedColor: {r: 0.9744422, g: 1, b: 0.53676474, a: 1}
+    m_PressedColor: {r: 1, g: 0.50735295, b: 0.50735295, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -4633,7 +4633,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 362379328}
+      - m_Target: {fileID: 363375780}
         m_MethodName: ShowPlanetInfo
         m_Mode: 5
         m_Arguments:
@@ -5804,15 +5804,15 @@ Transform:
   m_PrefabParentObject: {fileID: 4426707937258982, guid: f0a3bbdc9bcb58c4ab40947e3652f77e,
     type: 2}
   m_PrefabInternal: {fileID: 359020403}
---- !u!1 &362379327
+--- !u!1 &363375779
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 362379329}
-  - component: {fileID: 362379328}
+  - component: {fileID: 363375781}
+  - component: {fileID: 363375780}
   m_Layer: 0
   m_Name: PlanetInfo
   m_TagString: Untagged
@@ -5820,24 +5820,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &362379328
+--- !u!114 &363375780
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 362379327}
+  m_GameObject: {fileID: 363375779}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8f37959b5aff4b49907d531107e3d69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorialPane: {fileID: 791731379}
---- !u!4 &362379329
+  tutorialPane: {fileID: 0}
+--- !u!4 &363375781
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 362379327}
+  m_GameObject: {fileID: 363375779}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -55.0311, y: -1.1623192, z: -27.103918}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -10155,7 +10155,7 @@ MonoBehaviour:
   pickupSound: {fileID: 0}
   throwingSound: {fileID: 0}
   usingState: 0
-  restartSceneName: Scene_27Mar_PlanetInfo
+  restartSceneName: Scene_21Mar_Master
 --- !u!23 &732853015
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10908,7 +10908,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numPlanetColelcted: 0
-  tutorialPane: {fileID: 791731379}
+  tutorialPane: {fileID: 0}
   collectionBook:
   - {fileID: 1310317676}
   - {fileID: 890713026}
@@ -10919,6 +10919,7 @@ MonoBehaviour:
   - {fileID: 1840998031}
   - {fileID: 1873716284}
   - {fileID: 1100033410}
+  isTutorialShown: 0
 --- !u!4 &841666603
 Transform:
   m_ObjectHideFlags: 0
@@ -19507,8 +19508,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.98417854, b: 0.42647058, a: 1}
-    m_PressedColor: {r: 0.9264706, g: 0.5647148, b: 0.17711937, a: 1}
+    m_HighlightedColor: {r: 0.9744422, g: 1, b: 0.53676474, a: 1}
+    m_PressedColor: {r: 1, g: 0.50735295, b: 0.50735295, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -19526,7 +19527,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 362379328}
+      - m_Target: {fileID: 363375780}
         m_MethodName: ShowPlanetInfo
         m_Mode: 5
         m_Arguments:
@@ -19958,7 +19959,7 @@ MonoBehaviour:
   - {fileID: 1980842652}
   - {fileID: 1986179417}
   - {fileID: 822498224}
-  restartSceneName: Scene_27Mar_PlanetInfo
+  restartSceneName: Scene_21Mar_Master
   collectionBook: {fileID: 0}
   backgroundSound: {fileID: 8300000, guid: 48bb23b384cb013418eae08081d2066d, type: 3}
   colOxygenSound: {fileID: 8300000, guid: 24aa8061ceef35b4b97e7b84ab3660b7, type: 3}
@@ -21642,8 +21643,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.98417854, b: 0.42647058, a: 1}
-    m_PressedColor: {r: 0.9264706, g: 0.5647148, b: 0.17711937, a: 1}
+    m_HighlightedColor: {r: 0.9744422, g: 1, b: 0.53676474, a: 1}
+    m_PressedColor: {r: 1, g: 0.50735295, b: 0.50735295, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -21661,7 +21662,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 362379328}
+      - m_Target: {fileID: 363375780}
         m_MethodName: ShowPlanetInfo
         m_Mode: 5
         m_Arguments:
@@ -24098,8 +24099,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.98417854, b: 0.42647058, a: 1}
-    m_PressedColor: {r: 0.9264706, g: 0.5647148, b: 0.17711937, a: 1}
+    m_HighlightedColor: {r: 0.9744422, g: 1, b: 0.53676474, a: 1}
+    m_PressedColor: {r: 1, g: 0.50735295, b: 0.50735295, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -24117,7 +24118,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 362379328}
+      - m_Target: {fileID: 363375780}
         m_MethodName: ShowPlanetInfo
         m_Mode: 5
         m_Arguments:

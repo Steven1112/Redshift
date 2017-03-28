@@ -23,13 +23,13 @@ public class PlanetInfo : MonoBehaviour {
         if (planetCollection.collection.Contains(planet))
         {
             // show planet facts
-            planetInfoImage = Resources.Load("PlanetInfo/Unlocked/" + planet + "Info_unlocked") as Sprite;
+            planetInfoImage = Resources.Load<Sprite>("PlanetInfo/Unlocked/" + planet + "Info_unlocked") as Sprite;
 
         }
         else
         {
             // show tutorial
-            planetInfoImage = Resources.Load("PlanetInfo/Locked/" + planet + "Info_locked") as Sprite;
+            planetInfoImage = Resources.Load<Sprite>("PlanetInfo/Locked/" + planet + "Info_locked") as Sprite;
         }
 
         tutorialPane.GetComponent<Image>().sprite = planetInfoImage;

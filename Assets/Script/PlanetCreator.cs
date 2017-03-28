@@ -223,6 +223,8 @@ public class PlanetCreator : MonoBehaviour {
 	public void reStart(){
 
 		SceneManager.LoadScene("Scene_27Mar_PlanetInfo");
+        collectionBook.isTutorialShown = true;
+
         //SceneManager.LoadScene(restartSceneName);
     }
 
