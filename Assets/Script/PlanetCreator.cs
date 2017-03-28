@@ -220,21 +220,13 @@ public class PlanetCreator : MonoBehaviour {
 		computeResult(userMixture).form(protoPlanet);
     }
 
-	public void reStart(){
+	public void Restart(string sceneName){
 
-		SceneManager.LoadScene("Scene_27Mar_PlanetInfo");
+		SceneManager.LoadScene(sceneName);
         collectionBook.isTutorialShown = true;
-
-        //SceneManager.LoadScene(restartSceneName);
     }
 
 	void Update() {
-		
-		if (Input.GetKeyDown(KeyCode.R))
-		{
-			reStart();
-			canRestart = false;
-		}
 
 	}
 

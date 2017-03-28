@@ -1094,7 +1094,7 @@ namespace VRTK
 						controllerUI.SetActive (false);
 					}
 
-                    SoundManager.instance.stopSingle("triggerUISound", triggerUISound);
+                    //SoundManager.instance.stopSingle("triggerUISound", triggerUISound);
                 }
             }
 
