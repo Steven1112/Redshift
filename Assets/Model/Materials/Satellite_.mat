@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: platform_miniball
+  m_Name: Satellite_
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
@@ -121,7 +121,7 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 0.13286576, g: 0.0054302127, b: 0.001875874, a: 1}
+      second: {r: 0.09339807, g: 0.8000001, b: 0.7546635, a: 1}
     - first:
         name: _EmissionColor
-      second: {r: 0.9411765, g: 0.24221455, b: 0.24221455, a: 1}
+      second: {r: 0.38916522, g: 0.8280485, b: 0.86764705, a: 1}
