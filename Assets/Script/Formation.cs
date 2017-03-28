@@ -28,6 +28,9 @@ public class Formation : MonoBehaviour {
 		// add formed planet to collection
 		PlanetCollection.instance.addPlanetToCollection(this);
 
+		// show planet info
+		UnityEngine.GameObject.FindGameObjectWithTag("planetInfo").GetComponent<PlanetInfo>().ShowPlanetInfo(name);
+
 		//display animation
 
 		//replace finalStage with the current protoplanet object
@@ -40,12 +43,6 @@ public class Formation : MonoBehaviour {
 		formed.transform.rotation = protoPlanet.transform.rotation;
 		//formed.transform.localScale = protoPlanet.transform.localScale;
 
-        if (protoPlanet.transform.parent != null)
-        {
-            Destroy(protoPlanet.transform.parent.gameObject);
-			Debug.Log ("protoplanet has parent");
-        }
-        else {}
 
 		// triggering animation of formation
 		protoPlanet.GetComponent<Animator> ().enabled = true;
@@ -61,9 +58,9 @@ public class Formation : MonoBehaviour {
     public void setIngredients(HashSet<string> ingredients) {
         this.ingredients = ingredients;
     }
+
     public void setName(string name) {
         this.name = name;
     }
-
 		
 }

@@ -45,14 +45,6 @@ public class PlanetInfo : MonoBehaviour {
     }
 
 	public void PlayTutorialVoice(){
-		/*
-		if (currentPlanet == "" && currentState == "") {
-			// play tutorial voice
-			SoundManager.instance.playSingle("effectSource", tutorialVoice);
-
-		} else {
-			SoundManager.instance.playSingle ("effectSource", Resources.Load ("PlanetInfo/" + currentState + "/" + "Voice/" + currentPlanet) as AudioClip);
-		}*/
 		SoundManager.instance.playSingle("effectSource", tutorialVoice);
 	}
 
