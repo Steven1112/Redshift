@@ -94,7 +94,7 @@ public class PlanetCreator : MonoBehaviour {
 			image.GetComponent<Image> ().enabled = false;
 		}
 
-		protoPlanet.GetComponent<Animator> ().enabled = false;
+		//protoPlanet.GetComponent<Animator> ().enabled = false;
 		GameObject bigAsteroids = UnityEngine.GameObject.FindGameObjectWithTag ("bigAsteroids");
 		bigAsteroids.gameObject.GetComponent<Animator> ().enabled = false;
 
