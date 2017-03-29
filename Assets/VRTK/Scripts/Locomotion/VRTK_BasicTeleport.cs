@@ -41,6 +41,7 @@ namespace VRTK
 		[Tooltip("The max distance the teleport destination can be outside the nav mesh to be considered valid. If a value of `0` is given then the nav mesh restrictions will be ignored.")]
 		public float navMeshLimitDistance = 0f;
 		WorldRotater worldRotater;
+		public AudioClip teleportSound;
 
 		/// <summary>
 		/// Emitted when the teleport process has begun.
@@ -193,6 +194,8 @@ namespace VRTK
 
 				UnityEngine.GameObject.FindGameObjectWithTag ("player").transform.localPosition = Vector3.zero;
 				Debug.Log (UnityEngine.GameObject.FindGameObjectWithTag ("player").transform.localPosition);
+
+				SoundManager.instance.playSingle ("effectSource", teleportSound);
 			}
 		}
 
