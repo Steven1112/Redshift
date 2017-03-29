@@ -23,9 +23,6 @@ public class Formation : MonoBehaviour {
     }
 
     public void form(GameObject protoPlanet) {
-
-		GameObject protoPlanetParent = protoPlanet.transform.parent.gameObject;
-
 		//wait for a few seconds
 
 		// add formed planet to collection
@@ -45,7 +42,7 @@ public class Formation : MonoBehaviour {
 
         if (protoPlanet.transform.parent != null)
         {
-            //Destroy(protoPlanet.transform.parent.gameObject);		// this line breaks the parent animation we use to make a smooth transition
+            Destroy(protoPlanet.transform.parent.gameObject);
 			Debug.Log ("protoplanet has parent");
         }
         else {}
@@ -57,11 +54,8 @@ public class Formation : MonoBehaviour {
 		bigAsteroids.GetComponent<Animator> ().Play ("AsteroidPullin");
 		PlanetCreator.instance.lava.GetComponent<Animator> ().enabled = true;
 		PlanetCreator.instance.lava.GetComponent<Animator> ().Play (name + "lava");
-		//protoPlanet.GetComponent<Animator> ().Play ("prototransform");
+		protoPlanet.GetComponent<Animator> ().Play ("prototransform");
 		formed.GetComponent<Animator> ().Play (name + "transform");
-		Debug.Log (protoPlanetParent.name + "   " + protoPlanet.name);
-		protoPlanetParent.GetComponent<Animator>().SetTrigger ("Transform");
-		protoPlanet.GetComponent<Animator> ().SetTrigger ("Transform");
 
 		SoundManager.instance.playSingle ("voiceOverSource", voiceOver);
     }
