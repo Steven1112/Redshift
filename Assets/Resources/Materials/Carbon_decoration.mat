@@ -6,10 +6,10 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: platform_miniball
+  m_Name: Carbon_decoration
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION
-  m_LightmapFlags: 2
+  m_LightmapFlags: 1
   m_CustomRenderQueue: -1
   stringTagMap: {}
   m_SavedProperties:
@@ -121,7 +121,7 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 0.13286576, g: 0.0054302127, b: 0.001875874, a: 1}
+      second: {r: 0.053200692, g: 0.44011465, b: 0.9044118, a: 1}
     - first:
         name: _EmissionColor
-      second: {r: 0.9411765, g: 0.24221455, b: 0.24221455, a: 1}
+      second: {r: 0.23768038, g: 0.108131476, b: 0.29411763, a: 1}
