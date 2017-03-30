@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 0b66a0ab23976a04084f2941bca10084
 timeCreated: 1490741088
+=======
+guid: 86eebbb112d5e034d89287a224bfc3a7
+timeCreated: 1490310673
+>>>>>>> planet_info
 licenseType: Free
 AudioImporter:
   serializedVersion: 6

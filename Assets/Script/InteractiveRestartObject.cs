@@ -11,9 +11,10 @@
         public override void StartUsing(GameObject usingObject)
         {
             base.StartUsing(usingObject);
-
+			/*
 			SceneManager.LoadScene(restartSceneName);
-			Debug.Log ("Restart!");
+			Debug.Log ("Restart!");*/
+			PlanetCreator.instance.Restart (restartSceneName);
             AnimationManager.instance.stopAsteroidPullinEffect();
         }
 

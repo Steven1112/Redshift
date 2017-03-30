@@ -8,14 +8,14 @@ public class Formation : MonoBehaviour {
     public HashSet<string> ingredients;
     AnimationClip animation;
     public GameObject finalStage;
-	public AudioClip voiceOver;
+    AudioClip voiceOver;
 
-	public Formation(string name, HashSet<string> ingredients, GameObject planet, AudioClip voiceOver) {
+	public Formation(string name, HashSet<string> ingredients, GameObject planet,AudioClip voiceOver) {
         this.ingredients = new HashSet<string>();
         this.name = name;
         this.ingredients = ingredients;
         this.finalStage = planet;
-		this.voiceOver = voiceOver;
+        this.voiceOver = voiceOver;
     }
 
     public HashSet<string> getIngredients() {
@@ -27,6 +27,9 @@ public class Formation : MonoBehaviour {
 
 		// add formed planet to collection
 		PlanetCollection.instance.addPlanetToCollection(this);
+
+		// show planet info
+		UnityEngine.GameObject.FindGameObjectWithTag("planetInfo").GetComponent<PlanetInfo>().ShowPlanetInfo(name);
 
 		//display animation
 
@@ -40,12 +43,6 @@ public class Formation : MonoBehaviour {
 		formed.transform.rotation = protoPlanet.transform.rotation;
 		//formed.transform.localScale = protoPlanet.transform.localScale;
 
-        if (protoPlanet.transform.parent != null)
-        {
-            Destroy(protoPlanet.transform.parent.gameObject);
-			Debug.Log ("protoplanet has parent");
-        }
-        else {}
 
 		// triggering animation of formation
 		protoPlanet.GetComponent<Animator> ().enabled = true;
@@ -56,17 +53,15 @@ public class Formation : MonoBehaviour {
 		PlanetCreator.instance.lava.GetComponent<Animator> ().Play (name + "lava");
 		protoPlanet.GetComponent<Animator> ().Play ("prototransform");
 		formed.GetComponent<Animator> ().Play (name + "transform");
-
 		SoundManager.instance.playSingle ("voiceOverSource", voiceOver);
     }
 
     public void setIngredients(HashSet<string> ingredients) {
         this.ingredients = ingredients;
     }
+
     public void setName(string name) {
         this.name = name;
     }
-
-
 		
 }

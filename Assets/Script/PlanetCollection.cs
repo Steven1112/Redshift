@@ -7,14 +7,18 @@ public class PlanetCollection : MonoBehaviour {
 
 	public static PlanetCollection instance = null;
 	public int numPlanetColelcted = 0;
-	HashSet<string> collection;
-	HashSet<Formation> formations;
+	public HashSet<string> collection;
+	public HashSet<Formation> formations;
 	public static int maxNumPlanet = 9;
+
+    List<string> planetsNotInCollection = new List<string>() {"mercury", "venus", "earth", "mars", "jupiter","saturn", "uranus", "neptune", "pluto"};
 
 	// UI
 	[SerializeField]
-	public GameObject canvas;
-	public GameObject[] collectionBook = new GameObject[9];
+    public GameObject tutorialPane;
+    public GameObject[] collectionBook = new GameObject[9];
+
+    public bool isTutorialShown = false;
 
 
 	// Use this for initialization
@@ -31,7 +35,7 @@ public class PlanetCollection : MonoBehaviour {
 		DontDestroyOnLoad(gameObject);
 
 		collection = new HashSet<string>();
-	}
+    }
 
 	// Update is called once per frame
 	void Update () {
@@ -40,17 +44,25 @@ public class PlanetCollection : MonoBehaviour {
 
 	public void ReloadCollectionBook()
 	{
-		collectionBook [0] = UnityEngine.GameObject.FindGameObjectWithTag ("earth");
+        tutorialPane = UnityEngine.GameObject.FindGameObjectWithTag("tutorial");
+
+        if (isTutorialShown == true)
+        {
+            Sprite planetInfoImage = Resources.Load<Sprite>("PlanetInfo/Locked/" + planetsNotInCollection[0] + "Info_locked") as Sprite;
+            tutorialPane.GetComponent<Image>().sprite = planetInfoImage;
+        }
+
+        collectionBook [0] = UnityEngine.GameObject.FindGameObjectWithTag ("earth");
 		collectionBook [1] = UnityEngine.GameObject.FindGameObjectWithTag ("jupiter");
 		collectionBook [2] = UnityEngine.GameObject.FindGameObjectWithTag ("mars");
 		collectionBook [3] = UnityEngine.GameObject.FindGameObjectWithTag ("mercury");
-		collectionBook [4] = UnityEngine.GameObject.FindGameObjectWithTag ("neptune");
+        collectionBook [4] = UnityEngine.GameObject.FindGameObjectWithTag ("neptune");
 		collectionBook [5] = UnityEngine.GameObject.FindGameObjectWithTag ("pluto");
 		collectionBook [6] = UnityEngine.GameObject.FindGameObjectWithTag ("saturn");
 		collectionBook [7] = UnityEngine.GameObject.FindGameObjectWithTag ("venus");
 		collectionBook [8] = UnityEngine.GameObject.FindGameObjectWithTag ("uranus");
 
-		if (collection!=null && collection.Count > 0)
+        if (collection!=null && collection.Count > 0)
 		{
 			string[] planetsInCollection = new string[collection.Count];
 			collection.CopyTo(planetsInCollection);
@@ -73,16 +85,6 @@ public class PlanetCollection : MonoBehaviour {
 						planetImage.GetComponent<Image>().sprite = image;
 						// update the name of the planet on UI
 						planetName.GetComponent<Text>().text = planetObj.tag.ToUpper();
-						/*
-						for (int k = 0; k < 3; k++)
-						{
-							string[] ingredients = new string[planet.ingredients.Count];
-							// convert hashset from formation class to array
-							planet.ingredients.CopyTo(ingredients);
-							string ingredient = ingredients[k];
-							Sprite ingredientImage = Resources.Load<Sprite>(ingredient + "_2D") as Sprite;
-							planetIngredients.transform.GetChild(k).gameObject.GetComponent<Image>().sprite = ingredientImage;
-						}*/
 					}
 				}
 			}
@@ -107,31 +109,22 @@ public class PlanetCollection : MonoBehaviour {
 		{
 			numPlanetColelcted++;
 			collection.Add(name);
+            planetsNotInCollection.Remove(name);
+
 			Debug.Log(name + " is added to the collection");
 
 			// get all UI compoents of the newly collected planet
 			GameObject planetObj = collectionBook[planetIndex];
-			//GameObject planetIngredients = planetObj.transform.GetChild(0).gameObject;
 			GameObject planetImage = planetObj.transform.GetChild(0).gameObject;
 			GameObject planetName = planetObj.transform.GetChild(1).gameObject;
 
 			// update the image of the planet on UI
 			Sprite image = Resources.Load<Sprite> (planet.name + "_2D") as Sprite;
 			planetImage.GetComponent<Image>().sprite = image;
-			// update the name of the planet on UI
+			
+            // update the name of the planet on UI
 			planetName.GetComponent<Text>().text = name.ToUpper();
-			/*
-			for(int i = 0; i < 3; i++)
-			{
-				string[] ingredients = new string[planet.ingredients.Count];
-				// convert hashset from formation class to array
-				planet.ingredients.CopyTo(ingredients);
-				string ingredient = ingredients[i];
-				Sprite ingredientImage = Resources.Load<Sprite>(ingredient + "_2D") as Sprite;
-				//planetIngredients.transform.GetChild(i).gameObject.GetComponent<Image>().sprite = ingredientImage;
-			}*/
 
-			//planetObj.GetComponent<Image>().sprite = planetImage;
 			foreach(string collected in collection)
 			{
 				Debug.Log("in collection: " + collected);

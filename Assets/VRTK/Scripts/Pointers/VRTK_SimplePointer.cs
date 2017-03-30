@@ -41,8 +41,6 @@ namespace VRTK
         private bool storedBeamState;
         private bool storedTipState;
 
-		public AudioClip teleportSound;
-
         protected override void OnEnable()
         {
             base.OnEnable();
@@ -173,16 +171,6 @@ namespace VRTK
 
             base.ChangeMaterialColor(pointerBeam, color);
             base.ChangeMaterialColor(pointerTip, color);
-
-			if (color == Color.green){
-				SoundManager.instance.playSingle ("teleportSound", teleportSound);
-				//StartCoroutine (stopSound ());
-				print("Play Teleportation sound!");
-			} 
-			else
-			{
-				SoundManager.instance.stopSingle("teleportSound", teleportSound);
-			}
         }
 			
 

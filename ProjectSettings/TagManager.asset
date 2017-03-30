@@ -4,36 +4,17 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - pluto
-  - image
-  - common
   - name
-  - ControllerUI
-  - colourMixer
-  - Collection
-  - jupiter
-  - uranus
-  - asteroids
-  - earth
-  - mars
-  - mercury
   - saturn
-  - pivot
-  - venus
-  - rotater
-  - player
+  - image
   - neptune
-  - cameraRig
-  - oxygen
-  - carbon
-  - sulfur
-  - hydrogen
-  - nitrogen
-  - bigasteroid
-  - protoplanet
-  - bigAsteroids
-  - ingredients
-  - collected
+  - mars
+  - jupiter
+  - pluto
+  - mercury
+  - venus
+  - earth
+  - uranus
   layers:
   - Default
   - TransparentFX
@@ -43,7 +24,7 @@ TagManager:
   - UI
   - 
   - 
-  - Cannot_Teleport
+  - 
   - 
   - 
   - 

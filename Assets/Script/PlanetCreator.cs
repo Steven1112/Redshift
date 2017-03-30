@@ -47,11 +47,6 @@ public class PlanetCreator : MonoBehaviour {
         {
             Destroy(gameObject);
         }
-        //DontDestroyOnLoad(gameObject);
-
-		// reloads collection book for each planet creator instance
-		collectionBook = UnityEngine.GameObject.FindGameObjectWithTag("Collection").GetComponent<PlanetCollection>();
-		collectionBook.ReloadCollectionBook();
 
         //planets = new GameObject[10];
         ingredients = new HashSet<string> {"nitrogen", "hydrogen", "oxygen", "sulfur", "carbon"};
@@ -99,6 +94,10 @@ public class PlanetCreator : MonoBehaviour {
 		bigAsteroids.gameObject.GetComponent<Animator> ().enabled = false;
 
 		SoundManager.instance.playBackgroundSound ("backgroundSound", backgroundSound);
+
+        // reloads collection book for each planet creator instance
+        collectionBook = UnityEngine.GameObject.FindGameObjectWithTag("Collection").GetComponent<PlanetCollection>();
+        collectionBook.ReloadCollectionBook();
 
     }
 
@@ -223,19 +222,12 @@ public class PlanetCreator : MonoBehaviour {
 		computeResult(userMixture).form(protoPlanet);
     }
 
-	public void reStart(){
-
-		SceneManager.LoadScene("Scene_27Mar_Master");
-        //SceneManager.LoadScene(restartSceneName);
+	public void Restart(string sceneName){
+		SceneManager.LoadScene(sceneName);
+        collectionBook.isTutorialShown = true;
     }
 
 	void Update() {
-		
-		if (Input.GetKeyDown(KeyCode.R))
-		{
-			reStart();
-			canRestart = false;
-		}
 
 	}
 

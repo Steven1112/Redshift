@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 7f3aef213ca5841418a16866d60cea5a
 folderAsset: yes
 timeCreated: 1490741053
+=======
+guid: ebd0d40092b134b4e8cd0b5327fe17cf
+folderAsset: yes
+timeCreated: 1490310662
+>>>>>>> planet_info
 licenseType: Free
 DefaultImporter:
   userData: 
