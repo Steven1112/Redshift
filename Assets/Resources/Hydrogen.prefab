@@ -61,7 +61,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: c1f6b55786dde4704ac882af09b03913, type: 2}
+  - {fileID: 2100000, guid: d861729de17f24adbbccf518360ad133, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -141,6 +141,8 @@ MonoBehaviour:
   pointerActivatesUseAction: 0
   useOverrideButton: 0
   allowedUseControllers: 0
+  pickupSound: {fileID: 0}
+  throwingSound: {fileID: 0}
   usingState: 0
 --- !u!114 &114690255510197934
 MonoBehaviour:
