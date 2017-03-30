@@ -48,7 +48,12 @@ public class PlanetCollection : MonoBehaviour {
 
         if (isTutorialShown == true)
         {
-            Sprite planetInfoImage = Resources.Load<Sprite>("PlanetInfo/Locked/" + planetsNotInCollection[0] + "Info_locked") as Sprite;
+			Sprite planetInfoImage;
+			if (planetsNotInCollection.Count == 0) {
+				planetInfoImage = Resources.Load<Sprite>("PlanetInfo/Locked/" + "fail" + "Info_locked") as Sprite;
+			}else{
+				planetInfoImage = Resources.Load<Sprite>("PlanetInfo/Locked/" + planetsNotInCollection[0] + "Info_locked") as Sprite;
+			}
             tutorialPane.GetComponent<Image>().sprite = planetInfoImage;
         }
 

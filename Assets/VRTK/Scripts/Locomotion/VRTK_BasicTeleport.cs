@@ -195,7 +195,7 @@ namespace VRTK
 				UnityEngine.GameObject.FindGameObjectWithTag ("player").transform.localPosition = Vector3.zero;
 				Debug.Log (UnityEngine.GameObject.FindGameObjectWithTag ("player").transform.localPosition);
 
-				SoundManager.instance.playSingle ("voiceOverSource", teleportSound);
+				SoundManager.instance.playSingle ("effectSource", teleportSound);
 			}
 		}
 

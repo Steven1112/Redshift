@@ -35,6 +35,8 @@ public class PlanetCreator : MonoBehaviour {
     public AudioClip colHydrogenSound;
     public AudioClip transformingSound;
 
+	public AudioClip beginningOfExperienceVoiceOver;
+
 
     void Awake() {
 
@@ -47,6 +49,7 @@ public class PlanetCreator : MonoBehaviour {
         {
             Destroy(gameObject);
         }
+
 
         //planets = new GameObject[10];
         ingredients = new HashSet<string> {"nitrogen", "hydrogen", "oxygen", "sulfur", "carbon"};
@@ -98,6 +101,9 @@ public class PlanetCreator : MonoBehaviour {
         // reloads collection book for each planet creator instance
         collectionBook = UnityEngine.GameObject.FindGameObjectWithTag("Collection").GetComponent<PlanetCollection>();
         collectionBook.ReloadCollectionBook();
+		if (!collectionBook.isTutorialShown) {
+			SoundManager.instance.playSingle ("voiceOverSource", beginningOfExperienceVoiceOver);
+		}
 
     }
 

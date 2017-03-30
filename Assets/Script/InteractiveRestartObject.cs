@@ -12,8 +12,8 @@
         {
             base.StartUsing(usingObject);
 			/*
-			SceneManager.LoadScene(restartSceneName);
-			Debug.Log ("Restart!");*/
+			SceneManager.LoadScene(restartSceneName);*/
+			Debug.Log ("Restart!");
 			PlanetCreator.instance.Restart (restartSceneName);
             AnimationManager.instance.stopAsteroidPullinEffect();
         }

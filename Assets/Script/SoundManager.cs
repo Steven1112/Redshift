@@ -14,6 +14,7 @@ public class SoundManager : MonoBehaviour
     public AudioSource teleportSound;
     public AudioSource pickupSound;
     public AudioSource throwingSound;
+	public AudioSource effectSource;
 
 
     public static SoundManager instance = null;
@@ -43,7 +44,7 @@ public class SoundManager : MonoBehaviour
         if (audioSource == "explosionOxygen")
         {
             explosionOxygen.clip = sound;
-            explosionOxygen.volume = 0.2f;
+            explosionOxygen.volume = 1f;
             explosionOxygen.Play();
 			explosionOxygen.loop = false;
             Debug.Log("is playing the oxygen explosion sound!");
@@ -51,7 +52,7 @@ public class SoundManager : MonoBehaviour
         if (audioSource == "explosionSulfur")
         {
             explosionSulfur.clip = sound;
-			explosionSulfur.volume = 0.2f;
+			explosionSulfur.volume = 1f;
             explosionSulfur.Play();
 			explosionSulfur.loop = false;
             Debug.Log("is playing the sulfur explosion sound!");
@@ -59,7 +60,7 @@ public class SoundManager : MonoBehaviour
         if (audioSource == "explosionCarbon")
         {
             explosionCarbon.clip = sound;
-			explosionCarbon.volume = 0.2f;
+			explosionCarbon.volume = 1f;
             explosionCarbon.Play();
 			explosionCarbon.loop = false;
             Debug.Log("is playing the carbon explosion sound!");
@@ -67,7 +68,7 @@ public class SoundManager : MonoBehaviour
         if (audioSource == "explosionNitrogen")
         {
             explosionNitrogen.clip = sound;
-			explosionNitrogen.volume = 0.1f;
+			explosionNitrogen.volume = 1f;
             explosionNitrogen.Play();
 			explosionNitrogen.loop = false;
             Debug.Log("is playing the nitrogen explosion sound!");
@@ -75,7 +76,7 @@ public class SoundManager : MonoBehaviour
         if (audioSource == "explosionHydrogen")
         {
             explosionHydrogen.clip = sound;
-			explosionHydrogen.volume = 0.2f;
+			explosionHydrogen.volume = 1f;
             explosionHydrogen.Play();
 			explosionHydrogen.loop = false;
             Debug.Log("is playing the hydrogen explosion sound!");
@@ -112,6 +113,10 @@ public class SoundManager : MonoBehaviour
             throwingSound.loop = false;
             Debug.Log("is playing the throwing asteroid sound!");
         }
+		if (audioSource == "effectSource") {
+			effectSource.clip = sound;
+			effectSource.Play();
+		}
         else
         {
             //
