@@ -5,12 +5,10 @@ using UnityEngine.UI;
 
 public class PlanetInfo : MonoBehaviour {
     PlanetCollection planetCollection;
-    public GameObject tutorialPane;
+    public GameObject planetInfoPane;
 
 	public string currentPlanet = "";
 	public string currentState = "";
-
-	public AudioClip tutorialVoice;
 
     // Use this for initialization
     void Start () {
@@ -41,11 +39,7 @@ public class PlanetInfo : MonoBehaviour {
         }
 
 		currentPlanet = planet;
-        tutorialPane.GetComponent<Image>().sprite = planetInfoImage;
+		planetInfoPane.GetComponent<Image>().sprite = planetInfoImage;
     }
-
-	public void PlayTutorialVoice(){
-		SoundManager.instance.playSingle("effectSource", tutorialVoice);
-	}
 
 }

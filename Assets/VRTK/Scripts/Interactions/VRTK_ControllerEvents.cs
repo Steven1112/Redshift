@@ -432,23 +432,16 @@ namespace VRTK
         private Vector3 controllerVelocity = Vector3.zero;
         private Vector3 controllerAngularVelocity = Vector3.zero;
 
-		public GameObject collectionBook;
 		public GameObject controllerUI;
         public AudioClip triggerUISound;
-        public AudioClip teleportSound;
 
 
         public void Start(){
 
-			if(collectionBook != null){
-				collectionBook.SetActive (false);
-			}
-
 			if(controllerUI != null){
 				controllerUI.SetActive (false);
 			}
-
-
+				
 		}
 
         public virtual void OnTriggerPressed(ControllerInteractionEventArgs e)
@@ -1070,10 +1063,6 @@ namespace VRTK
                     uiClickPressed = true;
                     OnAliasUIClickOn(SetButtonEvent(ref buttonBool, true, buttonPressure));
 
-					if(collectionBook != null){
-						collectionBook.SetActive (true);
-					}
-
 					if(controllerUI != null){
 						controllerUI.SetActive (true);
 					}
@@ -1085,10 +1074,6 @@ namespace VRTK
                 {
                     uiClickPressed = false;
                     OnAliasUIClickOff(SetButtonEvent(ref buttonBool, false, buttonPressure));
-
-					if(collectionBook != null){
-						collectionBook.SetActive (false);
-					}
 
 					if(controllerUI != null){
 						controllerUI.SetActive (false);
@@ -1455,14 +1440,5 @@ namespace VRTK
             controllerVelocity = VRTK_SDK_Bridge.GetVelocityOnIndex(controllerIndex);
             controllerAngularVelocity = VRTK_SDK_Bridge.GetAngularVelocityOnIndex(controllerIndex);
         }
-
-		/*
-        IEnumerator stopSound()
-        {
-            yield return new WaitForSeconds(1);
-            SoundManager.instance.stopSingle("teleportSound", teleportSound);
-        }
-
-       */
     }
 }
