@@ -37,6 +37,10 @@ public class PlanetCreator : MonoBehaviour {
 
 	public AudioClip beginningOfExperienceVoiceOver;
 
+    // mode manager
+    public GameObject restartPane;
+	public GameObject solarSystemPane;
+
 
     void Awake() {
 
@@ -232,9 +236,9 @@ public class PlanetCreator : MonoBehaviour {
 		SceneManager.LoadScene(sceneName);
         collectionBook.isTutorialShown = true;
     }
-
-	void Update() {
-
+	
+	public void EnterSolarSystemCreatorMode(){
+		SceneManager.LoadScene("SolarSystemCreator");
 	}
 
     IEnumerator stopSound()
