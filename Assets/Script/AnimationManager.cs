@@ -5,8 +5,6 @@ using UnityEngine;
 public class AnimationManager : MonoBehaviour {
 
 	[Header("Visual Effects")]
-	public ParticleSystem simpleExplosion;
-	public ParticleSystem seeResults;
     public ParticleSystem oxygenHitExplosion;
     public ParticleSystem nitrogenHitExplosion;
     public ParticleSystem hydrogenHitExplosion;
@@ -19,9 +17,6 @@ public class AnimationManager : MonoBehaviour {
     public Animator asteroidPullin;
 
 	public AudioSource transformingSound;
-
-    // [Header("Explosion Sound")]
-    // public AudioClip colOxygenSound;
 
     public static AnimationManager instance = null;
 
@@ -36,7 +31,6 @@ public class AnimationManager : MonoBehaviour {
 		{
 			Destroy(gameObject);
 		}
-		//DontDestroyOnLoad(gameObject);
 		
         asteroidPullin = GetComponent<Animator>();
 
@@ -45,33 +39,9 @@ public class AnimationManager : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 
-        //hot key for testing
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            asteroidPullin.Play("AsteroidPullin");
-            // hot key for testing sound
-            //SoundManager.instance.explosionOxygen.Play();
-            //SoundManager.instance.playSingle("explosionOxygen", colOxygenSound);
-        }
     }
 		
-    public void playAsteroidPullinEffect()
-    {
-        //asteroidPullin.Play("AsteroidPullin");
-    }
 
-    public void stopAsteroidPullinEffect()
-    {
-        //asteroidPullin.Stop();
-    }
-
-    public void playFormationEffect(){
-		seeResults.Play();
-	}
-
-	public void stopFormationEffect(){
-		seeResults.Stop();		
-	}
 
     public void visualEffectsClearAll()
     {

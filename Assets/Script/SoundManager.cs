@@ -31,9 +31,6 @@ public class SoundManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        //DontDestroyOnLoad(gameObject);
-
-       // explosionOxygen = GetComponent<AudioSource>();
     }
 
     public void playSingle(string audioSource, AudioClip sound)

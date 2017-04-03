@@ -19,22 +19,12 @@ public class PullinScript : MonoBehaviour {
 		{
 			Destroy(gameObject);
 		}
-		//DontDestroyOnLoad(gameObject);
 
 		asteroidPullin = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
-		//hot key for testing
-		if (Input.GetKeyDown(KeyCode.T))
-		{
-			asteroidPullin.Play("AsteroidPullin");
-			// hot key for testing sound
-			//SoundManager.instance.explosionOxygen.Play();
-			//SoundManager.instance.playSingle("explosionOxygen", colOxygenSound);
-		}
 
 	}
 
