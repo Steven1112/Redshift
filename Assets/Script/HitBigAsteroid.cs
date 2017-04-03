@@ -5,6 +5,7 @@ using UnityEngine;
 public class HitBigAsteroid : MonoBehaviour {
 
     public GameObject hitBigAsteroid;
+	public AudioClip hitAsteroidSound;
     
 	// Use this for initialization
 	void Start () {
@@ -26,6 +27,7 @@ public class HitBigAsteroid : MonoBehaviour {
 			Debug.Log(hitBigAsteroid.transform.position);
             AnimationManager.instance.hitBigAsteroid.Play();
             Debug.Log("asteroid hit the big asteroid collision happened");
+			SoundManager.instance.playHitAsteroidSound ("hitAsteroidSound", hitAsteroidSound);
             StartCoroutine(ClearBackendEffect());
         }
     }
@@ -34,5 +36,6 @@ public class HitBigAsteroid : MonoBehaviour {
     {
         yield return new WaitForSeconds(1);
         AnimationManager.instance.hitBigAsteroid.Stop();
+		SoundManager.instance.stopHitAsteroidSound ("hitAsteroidSound", hitAsteroidSound);
     }
 }

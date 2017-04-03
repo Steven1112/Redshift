@@ -15,6 +15,7 @@ public class SoundManager : MonoBehaviour
     public AudioSource pickupSound;
     public AudioSource throwingSound;
 	public AudioSource effectSource;
+	public AudioSource hitAsteroidSound;
 
 
     public static SoundManager instance = null;
@@ -100,7 +101,7 @@ public class SoundManager : MonoBehaviour
         if (audioSource == "pickupSound")
         {
             pickupSound.clip = sound;
-            pickupSound.volume = 0.2f;
+            pickupSound.volume = 0.05f;
             pickupSound.Play();
             pickupSound.loop = false;
             Debug.Log("is playing the pickup asteroid sound!");
@@ -169,6 +170,38 @@ public class SoundManager : MonoBehaviour
 			backgroundSound.Play();
 			explosionOxygen.loop = true;
 			Debug.Log("is playing the background sound!");
+		}
+
+		else
+		{
+			//
+		}
+	}
+
+	public void playHitAsteroidSound(string audioSource, AudioClip sound)
+	{
+		if (audioSource == "hitAsteroidSound")
+		{
+			hitAsteroidSound.clip = sound;
+			hitAsteroidSound.volume = 0.15f;
+			hitAsteroidSound.Play();
+			hitAsteroidSound.loop = false;
+			Debug.Log("is playing the hitting asteroid sound!");
+		}
+
+		else
+		{
+			//
+		}
+	}
+
+	public void stopHitAsteroidSound(string audioSource, AudioClip sound)
+	{
+		if (audioSource == "hitAsteroidSound")
+		{
+			hitAsteroidSound.clip = sound;
+			hitAsteroidSound.Stop();
+			Debug.Log("is stopping the hitting asteroid sound!");
 		}
 
 		else
