@@ -20,6 +20,8 @@ public class PlanetCollection : MonoBehaviour {
 
     public bool isTutorialShown = false;
 
+	public AudioClip collectionCompleteVoice;
+
 
 	// Use this for initialization
 	void Start () {
@@ -134,6 +136,13 @@ public class PlanetCollection : MonoBehaviour {
 			{
 				Debug.Log("in collection: " + collected);
 			}
+		}
+
+		if(numPlanetColelcted == maxNumPlanet){
+			PlanetCreator planetCreator = UnityEngine.GameObject.FindGameObjectWithTag("creator").GetComponent<PlanetCreator>();
+			planetCreator.restartPane.SetActive(false);
+			planetCreator.solarSystemPane.SetActive(true);
+			//SoundManager.instance.playSingle("voiceOverSource",collectionCompleteVoice);
 		}
 	}
 }

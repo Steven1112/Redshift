@@ -37,6 +37,10 @@ public class PlanetCreator : MonoBehaviour {
 
 	public AudioClip beginningOfExperienceVoiceOver;
 
+	// mode manager
+	public GameObject restartPane;
+	public GameObject solarSystemPane;
+
 
     void Awake() {
 
@@ -235,6 +239,11 @@ public class PlanetCreator : MonoBehaviour {
 
 	void Update() {
 
+	}
+
+	public void EnterSolarSystemCreatorMode(){
+		//SceneManager.LoadScene("SolarSystemCreator");
+		Debug.Log("entering the solar system creator");
 	}
 
     IEnumerator stopSound()

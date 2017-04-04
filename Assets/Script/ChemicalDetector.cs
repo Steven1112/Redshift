@@ -37,13 +37,9 @@ public class ChemicalDetector : MonoBehaviour {
         }
         else
         {
-            // reset focused object to null when player is not looking at an asteroid
-            if (focusedObject != null)
-            {
-                //infoObject.transform.parent = null;
-                infoObject.SetActive(false);
-                focusedObject = null;
-            }
+			//infoObject.transform.parent = null;
+            infoObject.SetActive(false);
+            focusedObject = null;
         }
     }
 
