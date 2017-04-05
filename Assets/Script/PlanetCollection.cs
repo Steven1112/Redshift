@@ -19,7 +19,6 @@ public class PlanetCollection : MonoBehaviour {
     public GameObject[] collectionBook = new GameObject[9];
 
     public bool isTutorialShown = false;
-
 	public AudioClip collectionCompleteVoice;
 
 
@@ -80,8 +79,6 @@ public class PlanetCollection : MonoBehaviour {
 				{
 					if (planetsInCollection[i] == collectionBook[j].tag)
 					{
-						//Formation planet = (Formation)PlanetCreator.instance.results[planetsInCollection[i]];
-						//Debug.Log ("planet name:" + planet.name);
 						// get all UI compoents of the newly collected planet
 						GameObject planetObj = collectionBook[j];
 						GameObject planetImage = planetObj.transform.GetChild(0).gameObject;
@@ -90,6 +87,7 @@ public class PlanetCollection : MonoBehaviour {
 						// update the image of the planet on UI
 						Sprite image = Resources.Load<Sprite>(planetsInCollection[i] + "_2D") as Sprite;
 						planetImage.GetComponent<Image>().sprite = image;
+
 						// update the name of the planet on UI
 						planetName.GetComponent<Text>().text = planetObj.tag.ToUpper();
 					}

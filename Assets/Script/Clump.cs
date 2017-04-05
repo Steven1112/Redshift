@@ -119,7 +119,6 @@ public class Clump : MonoBehaviour
 
 	void absorb(GameObject planet, GameObject asteroid)
 	{
-		//Debug.Log("absorbing...");
 		asteroid.transform.parent = null;
 		planet.transform.localScale += new Vector3((float) planetScaleInc, (float) planetScaleInc, (float) planetScaleInc);
 		asteroid.transform.localScale -= new Vector3((float)asteroidScaleDec, (float)asteroidScaleDec, (float)asteroidScaleDec);
@@ -129,7 +128,6 @@ public class Clump : MonoBehaviour
 	IEnumerator Replay()
 	{
 		yield return new WaitForSeconds(2);
-		AnimationManager.instance.commonHitExplosion.Stop();
 	}
 
 	void increaseSpin() {

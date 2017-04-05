@@ -7,9 +7,6 @@ public class ChemicalDetector : MonoBehaviour {
     public GameObject infoObject;
     GameObject focusedObject = null;
 
-	// the thickness of the raycast
-	//float thickness = 10.0f;
-
     // Use this for initialization
     void Start () {
 		
@@ -19,7 +16,6 @@ public class ChemicalDetector : MonoBehaviour {
 	void Update () {
         Debug.DrawRay(transform.position, transform.forward * 3, Color.red);
         RaycastHit hit;
-		// Physics.SphereCast(transform.position,0.10,transform.forward,3,out hit)
 		if (Physics.SphereCast(transform.position,0.20f,transform.forward,out hit,3.0f) && hit.transform.parent != null)
         {
 			if (hit.transform.parent.tag == "asteroids") {
@@ -37,7 +33,6 @@ public class ChemicalDetector : MonoBehaviour {
         }
         else
         {
-			//infoObject.transform.parent = null;
             infoObject.SetActive(false);
             focusedObject = null;
         }
@@ -47,9 +42,7 @@ public class ChemicalDetector : MonoBehaviour {
     void ShowInfo(Transform hit)
     {
         infoObject.SetActive(true);
-        //infoObject.transform.parent = hit;
 		infoObject.transform.rotation = Quaternion.identity;
-        //Vector3 temp = Vector3.zero;
         infoObject.transform.position = hit.transform.position;
         float radius = hit.gameObject.GetComponent<SphereCollider>().radius;
 		float scale = hit.gameObject.transform.localScale.y;

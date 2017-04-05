@@ -114,16 +114,9 @@ public class PlanetCreator : MonoBehaviour {
     public void addMaterial(GameObject gameObject) {
 
         string material = gameObject.tag;
-
         AnimationManager.instance.visualEffectsClearAll();
 
-
-        if (string.Equals(material, "common"))
-        {
-            AnimationManager.instance.commonHitExplosion.transform.position = gameObject.transform.position;
-            AnimationManager.instance.commonHitExplosion.Play();
-		}
-		else if (string.Equals(material, "nitrogen"))
+        if (string.Equals(material, "nitrogen"))
 		{
 			addNitrogen(gameObject);
 		}
@@ -149,8 +142,7 @@ public class PlanetCreator : MonoBehaviour {
 			// do nothing
 		}
 
-        //SoundManager.instance.playSingle("effectSource",clickSound);
-        if (numMaterialCollected < MAX_NUM_MATERIAL && !userMixture.Contains(material) && material!= "common")
+        if (numMaterialCollected < MAX_NUM_MATERIAL && !userMixture.Contains(material))
 		{
 			numMaterialCollected++;
 			userMixture.Add (material);
@@ -165,11 +157,8 @@ public class PlanetCreator : MonoBehaviour {
 			growSize();
 		}
 
-
 		if (numMaterialCollected == 3) {
-			//computeResult(userMixture).form(protoPlanet);
             AnimationManager.instance.playSingle("transformingSound", transformingSound);
-			//PullinScript.instance.asteroidPullin.Play("AsteroidPullin");
             StartCoroutine(stopSound());
         }
 
@@ -203,14 +192,13 @@ public class PlanetCreator : MonoBehaviour {
         AnimationManager.instance.sulfurHitExplosion.transform.position = gameObject.transform.position;
         AnimationManager.instance.sulfurHitExplosion.Play();
         SoundManager.instance.playSingle("explosionSulfur", colSulfurSound);
-
-
     }
 
 
 
     Formation computeResult(HashSet<string> userMixture)
     {
+
         int size = results.Count;
         
         for(int i=0; i < size; i++)
@@ -220,30 +208,34 @@ public class PlanetCreator : MonoBehaviour {
             }
         }
         return null;
+
     }
 
     public void growSize() {
+
         //increase the size of the protoplanet
         protoPlanet.transform.localScale += new Vector3(0.1f, 0.1f, 0.1f);
+
     }
 	
 	public void lastAbsorbed(){
 
 		computeResult(userMixture).form(protoPlanet);
+
     }
 
 	public void Restart(string sceneName){
+
 		SceneManager.LoadScene(sceneName);
         collectionBook.isTutorialShown = true;
+
     }
 
-	void Update() {
-
-	}
-
 	public void EnterSolarSystemCreatorMode(){
+
 		//SceneManager.LoadScene("SolarSystemCreator");
 		Debug.Log("entering the solar system creator");
+
 	}
 
     IEnumerator stopSound()

@@ -10,7 +10,6 @@ public class AnimationManager : MonoBehaviour {
     public ParticleSystem hydrogenHitExplosion;
     public ParticleSystem sulfurHitExplosion;
     public ParticleSystem carbonHitExplosion;
-    public ParticleSystem commonHitExplosion;
     public ParticleSystem hitBigAsteroid;
 
     [Header("Animations")]
@@ -50,7 +49,6 @@ public class AnimationManager : MonoBehaviour {
         hydrogenHitExplosion.Stop();
         sulfurHitExplosion.Stop();
         carbonHitExplosion.Stop();
-        commonHitExplosion.Stop();
     }
 
 	public void playSingle(string audioSource, AudioClip sound)

@@ -7,6 +7,7 @@ public class WorldRotater : MonoBehaviour {
 
 	public void FaceProtoplanet(Vector3 playerPositionBeforeTeleport)
 	{
+
 		GameObject player = UnityEngine.GameObject.FindGameObjectWithTag("player");
 		GameObject protoplanet = UnityEngine.GameObject.FindGameObjectWithTag("protoplanet");
 
@@ -101,7 +102,6 @@ public class WorldRotater : MonoBehaviour {
 	void RotateWorld(Transform pivot, float angle)
 	{
 		// rotate velocities of asteroids
-
 		GameObject asteroidGroup = UnityEngine.GameObject.FindGameObjectWithTag("asteroids");
 		if (asteroidGroup != null) {
 			foreach (Transform child in asteroidGroup.transform)
@@ -114,5 +114,6 @@ public class WorldRotater : MonoBehaviour {
 		}
 
 		pivot.transform.Rotate(Vector3.up, -angle);
+
 	}
 }
