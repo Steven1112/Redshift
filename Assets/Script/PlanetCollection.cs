@@ -141,6 +141,6 @@ public class PlanetCollection : MonoBehaviour {
 	}
 
 	IEnumerator WaitToPlayCompletionVoice() {
-		yield return new WaitForSeconds(6);
+		yield return new WaitForSeconds(5);
 	}
 }

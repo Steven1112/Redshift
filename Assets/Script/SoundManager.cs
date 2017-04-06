@@ -38,6 +38,7 @@ public class SoundManager : MonoBehaviour
 		if(audioSource == "voiceOverSource"){
 			voiceOverSource.clip = sound;
 			voiceOverSource.Play ();
+			Debug.Log("is playing" + sound.name);
 		}
         if (audioSource == "explosionOxygen")
         {
