@@ -49,12 +49,7 @@ public class PlanetCollection : MonoBehaviour {
 
         if (isTutorialShown == true)
         {
-			Sprite planetInfoImage;
-			if (planetsNotInCollection.Count == 0) {
-				planetInfoImage = Resources.Load<Sprite>("PlanetInfo/Locked/" + "fail" + "Info_locked") as Sprite;
-			}else{
-				planetInfoImage = Resources.Load<Sprite>("PlanetInfo/Locked/" + planetsNotInCollection[0] + "Info_locked") as Sprite;
-			}
+            Sprite planetInfoImage = Resources.Load<Sprite>("PlanetInfo/Locked/" + planetsNotInCollection[0] + "Info_locked") as Sprite;
             tutorialPane.GetComponent<Image>().sprite = planetInfoImage;
         }
 
@@ -140,7 +135,7 @@ public class PlanetCollection : MonoBehaviour {
 			PlanetCreator planetCreator = UnityEngine.GameObject.FindGameObjectWithTag("creator").GetComponent<PlanetCreator>();
 			planetCreator.restartPane.SetActive(false);
 			planetCreator.solarSystemPane.SetActive(true);
-			//SoundManager.instance.playSingle("voiceOverSource",collectionCompleteVoice);
+			SoundManager.instance.playSingle("voiceOverSource",collectionCompleteVoice);
 		}
 	}
 }

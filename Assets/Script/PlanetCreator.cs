@@ -233,7 +233,7 @@ public class PlanetCreator : MonoBehaviour {
 
 	public void EnterSolarSystemCreatorMode(){
 
-		//SceneManager.LoadScene("SolarSystemCreator");
+		SceneManager.LoadScene("SolarSystemCreator");
 		Debug.Log("entering the solar system creator");
 
 	}
