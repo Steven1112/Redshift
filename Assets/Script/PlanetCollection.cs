@@ -135,7 +135,12 @@ public class PlanetCollection : MonoBehaviour {
 			PlanetCreator planetCreator = UnityEngine.GameObject.FindGameObjectWithTag("creator").GetComponent<PlanetCreator>();
 			planetCreator.restartPane.SetActive(false);
 			planetCreator.solarSystemPane.SetActive(true);
+			StartCoroutine(WaitToPlayCompletionVoice());
 			SoundManager.instance.playSingle("voiceOverSource",collectionCompleteVoice);
 		}
+	}
+
+	IEnumerator WaitToPlayCompletionVoice() {
+		yield return new WaitForSeconds(6);
 	}
 }
