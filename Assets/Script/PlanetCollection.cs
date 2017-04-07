@@ -136,11 +136,11 @@ public class PlanetCollection : MonoBehaviour {
 			planetCreator.restartPane.SetActive(false);
 			planetCreator.solarSystemPane.SetActive(true);
 			StartCoroutine(WaitToPlayCompletionVoice());
-			SoundManager.instance.playSingle("voiceOverSource",collectionCompleteVoice);
 		}
 	}
 
 	IEnumerator WaitToPlayCompletionVoice() {
 		yield return new WaitForSeconds(5);
-	}
+        SoundManager.instance.playSingle("voiceOverSource", collectionCompleteVoice);
+    }
 }
