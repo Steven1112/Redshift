@@ -140,7 +140,7 @@ public class PlanetCollection : MonoBehaviour {
 	}
 
 	IEnumerator WaitToPlayCompletionVoice() {
-		yield return new WaitForSeconds(5);
+		yield return new WaitForSeconds(7);
         SoundManager.instance.playSingle("voiceOverSource", collectionCompleteVoice);
     }
 }
